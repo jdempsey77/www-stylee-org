@@ -18,6 +18,11 @@ export const metadata: Metadata = {
   description: "A place for security insights, personal projects, and professional expertise.",
   keywords: ["cybersecurity", "software security", "Jerry Dempsey", "stylee.org"],
   authors: [{ name: "Jerry Dempsey" }],
+  icons: {
+    icon: '/favicon.svg',
+    shortcut: '/favicon.svg',
+    apple: '/favicon.svg',
+  },
   openGraph: {
     title: "stylee.org - Jerry Dempsey",
     description: "A place for security insights, personal projects, and professional expertise.",
