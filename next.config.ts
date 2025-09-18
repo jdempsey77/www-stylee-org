@@ -10,7 +10,8 @@ const nextConfig: NextConfig = {
   assetPrefix: basePath,
   images: {
     unoptimized: true
-  }
+  },
+  distDir: 'out'
 };
 
 export default nextConfig;
