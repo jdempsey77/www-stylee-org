@@ -67,7 +67,7 @@ const Navigation = () => {
           <div className="flex items-center">
             <Link href="/" className="flex-shrink-0 flex items-center">
               <img 
-                src="/mainlogo.png" 
+                src="/main2.png" 
                 alt="stylee.org" 
                 className="h-8 w-auto"
               />
