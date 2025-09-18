@@ -66,7 +66,11 @@ const Navigation = () => {
         <div className="flex justify-between h-16">
           <div className="flex items-center">
             <Link href="/" className="flex-shrink-0 flex items-center">
-              <span className="text-2xl font-bold text-slate-300">stylee.org</span>
+              <img 
+                src="/logo.svg" 
+                alt="stylee.org" 
+                className="h-8 w-auto"
+              />
             </Link>
           </div>
 
