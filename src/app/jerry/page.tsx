@@ -1,5 +1,3 @@
-import { } from '@heroicons/react/24/outline';
-
 export default function Jerry() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800">
