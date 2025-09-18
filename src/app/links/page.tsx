@@ -7,6 +7,18 @@ export default function Links() {
       category: "Sports"
     },
     {
+      name: "Atlanta Braves",
+      url: "https://www.mlb.com/braves",
+      description: "Official website of the Atlanta Braves MLB team",
+      category: "Sports"
+    },
+    {
+      name: "Atlanta Hawks",
+      url: "https://www.nba.com/hawks/",
+      description: "Official website of the Atlanta Hawks NBA team",
+      category: "Sports"
+    },
+    {
       name: "Dark Reading",
       url: "https://www.darkreading.com",
       description: "Information security news, analysis, and insights",

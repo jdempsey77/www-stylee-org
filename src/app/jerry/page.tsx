@@ -41,9 +41,9 @@ export default function Jerry() {
                 happens when it&apos;s practical, collaborative, and focused on protecting what matters most.
               </p>
             </div>
-            <div className="bg-slate-50 dark:bg-slate-700 p-6 rounded-lg">
-              <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-4">What I do when I&apos;m not working</h3>
-              <ul className="space-y-3 text-slate-700 dark:text-slate-200">
+            <div className="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">What I do when I&apos;m not working</h3>
+              <ul className="space-y-3 text-gray-700">
                 <li>👨‍👩‍👧‍👦 Family time — the best part of my day</li>
                 <li>🎮 Gaming — Enjoy playing video games with my family along with collecting retro systems and games</li>
                 <li>🏈 Falcons fan — Rise up! (even when they break my heart)</li>
