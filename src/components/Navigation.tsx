@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState } from 'react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 
@@ -66,9 +67,11 @@ const Navigation = () => {
         <div className="flex justify-between h-16">
           <div className="flex items-center">
             <Link href="/" className="flex-shrink-0 flex items-center">
-              <img 
+              <Image 
                 src="/main.png" 
                 alt="stylee.org" 
+                width={32}
+                height={32}
                 className="h-8 w-auto"
               />
             </Link>
