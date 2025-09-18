@@ -15,7 +15,7 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: "stylee.org - Jerry Dempsey",
-  description: "A place for security insights, personal projects, and professional expertise.",
+  description: "Welcome to stylee.org",
   keywords: ["cybersecurity", "software security", "Jerry Dempsey", "stylee.org"],
   authors: [{ name: "Jerry Dempsey" }],
   icons: {
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "stylee.org - Jerry Dempsey",
-    description: "A place for security insights, personal projects, and professional expertise.",
+    description: "Welcome to stylee.org",
     type: "website",
     url: "https://stylee.org",
   },
