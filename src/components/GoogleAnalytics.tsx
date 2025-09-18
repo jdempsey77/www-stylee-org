@@ -4,8 +4,13 @@ import Script from 'next/script';
 import { GA_TRACKING_ID } from '@/lib/gtag';
 
 const GoogleAnalytics = () => {
+  // Debug: Log the GA_TRACKING_ID to see what's happening
+  console.log('GA_TRACKING_ID:', GA_TRACKING_ID);
+  
   if (!GA_TRACKING_ID) {
-    return null;
+    console.log('No GA_TRACKING_ID found, analytics disabled');
+    // Debug: Show in HTML for debugging
+    return <div style={{display: 'none'}}>DEBUG: GA_TRACKING_ID is empty</div>;
   }
 
   return (
