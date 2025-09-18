@@ -1,8 +1,5 @@
 import { 
-  ShieldCheckIcon, 
-  AcademicCapIcon, 
-  BriefcaseIcon, 
-  StarIcon,
+  BriefcaseIcon,
   DocumentArrowDownIcon,
   DocumentTextIcon,
   EnvelopeIcon,
@@ -95,7 +92,7 @@ export default function Resume() {
                       FanDuel, Atlanta, GA | January 2025 – Present
                     </p>
                     <ul className="mt-3 space-y-2 text-slate-700 dark:text-slate-300">
-                      <li>• Lead comprehensive security strategy for FanDuel's platform, applications, and products</li>
+                      <li>• Lead comprehensive security strategy for FanDuel&apos;s platform, applications, and products</li>
                       <li>• Ensure customer trust through robust security measures and platform integrity</li>
                       <li>• Oversee Platform Security, Application Security, and Product Security initiatives</li>
                       <li>• Drive security culture and best practices across engineering and product teams</li>
