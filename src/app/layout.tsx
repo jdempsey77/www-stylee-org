@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     title: "stylee.org - Jerry Dempsey",
     description: "A place for security insights, personal projects, and professional expertise.",
     type: "website",
-    url: "https://www.stylee.org",
+    url: "https://stylee.org",
   },
 };
 
