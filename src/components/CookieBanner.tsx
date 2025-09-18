@@ -44,26 +44,26 @@ const CookieBanner = () => {
   return (
     <div className="fixed bottom-0 left-0 right-0 bg-white dark:bg-slate-800 border-t border-gray-200 dark:border-slate-700 shadow-lg z-50">
       <div className="max-w-7xl mx-auto px-4 py-4">
-        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+        <div className="flex flex-col gap-4">
           <div className="flex-1">
-            <h3 className="text-sm font-semibold text-gray-900 dark:text-white mb-1">
+            <h3 className="text-base font-semibold text-gray-900 dark:text-white mb-2">
               Privacy & Analytics
             </h3>
-            <p className="text-xs text-gray-600 dark:text-gray-300">
+            <p className="text-sm text-gray-600 dark:text-gray-300">
               We use analytics to understand how visitors interact with our site. 
               This helps us improve your experience. No personal data is collected.
             </p>
           </div>
-          <div className="flex gap-2">
+          <div className="flex gap-3 w-full">
             <button
               onClick={rejectAnalytics}
-              className="px-3 py-1.5 text-xs font-medium text-gray-600 dark:text-gray-300 hover:text-gray-800 dark:hover:text-white transition-colors"
+              className="flex-1 px-4 py-3 text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-gray-800 dark:hover:text-white transition-colors border border-gray-300 dark:border-gray-600 rounded-md"
             >
               Reject
             </button>
             <button
               onClick={acceptAnalytics}
-              className="px-3 py-1.5 text-xs font-medium bg-slate-900 dark:bg-slate-100 text-white dark:text-slate-900 rounded hover:bg-slate-800 dark:hover:bg-slate-200 transition-colors"
+              className="flex-1 px-4 py-3 text-sm font-medium bg-slate-900 dark:bg-slate-100 text-white dark:text-slate-900 rounded-md hover:bg-slate-800 dark:hover:bg-slate-200 transition-colors"
             >
               Accept
             </button>
