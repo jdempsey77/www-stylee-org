@@ -25,6 +25,12 @@ export default function Links() {
       category: "Security"
     },
     {
+      name: "The Hacker News",
+      url: "https://thehackernews.com/",
+      description: "#1 Trusted Cybersecurity News Platform - Latest security news, vulnerabilities, and expert insights",
+      category: "Security"
+    },
+    {
       name: "OWASP",
       url: "https://owasp.org",
       description: "Open Web Application Security Project - Global community focused on improving software security",
@@ -37,9 +43,21 @@ export default function Links() {
       category: "Gaming"
     },
     {
+      name: "IGN",
+      url: "https://www.ign.com/",
+      description: "Video game reviews, news, and entertainment coverage",
+      category: "Gaming"
+    },
+    {
       name: "Breaking Bourbon",
       url: "https://www.breakingbourbon.com",
       description: "Bourbon reviews, news, and industry insights",
+      category: "Bourbon"
+    },
+    {
+      name: "Bourbon & Banter",
+      url: "https://www.bourbonbanter.com/",
+      description: "Bourbon reviews, industry news, and community discussions",
       category: "Bourbon"
     }
   ];
