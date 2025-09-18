@@ -14,13 +14,13 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Jerry Dempsey - Cybersecurity Professional",
-  description: "Cybersecurity expert specializing in software security, application security, and cloud security. Professional blog and portfolio.",
-  keywords: ["cybersecurity", "software security", "application security", "cloud security", "Jerry Dempsey"],
+  title: "stylee.org - Jerry Dempsey",
+  description: "A place for security insights, personal projects, and professional expertise.",
+  keywords: ["cybersecurity", "software security", "Jerry Dempsey", "stylee.org"],
   authors: [{ name: "Jerry Dempsey" }],
   openGraph: {
-    title: "Jerry Dempsey - Cybersecurity Professional",
-    description: "Cybersecurity expert specializing in software security, application security, and cloud security.",
+    title: "stylee.org - Jerry Dempsey",
+    description: "A place for security insights, personal projects, and professional expertise.",
     type: "website",
     url: "https://www.stylee.org",
   },

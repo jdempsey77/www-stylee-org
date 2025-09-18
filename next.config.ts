@@ -1,7 +1,8 @@
 import type { NextConfig } from "next";
 
 const isProd = process.env.NODE_ENV === 'production';
-const basePath = isProd ? '/jerry-dempsey-website' : '';
+const isCustomDomain = process.env.CUSTOM_DOMAIN === 'true';
+const basePath = isProd && !isCustomDomain ? '/jerry-dempsey-website' : '';
 
 const nextConfig: NextConfig = {
   output: 'export',
