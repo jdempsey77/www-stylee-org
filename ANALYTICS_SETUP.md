@@ -19,8 +19,9 @@ This website includes Google Analytics 4 with privacy-compliant cookie consent.
    ```
 
 3. **Deploy to Production**
-   - Add `NEXT_PUBLIC_GA_ID` to your Vercel environment variables
-   - Or add to your hosting platform's environment settings
+   - Add `NEXT_PUBLIC_GA_ID` to your GitHub repository secrets
+   - Go to Settings → Secrets and variables → Actions
+   - Add new repository secret with your GA ID
 
 ### Features
 
@@ -86,6 +87,6 @@ event({
 
 If you prefer other analytics solutions:
 
-1. **Vercel Analytics** (if using Vercel)
-2. **Plausible Analytics** (privacy-focused)
-3. **Fathom Analytics** (simple and privacy-focused)
+1. **Plausible Analytics** (privacy-focused)
+2. **Fathom Analytics** (simple and privacy-focused)
+3. **Google Analytics 4** (current implementation)
