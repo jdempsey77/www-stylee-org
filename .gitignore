@@ -39,3 +39,11 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Google Drive API credentials and tokens
+credentials.json
+token.json
+
+# Resume pipeline files
+public/Jerry_Dempsey_Resume.docx
+public/Jerry_Dempsey_Resume_Google.md

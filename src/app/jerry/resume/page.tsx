@@ -1,6 +1,5 @@
 import { 
   BriefcaseIcon,
-  DocumentArrowDownIcon,
   DocumentTextIcon,
   EnvelopeIcon,
   MapPinIcon
@@ -20,7 +19,7 @@ export default function Resume() {
               Product and Application Security Leader
             </p>
             <p className="text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto mb-8">
-              More than 20 years of experience in cybersecurity with outstanding communication skills and expertise in recruiting and mentoring top-performing teams
+              More than 20 years of experience in cybersecurity with outstanding communication skills and expertise in recruiting and mentoring top-performing teams. As a Product and Application Security leader, I possess outstanding communication skills and excel at recruiting and mentoring top-performing teams. I am a proven problem-solver with a knack for finding creative solutions to complex challenges. I am also an advocate for forward-thinking security concepts, and I am committed to driving collaboration and partnership with development organizations to help them adopt cutting-edge security strategies.
             </p>
             
             {/* Contact Information */}
@@ -67,12 +66,7 @@ export default function Resume() {
                   Professional Summary
                 </h2>
                 <p className="text-slate-700 dark:text-slate-300 leading-relaxed">
-                  As a Product and Application Security leader with more than 20 years of experience in cybersecurity, 
-                  I possess outstanding communication skills and excel at recruiting and mentoring top-performing teams. 
-                  I am a proven problem-solver with a knack for finding creative solutions to complex challenges. 
-                  I am also an advocate for forward-thinking security concepts, and I am committed to driving 
-                  collaboration and partnership with development organizations to help them adopt cutting-edge 
-                  security strategies.
+                  More than 20 years of experience in cybersecurity with outstanding communication skills and expertise in recruiting and mentoring top-performing teams. As a Product and Application Security leader, I possess outstanding communication skills and excel at recruiting and mentoring top-performing teams. I am a proven problem-solver with a knack for finding creative solutions to complex challenges. I am also an advocate for forward-thinking security concepts, and I am committed to driving collaboration and partnership with development organizations to help them adopt cutting-edge security strategies.
                 </p>
               </div>
 
@@ -84,6 +78,7 @@ export default function Resume() {
                 </h2>
                 
                 <div className="space-y-6">
+                  
                   <div className="border-l-4 border-slate-600 pl-6">
                     <h3 className="text-xl font-semibold text-slate-900 dark:text-white">
                       Head of Software Security
@@ -119,7 +114,7 @@ export default function Resume() {
                     <h3 className="text-xl font-semibold text-slate-900 dark:text-white">
                       Director, Product and Application Security
                     </h3>
-                    <p className="text-green-600 dark:text-green-400 font-medium">
+                    <p className="text-gray-600 dark:text-gray-400 font-medium">
                       WarnerMedia, Atlanta, GA | October 2021 – April 2022
                     </p>
                     <ul className="mt-3 space-y-2 text-slate-700 dark:text-slate-300">
@@ -135,7 +130,7 @@ export default function Resume() {
                     <h3 className="text-xl font-semibold text-slate-900 dark:text-white">
                       Director, Software Development Security
                     </h3>
-                    <p className="text-cyan-600 dark:text-cyan-400 font-medium">
+                    <p className="text-gray-600 dark:text-gray-400 font-medium">
                       WarnerMedia, Atlanta, GA | March 2021 – October 2021
                     </p>
                     <ul className="mt-3 space-y-2 text-slate-700 dark:text-slate-300">
@@ -151,7 +146,7 @@ export default function Resume() {
                     <h3 className="text-xl font-semibold text-slate-900 dark:text-white">
                       Sr. Manager, Application Security and Security Tools Engineering
                     </h3>
-                    <p className="text-purple-600 dark:text-purple-400 font-medium">
+                    <p className="text-gray-600 dark:text-gray-400 font-medium">
                       WarnerMedia, Atlanta, GA | June 2019 – May 2020
                     </p>
                     <ul className="mt-3 space-y-2 text-slate-700 dark:text-slate-300">
@@ -164,29 +159,53 @@ export default function Resume() {
                   </div>
                 </div>
               </div>
-
             </div>
 
             {/* Sidebar */}
             <div className="space-y-8">
+              
+              {/* Education */}
+              <div>
+                <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-4 flex items-center">
+                  <BriefcaseIcon className="w-6 h-6 mr-3 text-gray-600 dark:text-gray-400" />
+                  Education
+                </h3>
+                <div className="space-y-2">
+                  <p className="text-slate-700 dark:text-slate-300">Bachelor of Science in Computer Science</p>
+                  <p className="text-slate-700 dark:text-slate-300">Georgia Institute of Technology, Atlanta, GA</p>
+                </div>
+              </div>
 
+              {/* Certifications */}
+              <div>
+                <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-4 flex items-center">
+                  <BriefcaseIcon className="w-6 h-6 mr-3 text-gray-600 dark:text-gray-400" />
+                  Certifications
+                </h3>
+                <ul className="space-y-2">
+                  <li className="text-slate-700 dark:text-slate-300">• Certified Information Security Manager (CISM)</li>
+                  <li className="text-slate-700 dark:text-slate-300">• Certified Information Systems Security Professional (CISSP)</li>
+                  <li className="text-slate-700 dark:text-slate-300">• Certified Ethical Hacker (CEH)</li>
+                  <li className="text-slate-700 dark:text-slate-300">• AWS Certified Security - Specialty</li>
+                  <li className="text-slate-700 dark:text-slate-300">• CompTIA Security+</li>
+                </ul>
+              </div>
 
+              {/* Skills */}
+              <div>
+                <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-4 flex items-center">
+                  <BriefcaseIcon className="w-6 h-6 mr-3 text-gray-600 dark:text-gray-400" />
+                  Skills
+                </h3>
+                <ul className="space-y-2">
+                  <li className="text-slate-700 dark:text-slate-300">• Application Security, Product Security, Cloud Security</li>
+                  <li className="text-slate-700 dark:text-slate-300">• Penetration Testing, Vulnerability Management, Threat Modeling</li>
+                  <li className="text-slate-700 dark:text-slate-300">• Python, Java, C++, JavaScript, PowerShell, Bash</li>
+                  <li className="text-slate-700 dark:text-slate-300">• AWS, Azure, Google Cloud Platform</li>
+                  <li className="text-slate-700 dark:text-slate-300">• Docker, Kubernetes, CI/CD</li>
+                </ul>
+              </div>
             </div>
-          </div>
-          
-          {/* Download Section */}
-          <div className="mt-12 text-center">
-            <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-6">
-              Download Resume
-            </h2>
-            <a
-              href="/jerry-dempsey-resume.pdf"
-              download="Jerry-Dempsey-Resume.pdf"
-              className="bg-slate-600 text-white hover:bg-slate-700 px-8 py-3 rounded-lg font-semibold transition-colors duration-200 inline-flex items-center"
-            >
-              <DocumentArrowDownIcon className="w-5 h-5 mr-2" />
-              Download PDF
-            </a>
           </div>
         </div>
       </section>

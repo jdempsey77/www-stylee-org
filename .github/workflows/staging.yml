@@ -1,0 +1,95 @@
+name: Hybrid Staging Environment
+
+on:
+  pull_request:
+    branches: [ main ]
+  push:
+    branches: [ develop, staging ]
+
+jobs:
+  # Quick validation - focuses on what local testing might miss
+  validate:
+    runs-on: ubuntu-latest
+    name: "Validate & Build"
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+        
+    - name: Install dependencies
+      run: npm ci
+      
+    - name: Quick validation (skip if local tests passed)
+      run: npm run test:quick
+      env:
+        NODE_ENV: staging
+        
+    - name: Build validation
+      run: npm run validate:build
+
+  # Deploy to staging only for PRs and develop branch
+  deploy-staging:
+    needs: validate
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request' || github.ref == 'refs/heads/develop'
+    name: "Deploy to Staging"
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+        
+    - name: Install dependencies
+      run: npm ci
+      
+    - name: Build for staging
+      run: npm run build:staging
+      
+    - name: Deploy to GitHub Pages (staging)
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./out
+        destination_dir: staging
+        keep_files: true
+
+  # Production deployment (only for main branch)
+  deploy-production:
+    needs: validate
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    name: "Deploy to Production"
+    environment: production
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+        
+    - name: Install dependencies
+      run: npm ci
+      
+    - name: Build for production
+      run: npm run build:prod
+      
+    - name: Deploy to GitHub Pages (production)
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./out

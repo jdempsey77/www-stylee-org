@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Preview - Jerry Dempsey</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .line-clamp-3 {
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50 border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="#" class="flex-shrink-0 flex items-center">
+                        <img src="public/main.png" alt="stylee.org" class="h-8 w-auto">
+                    </a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="#" class="text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Blog</a>
+                    <a href="#" class="text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Links</a>
+                    <a href="#" class="text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Resume</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Blog Content -->
+    <div class="container mx-auto px-4 py-16">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-16">
+                <h1 class="text-5xl font-bold text-gray-900 mb-6">Blog</h1>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Thoughts on gaming, bourbon, security, and leadership in software security.
+                </p>
+            </div>
+
+            <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+                <!-- Blog Post 1 -->
+                <article class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                    <img src="public/main2.png" alt="Welcome to My Blog!" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center text-sm text-gray-500 mb-3">
+                            <time>January 15, 2024</time>
+                            <span class="mx-2">•</span>
+                            <span>3 min read</span>
+                        </div>
+                        <h2 class="text-2xl font-bold text-gray-900 mb-3">
+                            <a href="#" class="hover:text-blue-600 transition-colors duration-200">
+                                Welcome to My Blog!
+                            </a>
+                        </h2>
+                        <p class="text-gray-600 mb-4 line-clamp-3">
+                            I'm excited to share my thoughts on gaming, bourbon, security, and leadership in software security.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded-full">welcome</span>
+                                <span class="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded-full">introduction</span>
+                                <span class="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded-full">blog</span>
+                            </div>
+                            <a href="#" class="text-blue-600 hover:text-blue-800 font-medium transition-colors duration-200">
+                                Read more →
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Blog Post 2 -->
+                <article class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                    <img src="public/main.png" alt="Building This Website" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center text-sm text-gray-500 mb-3">
+                            <time>January 10, 2024</time>
+                            <span class="mx-2">•</span>
+                            <span>5 min read</span>
+                        </div>
+                        <h2 class="text-2xl font-bold text-gray-900 mb-3">
+                            <a href="#" class="hover:text-blue-600 transition-colors duration-200">
+                                Building This Website: A Journey in Modern Web Development
+                            </a>
+                        </h2>
+                        <p class="text-gray-600 mb-4 line-clamp-3">
+                            A behind-the-scenes look at how I built this website using Next.js, TypeScript, and modern web development practices.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded-full">web development</span>
+                                <span class="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded-full">nextjs</span>
+                                <span class="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded-full">typescript</span>
+                            </div>
+                            <a href="#" class="text-blue-600 hover:text-blue-800 font-medium transition-colors duration-200">
+                                Read more →
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Blog Post 3 -->
+                <article class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                    <img src="public/mainlogo.png" alt="The Importance of Testing" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center text-sm text-gray-500 mb-3">
+                            <time>January 5, 2024</time>
+                            <span class="mx-2">•</span>
+                            <span>7 min read</span>
+                        </div>
+                        <h2 class="text-2xl font-bold text-gray-900 mb-3">
+                            <a href="#" class="hover:text-blue-600 transition-colors duration-200">
+                                The Importance of Testing in Software Development
+                            </a>
+                        </h2>
+                        <p class="text-gray-600 mb-4 line-clamp-3">
+                            Why testing isn't just about finding bugs—it's about building confidence, improving design, and creating maintainable code.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded-full">testing</span>
+                                <span class="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded-full">software development</span>
+                                <span class="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded-full">best practices</span>
+                            </div>
+                            <a href="#" class="text-blue-600 hover:text-blue-800 font-medium transition-colors duration-200">
+                                Read more →
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+
+    <!-- Individual Post Preview -->
+    <div class="container mx-auto px-4 py-16" style="display: none;" id="post-preview">
+        <div class="max-w-4xl mx-auto">
+            <a href="#" class="inline-flex items-center text-blue-600 hover:text-blue-800 mb-8 transition-colors duration-200">
+                ← Back to Blog
+            </a>
+
+            <article class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <img src="public/main2.png" alt="Welcome to My Blog!" class="w-full h-64 md:h-96 object-cover">
+                <div class="p-8 md:p-12">
+                    <div class="flex items-center text-sm text-gray-500 mb-6">
+                        <time>January 15, 2024</time>
+                        <span class="mx-2">•</span>
+                        <span>3 min read</span>
+                    </div>
+                    
+                    <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                        Welcome to My Blog!
+                    </h1>
+                    
+                    <div class="flex flex-wrap gap-2 mb-8">
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">welcome</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">introduction</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">blog</span>
+                    </div>
+                    
+                    <div class="prose prose-lg max-w-none">
+                        <div class="text-gray-700 leading-relaxed">
+                            <p>Hello and welcome to my blog! I'm Jerry Dempsey, and I'm thrilled to have you here.</p>
+                            
+                            <p>This blog is where I'll be sharing my thoughts on:</p>
+                            <ul>
+                                <li>Software development and engineering</li>
+                                <li>Technology trends and insights</li>
+                                <li>Career advice for developers</li>
+                                <li>Personal projects and experiences</li>
+                                <li>Life lessons learned along the way</li>
+                            </ul>
+                            
+                            <h2>What to Expect</h2>
+                            <p>You can expect a mix of technical deep-dives, practical tutorials, and personal reflections. I believe in writing content that's both informative and accessible.</p>
+                            
+                            <h2>Let's Connect</h2>
+                            <p>I'd love to hear from you! Feel free to reach out through my contact links if you have questions or just want to chat about technology.</p>
+                            
+                            <p>Thanks for reading, and I look forward to sharing more content with you soon!</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <div class="mt-12 flex justify-between items-center">
+                <a href="#" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors duration-200">
+                    View All Posts
+                </a>
+                <div class="text-sm text-gray-500">
+                    Published on January 15, 2024
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Simple preview functionality
+        document.querySelectorAll('a[href="#"]').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const blogGrid = document.querySelector('.grid');
+                const postPreview = document.getElementById('post-preview');
+                
+                if (blogGrid && postPreview) {
+                    blogGrid.style.display = 'none';
+                    postPreview.style.display = 'block';
+                }
+            });
+        });
+
+        // Back to blog functionality
+        document.querySelector('a[href="#"]:first-of-type').addEventListener('click', (e) => {
+            e.preventDefault();
+            const blogGrid = document.querySelector('.grid');
+            const postPreview = document.getElementById('post-preview');
+            
+            if (blogGrid && postPreview) {
+                blogGrid.style.display = 'grid';
+                postPreview.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

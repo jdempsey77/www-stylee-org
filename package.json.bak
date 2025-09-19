@@ -24,24 +24,10 @@
     "test:quick": "npm run lint && npm run build:staging",
     "dev:test": "npm run lint && npm run dev",
     "staging:full": "npm run test:local && npm run preview",
-    "dev:workflow": "node scripts/dev-workflow.js",
-    "serve:local": "./scripts/serve-local.sh",
-    "watch:files": "./scripts/watch-files.sh",
-    "test:blog": "./scripts/test-blog.sh",
-    "preview:blog": "./scripts/dev-helper.sh preview",
-    "dev:full": "./scripts/dev-helper.sh full",
-    "resume:update": "node scripts/resume-pipeline.js",
-    "resume:build": "npm run resume:update && npm run build:staging",
-    "resume:preview": "npm run resume:build && npm run serve:staging",
-    "resume:simple": "node scripts/simple-resume-pipeline.js",
-    "resume:google": "node scripts/google-drive-pipeline.js",
-    "resume:google-api": "node scripts/google-drive-api-pipeline.js",
-    "test:google-drive": "node scripts/test-google-drive-setup.js",
-    "resume:hybrid": "node scripts/hybrid-resume-pipeline.js"
+    "dev:workflow": "node scripts/dev-workflow.js"
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",
-    "googleapis": "^160.0.0",
     "gtag": "^1.0.1",
     "next": "15.5.3",
     "react": "19.1.0",
@@ -55,7 +41,6 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "15.5.3",
-    "puppeteer": "^24.22.0",
     "tailwindcss": "^4",
     "typescript": "^5"
   }

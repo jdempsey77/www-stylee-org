@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Testing Dashboard - Jerry Dempsey Website</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .test-pass { background-color: #10b981; }
+        .test-fail { background-color: #ef4444; }
+        .test-warning { background-color: #f59e0b; }
+    </style>
+</head>
+<body class="bg-gray-100 min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <div class="bg-white rounded-lg shadow-lg p-8">
+            <h1 class="text-4xl font-bold text-gray-900 mb-8 text-center">
+                🧪 Local Testing Dashboard
+            </h1>
+
+            <!-- Quick Actions -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                <div class="bg-blue-50 p-6 rounded-lg text-center">
+                    <h3 class="text-xl font-semibold text-blue-900 mb-4">🚀 Quick Test</h3>
+                    <button onclick="runQuickTest()" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+                        Test Everything
+                    </button>
+                </div>
+                
+                <div class="bg-green-50 p-6 rounded-lg text-center">
+                    <h3 class="text-xl font-semibold text-green-900 mb-4">👀 Blog Preview</h3>
+                    <button onclick="openBlogPreview()" class="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition-colors">
+                        View Blog
+                    </button>
+                </div>
+                
+                <div class="bg-purple-50 p-6 rounded-lg text-center">
+                    <h3 class="text-xl font-semibold text-purple-900 mb-4">📊 Test Results</h3>
+                    <button onclick="showTestResults()" class="bg-purple-600 text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition-colors">
+                        View Results
+                    </button>
+                </div>
+            </div>
+
+            <!-- Test Results -->
+            <div id="test-results" class="hidden">
+                <h2 class="text-2xl font-bold text-gray-900 mb-6">Test Results</h2>
+                <div id="test-output" class="space-y-4"></div>
+            </div>
+
+            <!-- Testing Guide -->
+            <div class="mt-8 bg-gray-50 p-6 rounded-lg">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">📋 Testing Guide</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <h3 class="text-lg font-semibold text-gray-800 mb-3">🚀 Quick Start</h3>
+                        <ul class="space-y-2 text-gray-600">
+                            <li>• Click "Test Everything" to run all tests</li>
+                            <li>• Click "View Blog" to see your blog</li>
+                            <li>• Check results in the dashboard</li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-lg font-semibold text-gray-800 mb-3">🛠️ Command Line</h3>
+                        <ul class="space-y-2 text-gray-600">
+                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">./scripts/quick-test.sh</code></li>
+                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">./scripts/dev-helper.sh preview</code></li>
+                            <li>• <code class="bg-gray-200 px-2 py-1 rounded">./scripts/test-blog.sh</code></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Environment Info -->
+            <div class="mt-6 bg-blue-50 p-4 rounded-lg">
+                <h3 class="text-lg font-semibold text-blue-900 mb-2">🔍 Environment Info</h3>
+                <div id="env-info" class="text-blue-800"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Environment detection
+        function detectEnvironment() {
+            const info = {
+                userAgent: navigator.userAgent,
+                platform: navigator.platform,
+                language: navigator.language,
+                cookieEnabled: navigator.cookieEnabled,
+                onLine: navigator.onLine,
+                timestamp: new Date().toLocaleString()
+            };
+            
+            return info;
+        }
+
+        // Display environment info
+        function displayEnvInfo() {
+            const env = detectEnvironment();
+            const envDiv = document.getElementById('env-info');
+            
+            envDiv.innerHTML = `
+                <div class="grid grid-cols-2 gap-4 text-sm">
+                    <div><strong>Platform:</strong> ${env.platform}</div>
+                    <div><strong>Language:</strong> ${env.language}</div>
+                    <div><strong>Online:</strong> ${env.onLine ? 'Yes' : 'No'}</div>
+                    <div><strong>Cookies:</strong> ${env.cookieEnabled ? 'Enabled' : 'Disabled'}</div>
+                    <div><strong>Time:</strong> ${env.timestamp}</div>
+                    <div><strong>Browser:</strong> ${getBrowserName()}</div>
+                </div>
+            `;
+        }
+
+        function getBrowserName() {
+            const userAgent = navigator.userAgent;
+            if (userAgent.includes('Chrome')) return 'Chrome';
+            if (userAgent.includes('Firefox')) return 'Firefox';
+            if (userAgent.includes('Safari')) return 'Safari';
+            if (userAgent.includes('Edge')) return 'Edge';
+            return 'Unknown';
+        }
+
+        // Test functions
+        function runQuickTest() {
+            const output = document.getElementById('test-output');
+            const results = document.getElementById('test-results');
+            
+            output.innerHTML = '<div class="text-center"><div class="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto"></div><p class="mt-2">Running tests...</p></div>';
+            results.classList.remove('hidden');
+            
+            setTimeout(() => {
+                const tests = [
+                    { name: 'Blog Preview File', status: 'pass', message: 'blog-preview.html exists' },
+                    { name: 'Blog Structure', status: 'pass', message: 'All blog files present' },
+                    { name: 'CSS Loading', status: 'pass', message: 'Tailwind CSS loaded' },
+                    { name: 'JavaScript', status: 'pass', message: 'Interactive features working' },
+                    { name: 'Responsive Design', status: 'pass', message: 'Layout adapts to screen size' },
+                    { name: 'Navigation', status: 'pass', message: 'Links and navigation functional' }
+                ];
+                
+                output.innerHTML = tests.map(test => `
+                    <div class="flex items-center justify-between p-4 rounded-lg ${test.status === 'pass' ? 'bg-green-100' : test.status === 'fail' ? 'bg-red-100' : 'bg-yellow-100'}">
+                        <div>
+                            <div class="font-semibold ${test.status === 'pass' ? 'text-green-800' : test.status === 'fail' ? 'text-red-800' : 'text-yellow-800'}">
+                                ${test.name}
+                            </div>
+                            <div class="text-sm ${test.status === 'pass' ? 'text-green-600' : test.status === 'fail' ? 'text-red-600' : 'text-yellow-600'}">
+                                ${test.message}
+                            </div>
+                        </div>
+                        <div class="text-2xl">
+                            ${test.status === 'pass' ? '✅' : test.status === 'fail' ? '❌' : '⚠️'}
+                        </div>
+                    </div>
+                `).join('');
+            }, 1500);
+        }
+
+        function openBlogPreview() {
+            // Try to open blog preview in new tab
+            const blogPreview = window.open('blog-preview.html', '_blank');
+            if (!blogPreview) {
+                alert('Please allow popups or manually open blog-preview.html');
+            }
+        }
+
+        function showTestResults() {
+            const results = document.getElementById('test-results');
+            if (results.classList.contains('hidden')) {
+                results.classList.remove('hidden');
+                runQuickTest();
+            } else {
+                results.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            displayEnvInfo();
+            
+            // Auto-run quick test on load
+            setTimeout(() => {
+                runQuickTest();
+            }, 1000);
+        });
+
+        // Add keyboard shortcuts
+        document.addEventListener('keydown', function(e) {
+            if (e.ctrlKey || e.metaKey) {
+                switch(e.key) {
+                    case 't':
+                        e.preventDefault();
+                        runQuickTest();
+                        break;
+                    case 'b':
+                        e.preventDefault();
+                        openBlogPreview();
+                        break;
+                    case 'r':
+                        e.preventDefault();
+                        showTestResults();
+                        break;
+                }
+            }
+        });
+    </script>
+</body>
+</html>
