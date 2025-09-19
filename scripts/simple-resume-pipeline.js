@@ -29,13 +29,9 @@ class SimpleResumePipeline {
     return true;
   }
 
-  // Create a simple HTML version from the current resume data
-  createSimpleResumeHTML() {
-    console.log('📝 Creating simple resume HTML...');
-    
-    // For now, we'll use the current resume data structure
-    // In the future, this could be enhanced to parse the Word document
-    const resumeData = {
+  // Get the current resume data
+  getResumeData() {
+    return {
       name: 'Jerry Dempsey',
       title: 'Product and Application Security Leader',
       email: 'jerry@stylee.org',
@@ -43,7 +39,7 @@ class SimpleResumePipeline {
       summary: 'More than 20 years of experience in cybersecurity with outstanding communication skills and expertise in recruiting and mentoring top-performing teams. As a Product and Application Security leader, I possess outstanding communication skills and excel at recruiting and mentoring top-performing teams. I am a proven problem-solver with a knack for finding creative solutions to complex challenges. I am also an advocate for forward-thinking security concepts, and I am committed to driving collaboration and partnership with development organizations to help them adopt cutting-edge security strategies.',
       experience: [
         {
-          title: 'Head of Software Security',
+          title: 'Product and Application Security Leader',
           company: 'FanDuel',
           location: 'Atlanta, GA',
           dates: 'January 2025 – Present',
@@ -121,6 +117,14 @@ class SimpleResumePipeline {
     };
 
     return resumeData;
+  }
+
+  // Create a simple HTML version from the current resume data
+  createSimpleResumeHTML() {
+    console.log('📝 Creating simple resume HTML...');
+    
+    const resumeData = this.getResumeData();
+    return this.generateResumePage(resumeData);
   }
 
   // Generate the React component for the resume page

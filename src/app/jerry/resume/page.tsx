@@ -81,7 +81,7 @@ export default function Resume() {
                   
                   <div className="border-l-4 border-slate-600 pl-6">
                     <h3 className="text-xl font-semibold text-slate-900 dark:text-white">
-                      Head of Software Security
+                      Product and Application Security Leader
                     </h3>
                     <p className="text-gray-600 dark:text-gray-400 font-medium">
                       FanDuel, Atlanta, GA | January 2025 – Present
@@ -188,21 +188,6 @@ export default function Resume() {
                   <li className="text-slate-700 dark:text-slate-300">• Certified Ethical Hacker (CEH)</li>
                   <li className="text-slate-700 dark:text-slate-300">• AWS Certified Security - Specialty</li>
                   <li className="text-slate-700 dark:text-slate-300">• CompTIA Security+</li>
-                </ul>
-              </div>
-
-              {/* Skills */}
-              <div>
-                <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-4 flex items-center">
-                  <BriefcaseIcon className="w-6 h-6 mr-3 text-gray-600 dark:text-gray-400" />
-                  Skills
-                </h3>
-                <ul className="space-y-2">
-                  <li className="text-slate-700 dark:text-slate-300">• Application Security, Product Security, Cloud Security</li>
-                  <li className="text-slate-700 dark:text-slate-300">• Penetration Testing, Vulnerability Management, Threat Modeling</li>
-                  <li className="text-slate-700 dark:text-slate-300">• Python, Java, C++, JavaScript, PowerShell, Bash</li>
-                  <li className="text-slate-700 dark:text-slate-300">• AWS, Azure, Google Cloud Platform</li>
-                  <li className="text-slate-700 dark:text-slate-300">• Docker, Kubernetes, CI/CD</li>
                 </ul>
               </div>
             </div>
