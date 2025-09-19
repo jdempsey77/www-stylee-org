@@ -33,7 +33,7 @@ class SimpleResumePipeline {
   getResumeData() {
     return {
       name: 'Jerry Dempsey',
-      title: 'Sr. Director, Head of Software Security',
+      title: 'Product and Application Security Leader',
       email: 'jerry@stylee.org',
       location: 'Roswell, GA',
       summary: 'More than 20 years of experience in cybersecurity with outstanding communication skills and expertise in recruiting and mentoring top-performing teams. As a Product and Application Security leader, I possess outstanding communication skills and excel at recruiting and mentoring top-performing teams. I am a proven problem-solver with a knack for finding creative solutions to complex challenges. I am also an advocate for forward-thinking security concepts, and I am committed to driving collaboration and partnership with development organizations to help them adopt cutting-edge security strategies.',
@@ -48,7 +48,7 @@ class SimpleResumePipeline {
             'Application, Product, and Platform Security. I established a robust Application Security program that provides automated code scanning across all repositories and pull requests',
             'Seamlessly integrating security into the development process. Furthermore, I built out the Product Security team, defining and implementing a new framework to reduce risk through threat modeling',
             'Risk assessments, and penetration testing. My focus also included creating a dedicated Platform Security function to proactively mitigate risks in the platforms we build',
-            'Ensuring a secure foundation for all our services'
+            'Ensuring a secure foundation for all our services.'
           ]
         },
         {
@@ -58,20 +58,20 @@ class SimpleResumePipeline {
           dates: 'May 2023 – March 2025',
           bullets: [
             'Leading application, product, and cloud security initiatives to safeguard our software and ensure trust for our players',
-            'Grew team from 3 employees to over 25 employees while building comprehensive security functions'
+            'Grew team from 3 employees to over 25 employees while building comprehensive security functions.'
           ]
         },
         {
           title: 'Director, Product and Application Security',
           company: 'Warner Bros. Discovery',
           location: 'Atlanta, GA',
-          dates: 'April 2022 – December 2024',
+          dates: 'April 2022 – Present',
           bullets: [
             'Transformed program from supporting only Turner Broadcasting to supporting all of WarnerMedia',
-            'Support more than 3500 developers creating over 4000 applications with full security services',
+            'Support more than 3500 developers creating over 4000 applications with full security services.',
             'Developed Artemis, a state-of-the-art platform scanning 22,000+ code repositories',
             'Built Product Security team partnering with HBO Max, CNN, and DC Universe brands',
-            'Provide threat modeling, DAST, source code scanning, bug bounties, and remediation'
+            'Provide threat modeling, DAST, source code scanning, bug bounties, and remediation.'
           ]
         },
         {
@@ -84,7 +84,7 @@ class SimpleResumePipeline {
             'Created new Product Security team for Direct-to-Consumer platforms',
             'Assembled Security Operations team for CNN+ launch with successful platform integration',
             'Developed protection layers against account takeover and fraud',
-            'Oversaw critical programs including bug bounty, DAST, and vulnerability remediation'
+            'Oversaw critical programs including bug bounty, DAST, and vulnerability remediation.'
           ]
         },
         {
@@ -97,7 +97,7 @@ class SimpleResumePipeline {
             'Built on existing WarnerMedia CSO Application Security platform',
             'Made tremendous progress towards three-year strategic plan',
             'Led team reporting directly to AT&T Chief Security Office',
-            'Focused on innovative solutions driving security forward'
+            'Focused on innovative solutions driving security forward.'
           ]
         },
         {
@@ -110,21 +110,12 @@ class SimpleResumePipeline {
             'Catered to development processes for legacy TimeWarner, HBO, WarnerBros., and Turner',
             'Designed advanced platform for streamlined source code scanning and automation',
             'Led Security Tools Engineering function for Architecture and Engineering division',
-            'Acted as security sounding board for entire WarnerMedia development community'
+            'Acted as security sounding board for entire WarnerMedia development community.'
           ]
         }
       ],
-      education: [
-        'Bachelor of Science in Computer Science',
-        'Georgia Institute of Technology, Atlanta, GA'
-      ],
-      certifications: [
-        'Certified Information Security Manager (CISM)',
-        'Certified Information Systems Security Professional (CISSP)',
-        'Certified Ethical Hacker (CEH)',
-        'AWS Certified Security - Specialty',
-        'CompTIA Security+'
-      ]
+      education: [],
+      certifications: []
     };
 
     return resumeData;
@@ -154,7 +145,7 @@ export default function Resume() {
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-gray-50 dark:from-slate-900 dark:to-slate-800">
       {/* Header */}
       <section className="py-20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
             <h1 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-4">
               ${resumeData.name}
@@ -162,7 +153,7 @@ export default function Resume() {
             <p className="text-xl text-gray-600 dark:text-gray-400 mb-6 font-semibold">
               ${resumeData.title}
             </p>
-            <p className="text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto mb-8">
+            <p className="text-lg text-slate-600 dark:text-slate-300 max-w-5xl mx-auto mb-8">
               ${resumeData.summary}
             </p>
             
@@ -199,10 +190,10 @@ export default function Resume() {
 
       {/* Resume Content */}
       <section className="py-12 bg-white dark:bg-slate-800">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-3 gap-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="space-y-8">
             {/* Main Content */}
-            <div className="lg:col-span-2 space-y-8">
+            <div className="space-y-8">
               {/* Professional Summary */}
               <div>
                 <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-4 flex items-center">
@@ -227,10 +218,6 @@ export default function Resume() {
               </div>
             </div>
 
-            {/* Sidebar */}
-            <div className="space-y-8">
-              ${this.generateSidebarHTML(resumeData)}
-            </div>
           </div>
         </div>
       </section>
@@ -253,37 +240,12 @@ export default function Resume() {
                     <p className="text-gray-600 dark:text-gray-400 font-medium">
                       ${job.company}, ${job.location} | ${job.dates}
                     </p>
-                    <ul className="mt-3 space-y-2 text-slate-700 dark:text-slate-300">
-                      ${job.bullets.map(bullet => `<li>• ${bullet}</li>`).join('\n                      ')}
-                    </ul>
+                    <div className="mt-3 space-y-2 text-slate-700 dark:text-slate-300">
+                      ${job.bullets.map(bullet => `<p>${bullet}</p>`).join('\n                      ')}
+                    </div>
                   </div>`).join('\n');
   }
 
-  // Generate HTML for sidebar
-  generateSidebarHTML(resumeData) {
-    return `
-              {/* Education */}
-              <div>
-                <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-4 flex items-center">
-                  <BriefcaseIcon className="w-6 h-6 mr-3 text-gray-600 dark:text-gray-400" />
-                  Education
-                </h3>
-                <div className="space-y-2">
-                  ${resumeData.education.map(edu => `<p className="text-slate-700 dark:text-slate-300">${edu}</p>`).join('\n                  ')}
-                </div>
-              </div>
-
-              {/* Certifications */}
-              <div>
-                <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-4 flex items-center">
-                  <BriefcaseIcon className="w-6 h-6 mr-3 text-gray-600 dark:text-gray-400" />
-                  Certifications
-                </h3>
-                <ul className="space-y-2">
-                  ${resumeData.certifications.map(cert => `<li className="text-slate-700 dark:text-slate-300">• ${cert}</li>`).join('\n                  ')}
-                </ul>
-              </div>`;
-  }
 
   // Generate PDF from resume data
   async generatePDF(resumeData) {

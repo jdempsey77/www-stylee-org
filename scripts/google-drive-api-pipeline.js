@@ -279,15 +279,12 @@ class GoogleDriveAPIPipeline {
     return resumeData;
   }
 
-  // Helper function to escape HTML entities for React
-  escapeHtmlEntities(text) {
+  // Helper function to escape only quotes and apostrophes for React (not HTML tags)
+  escapeQuotesForReact(text) {
     if (!text) return '';
     return text
       .replace(/'/g, '&apos;')
-      .replace(/"/g, '&quot;')
-      .replace(/&/g, '&amp;')
-      .replace(/</g, '&lt;')
-      .replace(/>/g, '&gt;');
+      .replace(/"/g, '&quot;');
   }
 
   // Generate the React component for the resume page

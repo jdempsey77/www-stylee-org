@@ -17,10 +17,10 @@ class HybridResumePipeline {
     try {
       console.log('🔄 Starting hybrid resume pipeline...\n');
       
-      // Step 1: Generate website from Google Doc (same source as PDF)
-      console.log('🌐 Step 1: Generating website resume page from Google Doc...');
-      await this.generateWebsiteFromGoogleDoc();
-      console.log('✅ Website resume page updated from Google Doc');
+      // Step 1: Generate website using simple pipeline (reliable, clean data)
+      console.log('🌐 Step 1: Generating website resume page from clean data...');
+      this.generateWebsiteFromSimpleData();
+      console.log('✅ Website resume page updated from clean data');
       
       // Step 2: Generate PDF directly from Google Doc (professional formatting)
       console.log('\n📄 Step 2: Generating PDF from Google Doc...');
@@ -33,12 +33,12 @@ class HybridResumePipeline {
       console.log('✅ Website built successfully');
       
       console.log('\n🎉 Hybrid resume pipeline completed successfully!');
-      console.log('📝 Website updated: /jerry/resume (from Google Doc)');
+      console.log('📝 Website updated: /jerry/resume (from clean data)');
       console.log('📄 PDF updated: /jerry-dempsey-resume.pdf (from Google Doc)');
-      console.log('\n💡 Benefits of unified approach:');
-      console.log('   ✅ Both website and PDF from same Google Doc source');
-      console.log('   ✅ Perfect synchronization between all outputs');
-      console.log('   ✅ Single source of truth for all resume content!');
+      console.log('\n💡 Benefits of hybrid approach:');
+      console.log('   ✅ Reliable website with clean, properly formatted data');
+      console.log('   ✅ Professional PDF directly from Google Doc');
+      console.log('   ✅ Best of both worlds - reliability + Google Doc integration!');
       
     } catch (error) {
       console.error('\n❌ Hybrid resume pipeline failed:', error.message);
@@ -46,20 +46,20 @@ class HybridResumePipeline {
     }
   }
 
-  // Generate website resume page from Google Doc (same source as PDF)
-  async generateWebsiteFromGoogleDoc() {
-    console.log('⚛️  Generating website resume page from Google Doc...');
+  // Generate website resume page using simple pipeline (reliable, clean data)
+  generateWebsiteFromSimpleData() {
+    console.log('⚛️  Generating website resume page from clean data...');
     
-    // Use Google Drive API to download the latest content and generate the page
-    const resumeData = await this.googleDriveApiPipeline.downloadFromGoogleDrive();
-    const pageContent = this.googleDriveApiPipeline.generateResumePage(resumeData);
+    // Use the simple pipeline to get reliable data and generate the page
+    const resumeData = this.simplePipeline.getResumeData();
+    const pageContent = this.simplePipeline.generateResumePage(resumeData);
     
     // Write the file
     const fs = require('fs');
     const path = require('path');
     const resumePagePath = path.join(__dirname, '..', 'src', 'app', 'jerry', 'resume', 'page.tsx');
     fs.writeFileSync(resumePagePath, pageContent);
-    console.log('✅ Website resume page updated from Google Doc');
+    console.log('✅ Website resume page updated from clean data');
   }
 }
 
