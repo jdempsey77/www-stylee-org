@@ -33,21 +33,32 @@ class SimpleResumePipeline {
   getResumeData() {
     return {
       name: 'Jerry Dempsey',
-      title: 'Product and Application Security Leader',
+      title: 'Sr. Director, Head of Software Security',
       email: 'jerry@stylee.org',
       location: 'Roswell, GA',
       summary: 'More than 20 years of experience in cybersecurity with outstanding communication skills and expertise in recruiting and mentoring top-performing teams. As a Product and Application Security leader, I possess outstanding communication skills and excel at recruiting and mentoring top-performing teams. I am a proven problem-solver with a knack for finding creative solutions to complex challenges. I am also an advocate for forward-thinking security concepts, and I am committed to driving collaboration and partnership with development organizations to help them adopt cutting-edge security strategies.',
       experience: [
         {
-          title: 'Product and Application Security Leader',
+          title: 'Sr. Director, Head of Software Security',
           company: 'FanDuel',
           location: 'Atlanta, GA',
-          dates: 'January 2025 – Present',
+          dates: 'March 2025 – Present',
           bullets: [
-            'Lead comprehensive security strategy for FanDuel&apos;s platform, applications, and products',
-            'Ensure customer trust through robust security measures and platform integrity',
-            'Oversee Platform Security, Application Security, and Product Security initiatives',
-            'Drive security culture and best practices across engineering and product teams'
+            'As the leader of the Software Security team, I grew the organization from 3 to over 25 employees while building out three key security functions',
+            'Application, Product, and Platform Security. I established a robust Application Security program that provides automated code scanning across all repositories and pull requests',
+            'Seamlessly integrating security into the development process. Furthermore, I built out the Product Security team, defining and implementing a new framework to reduce risk through threat modeling',
+            'Risk assessments, and penetration testing. My focus also included creating a dedicated Platform Security function to proactively mitigate risks in the platforms we build',
+            'Ensuring a secure foundation for all our services'
+          ]
+        },
+        {
+          title: 'Director, Head of Software Security',
+          company: 'FanDuel',
+          location: 'Atlanta, GA',
+          dates: 'May 2023 – March 2025',
+          bullets: [
+            'Leading application, product, and cloud security initiatives to safeguard our software and ensure trust for our players',
+            'Grew team from 3 employees to over 25 employees while building comprehensive security functions'
           ]
         },
         {

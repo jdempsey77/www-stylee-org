@@ -16,7 +16,7 @@ export default function Resume() {
               Jerry Dempsey
             </h1>
             <p className="text-xl text-gray-600 dark:text-gray-400 mb-6 font-semibold">
-              Product and Application Security Leader
+              Sr. Director, Head of Software Security
             </p>
             <p className="text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto mb-8">
               More than 20 years of experience in cybersecurity with outstanding communication skills and expertise in recruiting and mentoring top-performing teams. As a Product and Application Security leader, I possess outstanding communication skills and excel at recruiting and mentoring top-performing teams. I am a proven problem-solver with a knack for finding creative solutions to complex challenges. I am also an advocate for forward-thinking security concepts, and I am committed to driving collaboration and partnership with development organizations to help them adopt cutting-edge security strategies.
@@ -81,20 +81,34 @@ export default function Resume() {
                   
                   <div className="border-l-4 border-slate-600 pl-6">
                     <h3 className="text-xl font-semibold text-slate-900 dark:text-white">
-                      Product and Application Security Leader
+                      Sr. Director, Head of Software Security
                     </h3>
                     <p className="text-gray-600 dark:text-gray-400 font-medium">
-                      FanDuel, Atlanta, GA | January 2025 – Present
+                      FanDuel, Atlanta, GA | March 2025 – Present
                     </p>
                     <ul className="mt-3 space-y-2 text-slate-700 dark:text-slate-300">
-                      <li>• Lead comprehensive security strategy for FanDuel&apos;s platform, applications, and products</li>
-                      <li>• Ensure customer trust through robust security measures and platform integrity</li>
-                      <li>• Oversee Platform Security, Application Security, and Product Security initiatives</li>
-                      <li>• Drive security culture and best practices across engineering and product teams</li>
+                      <li>• As the leader of the Software Security team, I grew the organization from 3 to over 25 employees while building out three key security functions</li>
+                      <li>• Application, Product, and Platform Security. I established a robust Application Security program that provides automated code scanning across all repositories and pull requests</li>
+                      <li>• Seamlessly integrating security into the development process. Furthermore, I built out the Product Security team, defining and implementing a new framework to reduce risk through threat modeling</li>
+                      <li>• Risk assessments, and penetration testing. My focus also included creating a dedicated Platform Security function to proactively mitigate risks in the platforms we build</li>
+                      <li>• Ensuring a secure foundation for all our services</li>
                     </ul>
                   </div>
 
                   <div className="border-l-4 border-gray-600 pl-6">
+                    <h3 className="text-xl font-semibold text-slate-900 dark:text-white">
+                      Director, Head of Software Security
+                    </h3>
+                    <p className="text-gray-600 dark:text-gray-400 font-medium">
+                      FanDuel, Atlanta, GA | May 2023 – March 2025
+                    </p>
+                    <ul className="mt-3 space-y-2 text-slate-700 dark:text-slate-300">
+                      <li>• Leading application, product, and cloud security initiatives to safeguard our software and ensure trust for our players</li>
+                      <li>• Grew team from 3 employees to over 25 employees while building comprehensive security functions</li>
+                    </ul>
+                  </div>
+
+                  <div className="border-l-4 border-green-600 pl-6">
                     <h3 className="text-xl font-semibold text-slate-900 dark:text-white">
                       Director, Product and Application Security
                     </h3>
@@ -110,7 +124,7 @@ export default function Resume() {
                     </ul>
                   </div>
 
-                  <div className="border-l-4 border-green-600 pl-6">
+                  <div className="border-l-4 border-cyan-600 pl-6">
                     <h3 className="text-xl font-semibold text-slate-900 dark:text-white">
                       Director, Product and Application Security
                     </h3>
@@ -126,7 +140,7 @@ export default function Resume() {
                     </ul>
                   </div>
 
-                  <div className="border-l-4 border-cyan-600 pl-6">
+                  <div className="border-l-4 border-purple-600 pl-6">
                     <h3 className="text-xl font-semibold text-slate-900 dark:text-white">
                       Director, Software Development Security
                     </h3>
@@ -142,7 +156,7 @@ export default function Resume() {
                     </ul>
                   </div>
 
-                  <div className="border-l-4 border-purple-600 pl-6">
+                  <div className="border-l-4 border-slate-600 pl-6">
                     <h3 className="text-xl font-semibold text-slate-900 dark:text-white">
                       Sr. Manager, Application Security and Security Tools Engineering
                     </h3>
