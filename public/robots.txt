@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+
+# Block blog pages from search engines
+Disallow: /blog/
+Disallow: /blog
+
+# Allow main pages
+Allow: /jerry/
+Allow: /links/
+Allow: /jerry-dempsey-resume.pdf
+
+# Sitemap location (if you add one later)
+# Sitemap: https://stylee.org/sitemap.xml
