@@ -96,7 +96,6 @@ export default function Resume() {
                       <li>• Ensure customer trust through robust security measures and platform integrity</li>
                       <li>• Oversee Platform Security, Application Security, and Product Security initiatives</li>
                       <li>• Drive security culture and best practices across engineering and product teams</li>
-                      <li>• Implement security frameworks to protect customer data and maintain regulatory compliance</li>
                     </ul>
                   </div>
 
