@@ -279,6 +279,17 @@ class GoogleDriveAPIPipeline {
     return resumeData;
   }
 
+  // Helper function to escape HTML entities for React
+  escapeHtmlEntities(text) {
+    if (!text) return '';
+    return text
+      .replace(/'/g, '&apos;')
+      .replace(/"/g, '&quot;')
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;');
+  }
+
   // Generate the React component for the resume page
   generateResumePage(resumeData) {
     console.log('⚛️  Generating resume page component...');
@@ -298,32 +309,32 @@ export default function Resume() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
             <h1 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-4">
-              ${resumeData.name}
+              ${this.escapeHtmlEntities(resumeData.name)}
             </h1>
             <p className="text-xl text-gray-600 dark:text-gray-400 mb-6 font-semibold">
-              ${resumeData.title}
+              ${this.escapeHtmlEntities(resumeData.title)}
             </p>
             <p className="text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto mb-8">
-              ${resumeData.summary.replace(/'/g, '&apos;').replace(/"/g, '&quot;')}
+              ${this.escapeHtmlEntities(resumeData.summary)}
             </p>
             
             {/* Contact Information */}
             <div className="flex flex-wrap justify-center gap-3">
               <a 
-                href="mailto:${resumeData.email}"
+                href="mailto:${this.escapeHtmlEntities(resumeData.email)}"
                 className="inline-flex items-center gap-2 rounded-lg bg-slate-600 px-4 py-2 text-white hover:bg-slate-700 transition-colors"
               >
                 <EnvelopeIcon className="w-5 h-5" />
                 Email
               </a>
               <a 
-                href="https://www.google.com/maps/place/${resumeData.location.replace(/\s+/g, '+')}"
+                href="https://www.google.com/maps/place/${this.escapeHtmlEntities(resumeData.location).replace(/\s+/g, '+')}"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-lg bg-slate-700 px-4 py-2 text-white hover:bg-slate-800 transition-colors"
               >
                 <MapPinIcon className="w-5 h-5" />
-                ${resumeData.location}
+                ${this.escapeHtmlEntities(resumeData.location)}
               </a>
               <a 
                 href="/jerry-dempsey-resume.pdf"
@@ -351,7 +362,7 @@ export default function Resume() {
                   Professional Summary
                 </h2>
                 <p className="text-slate-700 dark:text-slate-300 leading-relaxed">
-                  ${resumeData.summary.replace(/'/g, '&apos;').replace(/"/g, '&quot;')}
+                  ${this.escapeHtmlEntities(resumeData.summary)}
                 </p>
               </div>
 
@@ -389,13 +400,13 @@ export default function Resume() {
     return experience.map((job, index) => `
                   <div className="border-l-4 ${colors[index % colors.length]} pl-6">
                     <h3 className="text-xl font-semibold text-slate-900 dark:text-white">
-                      ${job.title}
+                      ${this.escapeHtmlEntities(job.title)}
                     </h3>
                     <p className="text-gray-600 dark:text-gray-400 font-medium">
-                      ${job.company}, ${job.location} | ${job.dates}
+                      ${this.escapeHtmlEntities(job.company)}, ${this.escapeHtmlEntities(job.location)} | ${this.escapeHtmlEntities(job.dates)}
                     </p>
                     <ul className="mt-3 space-y-2 text-slate-700 dark:text-slate-300">
-                      ${job.bullets.map(bullet => `<li>• ${bullet.replace(/'/g, '&apos;').replace(/"/g, '&quot;')}</li>`).join('\n                      ')}
+                      ${job.bullets.map(bullet => `<li>• ${this.escapeHtmlEntities(bullet)}</li>`).join('\n                      ')}
                     </ul>
                   </div>`).join('\n');
   }
@@ -410,7 +421,7 @@ export default function Resume() {
                   Education
                 </h3>
                 <div className="space-y-2">
-                  ${resumeData.education.map(edu => `<p className="text-slate-700 dark:text-slate-300">${edu}</p>`).join('\n                  ')}
+                  ${resumeData.education.map(edu => `<p className="text-slate-700 dark:text-slate-300">${this.escapeHtmlEntities(edu)}</p>`).join('\n                  ')}
                 </div>
               </div>
 
@@ -421,7 +432,7 @@ export default function Resume() {
                   Certifications
                 </h3>
                 <ul className="space-y-2">
-                  ${resumeData.certifications.map(cert => `<li className="text-slate-700 dark:text-slate-300">• ${cert}</li>`).join('\n                  ')}
+                  ${resumeData.certifications.map(cert => `<li className="text-slate-700 dark:text-slate-300">• ${this.escapeHtmlEntities(cert)}</li>`).join('\n                  ')}
                 </ul>
               </div>
 
@@ -432,7 +443,7 @@ export default function Resume() {
                   Skills
                 </h3>
                 <ul className="space-y-2">
-                  ${resumeData.skills.map(skill => `<li className="text-slate-700 dark:text-slate-300">• ${skill}</li>`).join('\n                  ')}
+                  ${resumeData.skills.map(skill => `<li className="text-slate-700 dark:text-slate-300">• ${this.escapeHtmlEntities(skill)}</li>`).join('\n                  ')}
                 </ul>
               </div>`;
   }
