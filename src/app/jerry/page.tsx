@@ -5,6 +5,17 @@ export default function Jerry() {
       <section className="relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="text-center">
+            {/* Profile Photo */}
+            <div className="mb-8 flex justify-center">
+              <div className="relative">
+                <img 
+                  src="/jerry.jpg" 
+                  alt="Jerry Dempsey" 
+                  className="w-48 h-48 md:w-64 md:h-64 rounded-full object-cover border-4 border-slate-200 dark:border-slate-600 shadow-lg"
+                />
+              </div>
+            </div>
+            
             <h1 className="text-4xl md:text-6xl font-bold text-slate-900 dark:text-white mb-6">
               Hey, I&apos;m Jerry! 👋
             </h1>
