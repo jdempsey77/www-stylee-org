@@ -112,6 +112,131 @@ class SimpleResumePipeline {
             'Led Security Tools Engineering function for Architecture and Engineering division',
             'Acted as security sounding board for entire WarnerMedia development community.'
           ]
+        },
+        {
+          title: 'Sr. Manager, DevOps Security',
+          company: 'Turner Broadcasting (became WarnerMedia)',
+          location: 'Atlanta, GA',
+          dates: 'June 2017 – June 2019',
+          bullets: [
+            'Established a cutting-edge DevSecOps team from scratch in the Information Security Office (ISO) at Turner',
+            'Aimed at helping various brands within the company adopt a &quot;secure by default&quot; mindset',
+            'Championed a culture of security and integrated critical tools into the CI/CD pipelines',
+            'Minimized security risks earlier in the development process',
+            'Worked alongside different teams at Turner, bridging the gap between security and developers',
+            'Identified and achieved top-notch security standards within each brand.'
+          ]
+        },
+        {
+          title: 'Sr. DevOps Manager, IT',
+          company: 'Tripwire Inc.',
+          location: 'Alpharetta, GA',
+          dates: 'February 2015 – May 2017',
+          bullets: [
+            'Oversaw the SaaSOps and IT DevOps groups at Tripwire',
+            'Managed the Purecloud application and led the development of a cloud-hosted service',
+            'Led the development of a cloud-hosted service for our flagship product',
+            'Managed the R&D Dev/Test infrastructure, which is Tripwire&apos;s largest private cloud',
+            'Facilitated self-service virtual machine deployment using tools like Cloudbolt and Chef/Vagrant',
+            'Streamlined development workflows.'
+          ]
+        },
+        {
+          title: 'Engineering Manager',
+          company: 'Tripwire Inc. (acquired nCircle Network Security)',
+          location: 'Alpharetta, GA',
+          dates: 'April 2013 – February 2015',
+          bullets: [
+            'As an Engineering Manager for IP360, Purecloud, and SIH at Tripwire',
+            'Led the charge in driving top-notch product quality',
+            'Ensured that customer escalations were kept in check',
+            'Resolved conflicts, mentored team members, and recruited new talent',
+            'Maintained employee retention and building a top-performing team',
+            'Played a critical role in smoothly transitioning build infrastructure into the Tripwire environment when nCircle was acquired.'
+          ]
+        },
+        {
+          title: 'Engineering Manager',
+          company: 'nCircle Network Security',
+          location: 'Alpharetta, GA',
+          dates: 'March 2010 – April 2013',
+          bullets: [
+            'As a Development Manager for nCircle&apos;s Compliance and Configuration Management software (CCM)',
+            'Led the development, QA, and content teams using Agile Methodology',
+            'Served as the Scrum Master and was hands-on in managing QA, design, code review, and backlog planning',
+            'Collaborated with Product Management to plan releases and determine long-term project goals',
+            'Maintained team retention and managed new hires',
+            'Oversaw quarterly budgeting for hardware and software purchases.'
+          ]
+        },
+        {
+          title: 'Advisory Software Engineer, Team Lead',
+          company: 'IBM Internet Security Systems, Inc. (ISS IBM)',
+          location: 'Atlanta, GA',
+          dates: 'March 2005 – March 2010',
+          bullets: [
+            'As the Team Lead of the Escalation Management Group (EMG)',
+            'Responsible for overseeing the resolution of high-level software defects on all released hardware and software platforms',
+            'Worked closely with customers to understand their needs and collaborated with the team to deliver solutions',
+            'Met both customer requirements and product design goals',
+            'My team traveled globally to customer sites, where we provided troubleshooting support',
+            'Helped optimize network design and architecture',
+            'Engaged with all departments across the IBM ISS organization to ensure customer issues were resolved effectively and efficiently.'
+          ]
+        },
+        {
+          title: 'Senior Quality Assurance Engineer, Team Lead',
+          company: 'Internet Security Systems, Inc. (ISS)',
+          location: 'Atlanta, GA',
+          dates: 'February 2003 – March 2005',
+          bullets: [
+            'As an internal member of the Unified Threat Management (UTM) appliance team',
+            'Collaborated with the development team to design and test the product',
+            'Played a key role in the design and functionality of the Intrusion Prevention System (IPS) module',
+            'Contributed to overall appliance security design',
+            'Promoted to Team Lead for the 2.0 release',
+            'Responsible for developing the test plan and ensuring thorough test case execution',
+            'Ran bug triages to prioritize defect fixes',
+            'Developed several automation tools to streamline testing.'
+          ]
+        },
+        {
+          title: 'Senior Quality Assurance Engineer, X-Force, Team Lead',
+          company: 'Internet Security Systems, Inc. (ISS)',
+          location: 'Atlanta, GA',
+          dates: 'June 2001 – February 2003',
+          bullets: [
+            'Responsible for testing new security content updates for RealSecure Network Sensor',
+            'Tested ISS&apos;s market-leading IDS software',
+            'Played a key role in determining how security content was tested with other ISS products',
+            'Collaborated closely with the X-Force Research and Development team',
+            'Identified and addressed new vulnerabilities',
+            'Ensured that our customers were protected quickly and effectively.'
+          ]
+        },
+        {
+          title: 'Quality Assurance Engineer',
+          company: 'Internet Security Systems, Inc. (ISS)',
+          location: 'Atlanta, GA',
+          dates: 'June 2000 – June 2001',
+          bullets: [
+            'Created and implemented test cases for the RealSecure software',
+            'Focused on the Solaris version testing',
+            'Conducted thorough testing of Attack Signatures on all supported platforms',
+            'Ensured product quality and reliability.'
+          ]
+        },
+        {
+          title: 'Senior Technical Support Engineer',
+          company: 'Internet Security Systems, Inc. (ISS)',
+          location: 'Atlanta, GA',
+          dates: 'November 1998 – June 2000',
+          bullets: [
+            'Delivered customer support for RealSecure Network Sensor via phone and email',
+            'Resolved configuration issues and identified software bugs',
+            'Assisted with product deployment',
+            'Provided workarounds to overcome software limitations.'
+          ]
         }
       ],
       education: [],
@@ -133,14 +258,19 @@ class SimpleResumePipeline {
   generateResumePage(resumeData) {
     console.log('⚛️  Generating resume page component...');
     
-    const componentContent = `import { 
+    const componentContent = `'use client';
+
+import { 
   BriefcaseIcon,
   DocumentTextIcon,
   EnvelopeIcon,
-  MapPinIcon
+  ChevronDownIcon,
+  ChevronUpIcon
 } from '@heroicons/react/24/outline';
+import { useState } from 'react';
 
 export default function Resume() {
+  const [showAllExperience, setShowAllExperience] = useState(false);
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-gray-50 dark:from-slate-900 dark:to-slate-800">
       {/* Header */}
@@ -161,24 +291,15 @@ export default function Resume() {
             <div className="flex flex-wrap justify-center gap-3">
               <a 
                 href="mailto:${resumeData.email}"
-                className="inline-flex items-center gap-2 rounded-lg bg-slate-600 px-4 py-2 text-white hover:bg-slate-700 transition-colors"
+                className="inline-flex items-center gap-2 rounded-lg bg-slate-100 dark:bg-slate-700 px-4 py-2 text-slate-700 dark:text-white hover:bg-slate-200 dark:hover:bg-slate-600 border border-slate-200 dark:border-slate-600 transition-all duration-200 hover:shadow-md"
               >
                 <EnvelopeIcon className="w-5 h-5" />
                 Email
               </a>
               <a 
-                href="https://www.google.com/maps/place/${resumeData.location.replace(/\s+/g, '+')}"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-lg bg-slate-700 px-4 py-2 text-white hover:bg-slate-800 transition-colors"
-              >
-                <MapPinIcon className="w-5 h-5" />
-                ${resumeData.location}
-              </a>
-              <a 
                 href="/jerry-dempsey-resume.pdf"
                 download="Jerry-Dempsey-Resume.pdf"
-                className="inline-flex items-center gap-2 rounded-lg bg-slate-800 px-4 py-2 text-white hover:bg-slate-900 transition-colors"
+                className="inline-flex items-center gap-2 rounded-lg bg-slate-100 dark:bg-slate-700 px-4 py-2 text-slate-700 dark:text-white hover:bg-slate-200 dark:hover:bg-slate-600 border border-slate-200 dark:border-slate-600 transition-all duration-200 hover:shadow-md"
               >
                 <DocumentTextIcon className="w-5 h-5" />
                 Resume
@@ -213,11 +334,53 @@ export default function Resume() {
                 </h2>
                 
                 <div className="space-y-6">
-                  ${this.generateExperienceHTML(resumeData.experience)}
+                  ${this.generateExperienceHTML(resumeData.experience, 'showAllExperience')}
+                  
+                  {/* Read More/Less Button */}
+                  <div className="flex justify-center pt-4">
+                    <button
+                      onClick={() => setShowAllExperience(!showAllExperience)}
+                      className="inline-flex items-center gap-2 px-6 py-3 bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-white hover:bg-slate-200 dark:hover:bg-slate-600 border border-slate-200 dark:border-slate-600 rounded-lg transition-all duration-200 hover:shadow-md"
+                    >
+                      {showAllExperience ? (
+                        <>
+                          <ChevronUpIcon className="w-5 h-5" />
+                          Show Less
+                        </>
+                      ) : (
+                        <>
+                          <ChevronDownIcon className="w-5 h-5" />
+                          Read More (Complete Career History)
+                        </>
+                      )}
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
 
+          </div>
+        </div>
+      </section>
+
+      {/* Download Resume Section */}
+      <section className="py-12 bg-slate-50 dark:bg-slate-700">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="bg-white dark:bg-slate-800 rounded-lg shadow-lg p-8 max-w-2xl mx-auto">
+            <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">
+              Download My Resume
+            </h2>
+            <p className="text-slate-600 dark:text-slate-300 mb-6">
+              Get a complete PDF version of my resume for your records or to share with your team.
+            </p>
+            <a 
+              href="/jerry-dempsey-resume.pdf"
+              download="Jerry-Dempsey-Resume.pdf"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-slate-600 hover:bg-slate-700 text-white font-semibold rounded-lg transition-all duration-200 hover:shadow-lg"
+            >
+              <DocumentTextIcon className="w-6 h-6" />
+              Download Resume PDF
+            </a>
           </div>
         </div>
       </section>
@@ -229,10 +392,14 @@ export default function Resume() {
   }
 
   // Generate HTML for experience section
-  generateExperienceHTML(experience) {
+  generateExperienceHTML(experience, showAllVar) {
     const colors = ['border-slate-600', 'border-gray-600', 'border-green-600', 'border-cyan-600', 'border-purple-600'];
     
-    return experience.map((job, index) => `
+    // Generate all jobs but wrap the later ones in conditional rendering
+    const recentJobs = experience.slice(0, 3);
+    const olderJobs = experience.slice(3);
+    
+    let html = recentJobs.map((job, index) => `
                   <div className="border-l-4 ${colors[index % colors.length]} pl-6">
                     <h3 className="text-xl font-semibold text-slate-900 dark:text-white">
                       ${job.title}
@@ -244,6 +411,33 @@ export default function Resume() {
                       ${job.bullets.join(' ')}
                     </div>
                   </div>`).join('\n');
+    
+    if (olderJobs.length > 0) {
+      html += `
+
+                  {/* Expandable Career History */}
+                  {${showAllVar} && (
+                    <div className="space-y-6">`;
+      
+      html += olderJobs.map((job, index) => `
+                      <div className="border-l-4 ${colors[(index + 3) % colors.length]} pl-6">
+                        <h3 className="text-xl font-semibold text-slate-900 dark:text-white">
+                          ${job.title}
+                        </h3>
+                        <p className="text-gray-600 dark:text-gray-400 font-medium">
+                          ${job.company}, ${job.location} | ${job.dates}
+                        </p>
+                        <div className="mt-3 text-slate-700 dark:text-slate-300">
+                          ${job.bullets.join(' ')}
+                        </div>
+                      </div>`).join('\n');
+      
+      html += `
+                    </div>
+                  )}`;
+    }
+    
+    return html;
   }
 
 
