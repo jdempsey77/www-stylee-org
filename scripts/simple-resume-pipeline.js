@@ -240,8 +240,8 @@ export default function Resume() {
                     <p className="text-gray-600 dark:text-gray-400 font-medium">
                       ${job.company}, ${job.location} | ${job.dates}
                     </p>
-                    <div className="mt-3 space-y-2 text-slate-700 dark:text-slate-300">
-                      ${job.bullets.map(bullet => `<p>${bullet}</p>`).join('\n                      ')}
+                    <div className="mt-3 text-slate-700 dark:text-slate-300">
+                      ${job.bullets.join(' ')}
                     </div>
                   </div>`).join('\n');
   }
