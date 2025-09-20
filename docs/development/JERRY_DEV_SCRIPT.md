@@ -188,7 +188,7 @@ The script automatically checks for:
 
 ```
 jerry-dev.sh              # Main development script
-JERRY_DEV_SCRIPT.md       # This documentation
+docs/development/JERRY_DEV_SCRIPT.md       # This documentation
 scripts/
 ├── production-pipeline.js    # Production testing pipeline
 ├── security-scanner.js       # Security scanning

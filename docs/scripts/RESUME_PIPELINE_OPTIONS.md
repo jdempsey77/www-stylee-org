@@ -84,7 +84,7 @@ You now have **three different ways** to manage your resume and keep it synchron
 - ✅ No external dependencies
 
 ### Google Drive API Integration
-- 🔧 **Requires setup** - see `GOOGLE_DRIVE_API_SETUP.md`
+- 🔧 **Requires setup** - see `docs/setup/GOOGLE_DRIVE_API_SETUP.md`
 - 🔧 Google Cloud Console project
 - 🔧 OAuth2 credentials
 - 🔧 Google Drive API enabled

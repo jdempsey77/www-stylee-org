@@ -36,12 +36,12 @@ const basePath = isProd && !isCustomDomain ? '/www-stylee-org' : '';
 ## 📝 **OPTIONAL DOCUMENTATION UPDATES:**
 
 ### **Files with Repository Name References:**
-- `GOOGLE_DRIVE_API_SETUP.md` (line 151)
-- `RESUME_PIPELINE_OPTIONS.md` (line 156)
-- `GOOGLE_DRIVE_PIPELINE.md` (line 148)
-- `RESUME_PIPELINE_SIMPLE.md` (line 89)
-- `RESUME_PIPELINE.md` (line 132)
-- `README_STAGING.md` (lines 14, 107, 108)
+- `docs/setup/GOOGLE_DRIVE_API_SETUP.md` (line 151)
+- `docs/scripts/RESUME_PIPELINE_OPTIONS.md` (line 156)
+- `docs/scripts/GOOGLE_DRIVE_PIPELINE.md` (line 148)
+- `docs/scripts/RESUME_PIPELINE_SIMPLE.md` (line 89)
+- `docs/scripts/RESUME_PIPELINE.md` (line 132)
+- `docs/deployment/README_STAGING.md` (lines 14, 107, 108)
 - `test.sh` (line 222)
 - `scripts/setup-local-testing.sh` (line 16)
 
