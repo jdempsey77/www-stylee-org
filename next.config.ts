@@ -2,7 +2,7 @@ import type { NextConfig } from "next";
 
 const isProd = process.env.NODE_ENV === 'production';
 const isCustomDomain = process.env.CUSTOM_DOMAIN === 'true';
-const basePath = isProd && !isCustomDomain ? '/jerry-dempsey-website' : '';
+const basePath = isProd && !isCustomDomain ? '/www-stylee-org' : '';
 
 const nextConfig: NextConfig = {
   output: 'export',
