@@ -289,7 +289,7 @@ setup_hooks() {
 migrate_repository() {
     log_header "Repository Migration"
     log_step "Running repository migration script..."
-    ./migrate-repo.sh
+    ./scripts/migrate-repo.sh
     log_success "Repository migration completed"
 }
 
