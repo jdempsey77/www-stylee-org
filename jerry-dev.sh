@@ -286,6 +286,13 @@ setup_hooks() {
     log_success "Git hooks setup completed"
 }
 
+migrate_repository() {
+    log_header "Repository Migration"
+    log_step "Running repository migration script..."
+    ./migrate-repo.sh
+    log_success "Repository migration completed"
+}
+
 # Main Menu
 show_main_menu() {
     clear
@@ -318,6 +325,7 @@ show_main_menu() {
     echo "15) Clean Project"
     echo "16) Install Dependencies"
     echo "17) Setup Git Hooks"
+    echo "18) Migrate Repository (jerry-dempsey-website → www-stylee-org)"
     echo ""
     echo -e "${WHITE}❌ Exit:${NC}"
     echo "0) Exit"
@@ -352,12 +360,13 @@ main() {
             15) clean_project ;;
             16) install_dependencies ;;
             17) setup_hooks ;;
+            18) migrate_repository ;;
             0) 
                 log_success "Goodbye! 👋"
                 exit 0
                 ;;
             *)
-                log_error "Invalid option. Please choose 0-17."
+                log_error "Invalid option. Please choose 0-18."
                 echo ""
                 read -p "Press Enter to continue..."
                 ;;
@@ -429,6 +438,9 @@ else
         "setup-hooks")
             setup_hooks
             ;;
+        "migrate")
+            migrate_repository
+            ;;
         "help"|"-h"|"--help")
             echo "Jerry Dempsey Website - Development Tool"
             echo ""
@@ -452,6 +464,7 @@ else
             echo "  clean                   - Clean project"
             echo "  install                 - Install dependencies"
             echo "  setup-hooks             - Setup git hooks"
+            echo "  migrate                 - Migrate repository (jerry-dempsey-website → www-stylee-org)"
             echo "  help, -h, --help        - Show this help"
             echo ""
             echo "If no command is provided, an interactive menu will be shown."
