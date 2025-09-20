@@ -1,3 +1,5 @@
+'use client';
+
 export default function Links() {
   const favoriteLinks = [
     {
@@ -101,9 +103,33 @@ export default function Links() {
                         className="group block p-6 bg-slate-50 dark:bg-slate-700 rounded-lg border border-slate-200 dark:border-slate-600 hover:border-slate-400 dark:hover:border-slate-500 transition-all duration-200 hover:shadow-lg"
                       >
                         <div className="flex items-start justify-between mb-3">
-                          <h3 className="text-lg font-semibold text-slate-900 dark:text-white group-hover:text-slate-600 dark:group-hover:text-slate-300 transition-colors">
-                            {link.name}
-                          </h3>
+                          <div className="flex items-center space-x-3">
+                            <img 
+                              src={`https://www.google.com/s2/favicons?domain=${new URL(link.url).hostname}&sz=32`}
+                              alt={`${link.name} favicon`}
+                              className="w-6 h-6 flex-shrink-0 rounded-sm"
+                              onError={(e) => {
+                                // Fallback to a generic link icon if favicon fails to load
+                                const target = e.currentTarget as HTMLImageElement;
+                                const nextSibling = target.nextElementSibling as HTMLElement;
+                                target.style.display = 'none';
+                                if (nextSibling) {
+                                  nextSibling.style.display = 'block';
+                                }
+                              }}
+                            />
+                            <svg 
+                              className="w-6 h-6 text-slate-400 hidden flex-shrink-0" 
+                              fill="none" 
+                              stroke="currentColor" 
+                              viewBox="0 0 24 24"
+                            >
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+                            </svg>
+                            <h3 className="text-lg font-semibold text-slate-900 dark:text-white group-hover:text-slate-600 dark:group-hover:text-slate-300 transition-colors">
+                              {link.name}
+                            </h3>
+                          </div>
                           <svg 
                             className="w-5 h-5 text-slate-400 group-hover:text-slate-600 dark:group-hover:text-slate-300 transition-colors flex-shrink-0 ml-2" 
                             fill="none" 
