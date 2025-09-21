@@ -55,10 +55,10 @@ export default function Resume() {
                   Professional Experience
                 </h2>
                 
-                <div className="space-y-3">
+                <div className="space-y-2">
                   
-                  <div className="relative pl-8 pb-4">
-                    <div className="absolute left-0 top-2 w-4 h-4 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full shadow-lg animate-pulse"></div>
+                  <div className="relative pl-8 pb-2">
+                    <div className="absolute left-0 top-2 w-4 h-4 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full shadow-lg animate-pulse hover:scale-125 hover:shadow-xl transition-all duration-200 cursor-pointer"></div>
                     <div className="bg-white dark:bg-slate-800 rounded-lg shadow-lg p-6 border-l-4 border-blue-500">
                       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
                         <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-2 sm:mb-0">
@@ -77,7 +77,7 @@ export default function Resume() {
                       </div>
                     </div>
 
-                  <div className="relative pl-8 pb-4">
+                  <div className="relative pl-8 pb-2">
                     <div className="absolute left-0 top-2 w-4 h-4 bg-gradient-to-r from-emerald-500 to-emerald-600 rounded-full shadow-lg animate-pulse"></div>
                     <div className="bg-white dark:bg-slate-800 rounded-lg shadow-lg p-6 border-l-4 border-emerald-500">
                       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
@@ -97,7 +97,7 @@ export default function Resume() {
                       </div>
                   </div>
 
-                  <div className="relative pl-8 pb-4">
+                  <div className="relative pl-8 pb-2">
                     <div className="absolute left-0 top-2 w-4 h-4 bg-gradient-to-r from-purple-500 to-purple-600 rounded-full shadow-lg animate-pulse"></div>
                     <div className="bg-white dark:bg-slate-800 rounded-lg shadow-lg p-6 border-l-4 border-purple-500">
                       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
@@ -117,7 +117,7 @@ export default function Resume() {
                       </div>
                   </div>
 
-                  <div className="relative pl-8 pb-4">
+                  <div className="relative pl-8 pb-2">
                     <div className="absolute left-0 top-2 w-4 h-4 bg-gradient-to-r from-cyan-500 to-cyan-600 rounded-full shadow-lg animate-pulse"></div>
                     <div className="bg-white dark:bg-slate-800 rounded-lg shadow-lg p-6 border-l-4 border-cyan-500">
                       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
@@ -152,8 +152,8 @@ export default function Resume() {
 
                   {/* Additional Experience (Hidden by default) */}
                   {showAllExperience && (
-                    <div ref={expandedContentRef} className="space-y-3">
-                      <div className="relative pl-8 pb-3">
+                    <div ref={expandedContentRef} className="space-y-2">
+                      <div className="relative pl-8 pb-2">
                         <div className="absolute left-0 top-2 w-4 h-4 bg-gradient-to-r from-orange-500 to-orange-600 rounded-full shadow-lg animate-pulse"></div>
                         <div className="bg-white dark:bg-slate-800 rounded-lg shadow-lg p-6 border-l-4 border-orange-500">
                           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
@@ -173,7 +173,7 @@ export default function Resume() {
                           </div>
                         </div>
 
-                      <div className="relative pl-8 pb-3">
+                      <div className="relative pl-8 pb-2">
                         <div className="absolute left-0 top-2 w-4 h-4 bg-gradient-to-r from-red-500 to-red-600 rounded-full shadow-lg animate-pulse"></div>
                         <div className="bg-white dark:bg-slate-800 rounded-lg shadow-lg p-6 border-l-4 border-red-500">
                           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
@@ -193,7 +193,7 @@ export default function Resume() {
                         </div>
                       </div>
 
-                      <div className="relative pl-8 pb-3">
+                      <div className="relative pl-8 pb-2">
                         <div className="absolute left-0 top-2 w-4 h-4 bg-gradient-to-r from-pink-500 to-pink-600 rounded-full shadow-lg animate-pulse"></div>
                         <div className="bg-white dark:bg-slate-800 rounded-lg shadow-lg p-6 border-l-4 border-pink-500">
                           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
@@ -213,7 +213,7 @@ export default function Resume() {
                           </div>
                         </div>
 
-                      <div className="relative pl-8 pb-3">
+                      <div className="relative pl-8 pb-2">
                         <div className="absolute left-0 top-2 w-4 h-4 bg-gradient-to-r from-indigo-500 to-indigo-600 rounded-full shadow-lg animate-pulse"></div>
                         <div className="bg-white dark:bg-slate-800 rounded-lg shadow-lg p-6 border-l-4 border-indigo-500">
                           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
@@ -233,7 +233,7 @@ export default function Resume() {
                         </div>
                       </div>
 
-                      <div className="relative pl-8 pb-3">
+                      <div className="relative pl-8 pb-2">
                         <div className="absolute left-0 top-2 w-4 h-4 bg-gradient-to-r from-teal-500 to-teal-600 rounded-full shadow-lg animate-pulse"></div>
                         <div className="bg-white dark:bg-slate-800 rounded-lg shadow-lg p-6 border-l-4 border-teal-500">
                           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
@@ -253,7 +253,7 @@ export default function Resume() {
                         </div>
                       </div>
 
-                      <div className="relative pl-8 pb-3">
+                      <div className="relative pl-8 pb-2">
                         <div className="absolute left-0 top-2 w-4 h-4 bg-gradient-to-r from-lime-500 to-lime-600 rounded-full shadow-lg animate-pulse"></div>
                         <div className="bg-white dark:bg-slate-800 rounded-lg shadow-lg p-6 border-l-4 border-lime-500">
                           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
@@ -273,7 +273,7 @@ export default function Resume() {
                           </div>
                         </div>
 
-                      <div className="relative pl-8 pb-3">
+                      <div className="relative pl-8 pb-2">
                         <div className="absolute left-0 top-2 w-4 h-4 bg-gradient-to-r from-amber-500 to-amber-600 rounded-full shadow-lg animate-pulse"></div>
                         <div className="bg-white dark:bg-slate-800 rounded-lg shadow-lg p-6 border-l-4 border-amber-500">
                           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
@@ -293,7 +293,7 @@ export default function Resume() {
                         </div>
                       </div>
 
-                      <div className="relative pl-8 pb-3">
+                      <div className="relative pl-8 pb-2">
                         <div className="absolute left-0 top-2 w-4 h-4 bg-gradient-to-r from-rose-500 to-rose-600 rounded-full shadow-lg animate-pulse"></div>
                         <div className="bg-white dark:bg-slate-800 rounded-lg shadow-lg p-6 border-l-4 border-rose-500">
                           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
@@ -313,7 +313,7 @@ export default function Resume() {
                         </div>
                       </div>
 
-                      <div className="relative pl-8 pb-3">
+                      <div className="relative pl-8 pb-2">
                         <div className="absolute left-0 top-2 w-4 h-4 bg-gradient-to-r from-violet-500 to-violet-600 rounded-full shadow-lg animate-pulse"></div>
                         <div className="bg-white dark:bg-slate-800 rounded-lg shadow-lg p-6 border-l-4 border-violet-500">
                           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
@@ -333,7 +333,7 @@ export default function Resume() {
                         </div>
                       </div>
 
-                      <div className="relative pl-8 pb-3">
+                      <div className="relative pl-8 pb-2">
                         <div className="absolute left-0 top-2 w-4 h-4 bg-gradient-to-r from-emerald-500 to-emerald-600 rounded-full shadow-lg animate-pulse"></div>
                         <div className="bg-white dark:bg-slate-800 rounded-lg shadow-lg p-6 border-l-4 border-emerald-500">
                           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
@@ -353,7 +353,7 @@ export default function Resume() {
                           </div>
                         </div>
 
-                      <div className="relative pl-8 pb-3">
+                      <div className="relative pl-8 pb-2">
                         <div className="absolute left-0 top-2 w-4 h-4 bg-gradient-to-r from-sky-500 to-sky-600 rounded-full shadow-lg animate-pulse"></div>
                         <div className="bg-white dark:bg-slate-800 rounded-lg shadow-lg p-6 border-l-4 border-sky-500">
                           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
@@ -400,9 +400,9 @@ export default function Resume() {
           <a
             href="/jerry-dempsey-resume.pdf"
             download="Jerry-Dempsey-Resume.pdf"
-            className="inline-flex items-center gap-2 px-4 py-2 bg-white text-blue-700 font-semibold rounded-lg hover:bg-blue-50 transition-all duration-200 shadow-sm"
+            className="inline-flex items-center gap-2 px-3 py-1.5 sm:px-4 sm:py-2 bg-white text-blue-700 font-semibold rounded-lg hover:bg-blue-50 transition-all duration-200 shadow-sm text-sm sm:text-base"
           >
-            <DocumentTextIcon className="w-4 h-4" />
+            <DocumentTextIcon className="w-3 h-3 sm:w-4 sm:h-4" />
             Download Resume
           </a>
         </div>
