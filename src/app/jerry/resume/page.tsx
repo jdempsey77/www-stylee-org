@@ -397,27 +397,55 @@ export default function Resume() {
 
       {/* Sticky Download Banner */}
       <div className="fixed bottom-0 left-0 right-0 bg-gradient-to-r from-blue-600 to-blue-700 text-white py-3 px-4 shadow-lg z-50 border-t border-blue-500">
-        <div className="max-w-7xl mx-auto flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <DocumentTextIcon className="w-5 h-5 text-blue-100" />
-            <span className="font-semibold">Ready to download my resume? Want to send me an email?</span>
+        <div className="max-w-7xl mx-auto">
+          {/* Desktop Layout */}
+          <div className="hidden md:flex items-center justify-between">
+            <div className="flex items-center gap-3">
+              <DocumentTextIcon className="w-5 h-5 text-blue-100" />
+              <span className="font-semibold">Ready to download my resume? Want to send me an email?</span>
+            </div>
+            <div className="flex items-center gap-3">
+              <a
+                href="mailto:jerry@stylee.org"
+                className="inline-flex items-center gap-2 px-4 py-2 bg-white text-blue-700 font-semibold rounded-lg hover:bg-blue-50 transition-all duration-200 shadow-sm"
+              >
+                <EnvelopeIcon className="w-4 h-4" />
+                Email Me
+              </a>
+              <a
+                href="/jerry-dempsey-resume.pdf"
+                download="Jerry-Dempsey-Resume.pdf"
+                className="inline-flex items-center gap-2 px-4 py-2 bg-white text-blue-700 font-semibold rounded-lg hover:bg-blue-50 transition-all duration-200 shadow-sm"
+              >
+                <DocumentTextIcon className="w-4 h-4" />
+                Download PDF
+              </a>
+            </div>
           </div>
-          <div className="flex items-center gap-3">
-            <a
-              href="mailto:jerry@stylee.org"
-              className="inline-flex items-center gap-2 px-4 py-2 bg-white text-blue-700 font-semibold rounded-lg hover:bg-blue-50 transition-all duration-200 shadow-sm"
-            >
-              <EnvelopeIcon className="w-4 h-4" />
-              Email Me
-            </a>
-            <a
-              href="/jerry-dempsey-resume.pdf"
-              download="Jerry-Dempsey-Resume.pdf"
-              className="inline-flex items-center gap-2 px-4 py-2 bg-white text-blue-700 font-semibold rounded-lg hover:bg-blue-50 transition-all duration-200 shadow-sm"
-            >
-              <DocumentTextIcon className="w-4 h-4" />
-              Download PDF
-            </a>
+          
+          {/* Mobile Layout */}
+          <div className="md:hidden">
+            <div className="flex items-center justify-center mb-3">
+              <DocumentTextIcon className="w-5 h-5 text-blue-100 mr-2" />
+              <span className="font-semibold text-sm text-center">Ready to download or email?</span>
+            </div>
+            <div className="flex items-center justify-center gap-3">
+              <a
+                href="mailto:jerry@stylee.org"
+                className="inline-flex items-center gap-2 px-3 py-2 bg-white text-blue-700 font-semibold rounded-lg hover:bg-blue-50 transition-all duration-200 shadow-sm text-sm"
+              >
+                <EnvelopeIcon className="w-4 h-4" />
+                Email
+              </a>
+              <a
+                href="/jerry-dempsey-resume.pdf"
+                download="Jerry-Dempsey-Resume.pdf"
+                className="inline-flex items-center gap-2 px-3 py-2 bg-white text-blue-700 font-semibold rounded-lg hover:bg-blue-50 transition-all duration-200 shadow-sm text-sm"
+              >
+                <DocumentTextIcon className="w-4 h-4" />
+                Download
+              </a>
+            </div>
           </div>
         </div>
       </div>
