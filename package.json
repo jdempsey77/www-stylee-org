@@ -39,8 +39,13 @@
         "test:google-drive": "node scripts/test-google-drive-setup.js",
         "resume:hybrid": "node scripts/hybrid-resume-pipeline.js",
         "pipeline:production": "node scripts/production-pipeline.js",
-        "setup:hooks": "./scripts/setup-pre-push-hook.sh",
-        "test:production": "npm run pipeline:production"
+    "setup:hooks": "./scripts/setup-pre-push-hook.sh",
+    "test:production": "npm run pipeline:production",
+    "docs": "echo '📚 Documentation available in docs/ directory:' && ls docs/",
+    "clean:all": "rm -rf .next out node_modules && npm cache clean --force",
+    "setup:all": "npm install && npm run setup:hooks",
+    "status": "echo '📊 Project Status:' && git status --short && echo '📦 Dependencies:' && npm list --depth=0",
+    "security": "node scripts/security-scanner.js"
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",

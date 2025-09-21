@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 export default function Jerry() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800">
@@ -8,9 +10,11 @@ export default function Jerry() {
             {/* Profile Photo */}
             <div className="mb-8 flex justify-center">
               <div className="relative">
-                <img 
+                <Image 
                   src="/jerry.jpg" 
                   alt="Jerry Dempsey" 
+                  width={256}
+                  height={256}
                   className="w-48 h-48 md:w-64 md:h-64 rounded-full object-cover border-4 border-slate-200 dark:border-slate-600 shadow-lg"
                 />
               </div>

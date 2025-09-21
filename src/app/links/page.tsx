@@ -1,5 +1,7 @@
 'use client';
 
+import Image from 'next/image';
+
 export default function Links() {
   const favoriteLinks = [
     {
@@ -104,9 +106,11 @@ export default function Links() {
                       >
                         <div className="flex items-start justify-between mb-3">
                           <div className="flex items-center space-x-3">
-                            <img 
+                            <Image 
                               src={`https://www.google.com/s2/favicons?domain=${new URL(link.url).hostname}&sz=32`}
                               alt={`${link.name} favicon`}
+                              width={32}
+                              height={32}
                               className="w-6 h-6 flex-shrink-0 rounded-sm"
                               onError={(e) => {
                                 // Fallback to a generic link icon if favicon fails to load

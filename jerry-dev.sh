@@ -248,6 +248,13 @@ show_status() {
     
     echo -e "\n${WHITE}🌐 Available Scripts:${NC}"
     npm run
+    
+    echo -e "\n${WHITE}📚 Documentation:${NC}"
+    echo "  docs/ directory contains comprehensive guides"
+    echo "  Run 'npm run docs' to list all documentation"
+    
+    echo -e "\n${WHITE}🛡️ Security Status:${NC}"
+    npm audit --audit-level moderate --silent && echo "  ✅ No vulnerabilities found" || echo "  ⚠️  Vulnerabilities detected - run 'npm run security'"
 }
 
 clean_project() {
@@ -286,12 +293,46 @@ setup_hooks() {
     log_success "Git hooks setup completed"
 }
 
-migrate_repository() {
-    log_header "Repository Migration"
-    log_step "Running repository migration script..."
-    ./scripts/migrate-repo.sh
-    log_success "Repository migration completed"
-}
+    migrate_repository() {
+        log_header "Repository Migration"
+        log_step "Running repository migration script..."
+        ./scripts/migrate-repo.sh
+        log_success "Repository migration completed"
+    }
+
+    show_docs() {
+        log_header "Documentation"
+        log_step "Available documentation in docs/ directory:"
+        find docs/ -name "*.md" | sort | sed 's/^/  📄 /'
+        echo ""
+        log_info "Quick access:"
+        echo "  📚 Main docs index: docs/README.md"
+        echo "  🚀 Quick start: QUICK_START.md"
+        echo "  🔧 Setup guides: docs/setup/"
+        echo "  🧪 Testing: docs/testing/"
+        echo "  🚀 Deployment: docs/deployment/"
+    }
+
+    run_security_check() {
+        log_header "Security Check"
+        log_step "Running comprehensive security scan..."
+        npm run security
+        if [ $? -eq 0 ]; then
+            log_success "Security scan completed successfully"
+        else
+            log_error "Security scan found issues"
+            exit 1
+        fi
+    }
+
+    setup_complete() {
+        log_header "Complete Setup"
+        log_step "Running complete project setup..."
+        npm install
+        npm run setup:hooks
+        log_success "Complete setup finished"
+        log_info "You can now run: ./jerry-dev.sh dev"
+    }
 
 # Main Menu
 show_main_menu() {
@@ -324,10 +365,13 @@ show_main_menu() {
     echo "14) Show Project Status"
     echo "15) Clean Project"
     echo "16) Install Dependencies"
-    echo "17) Setup Git Hooks"
-    echo "18) Migrate Repository (jerry-dempsey-website → www-stylee-org)"
-    echo ""
-    echo -e "${WHITE}❌ Exit:${NC}"
+        echo "17) Setup Git Hooks"
+        echo "18) Migrate Repository (jerry-dempsey-website → www-stylee-org)"
+        echo "19) Show Documentation"
+        echo "20) Run Security Check"
+        echo "21) Complete Setup (install + hooks)"
+        echo ""
+        echo -e "${WHITE}❌ Exit:${NC}"
     echo "0) Exit"
     echo ""
 }
@@ -361,12 +405,15 @@ main() {
             16) install_dependencies ;;
             17) setup_hooks ;;
             18) migrate_repository ;;
+            19) show_docs ;;
+            20) run_security_check ;;
+            21) setup_complete ;;
             0) 
                 log_success "Goodbye! 👋"
                 exit 0
                 ;;
             *)
-                log_error "Invalid option. Please choose 0-18."
+                log_error "Invalid option. Please choose 0-21."
                 echo ""
                 read -p "Press Enter to continue..."
                 ;;
@@ -441,6 +488,15 @@ else
         "migrate")
             migrate_repository
             ;;
+        "docs")
+            show_docs
+            ;;
+        "security-check")
+            run_security_check
+            ;;
+        "setup-all")
+            setup_complete
+            ;;
         "help"|"-h"|"--help")
             echo "Jerry Dempsey Website - Development Tool"
             echo ""
@@ -465,6 +521,9 @@ else
             echo "  install                 - Install dependencies"
             echo "  setup-hooks             - Setup git hooks"
             echo "  migrate                 - Migrate repository (jerry-dempsey-website → www-stylee-org)"
+            echo "  docs                    - Show documentation"
+            echo "  security-check          - Run security scan"
+            echo "  setup-all               - Complete setup (install + hooks)"
             echo "  help, -h, --help        - Show this help"
             echo ""
             echo "If no command is provided, an interactive menu will be shown."

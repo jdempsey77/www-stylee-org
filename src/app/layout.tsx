@@ -3,6 +3,7 @@ import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import Navigation from "@/components/Navigation";
 import CookieBanner from "@/components/CookieBanner";
+import StructuredData from "@/components/StructuredData";
 import { GA_TRACKING_ID } from "@/lib/gtag";
 
 const inter = Inter({
@@ -16,20 +17,37 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "stylee.org - Jerry Dempsey",
-  description: "Welcome to stylee.org!",
-  keywords: ["cybersecurity", "software security", "Jerry Dempsey", "stylee.org"],
+  title: "Jerry Dempsey - Product and Application Security Leader",
+  description: "Jerry Dempsey is a Product and Application Security Leader with 20+ years of experience in cybersecurity. Expert in team building, mentoring, and implementing cutting-edge security strategies.",
+  keywords: ["Jerry Dempsey", "Product Security", "Application Security", "Cybersecurity", "Security Leader", "FanDuel", "Warner Bros Discovery", "stylee.org"],
   authors: [{ name: "Jerry Dempsey" }],
+  robots: "index, follow",
   icons: {
     icon: '/favicon.svg',
     shortcut: '/favicon.svg',
     apple: '/favicon.svg',
   },
   openGraph: {
-    title: "stylee.org - Jerry Dempsey",
-    description: "Welcome to stylee.org!",
+    title: "Jerry Dempsey - Product and Application Security Leader",
+    description: "Product and Application Security Leader with 20+ years of cybersecurity experience. Expert in team building, mentoring, and implementing cutting-edge security strategies.",
     type: "website",
     url: "https://stylee.org",
+    siteName: "Jerry Dempsey - stylee.org",
+    images: [
+      {
+        url: "/mainlogo.png",
+        width: 1200,
+        height: 630,
+        alt: "Jerry Dempsey - Product and Application Security Leader",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Jerry Dempsey - Product and Application Security Leader",
+    description: "20+ years of cybersecurity experience. Expert in team building, mentoring, and implementing cutting-edge security strategies.",
+    images: ["/mainlogo.png"],
+    creator: "@jerryldempsey",
   },
 };
 
@@ -41,6 +59,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <StructuredData />
         {GA_TRACKING_ID && (
           <>
             <script
