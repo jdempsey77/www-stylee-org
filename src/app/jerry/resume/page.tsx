@@ -395,43 +395,16 @@ export default function Resume() {
 
 
       {/* Sticky Download Banner */}
-      <div className="fixed bottom-0 left-0 right-0 bg-gradient-to-r from-blue-600 to-blue-700 text-white py-2 md:py-3 px-3 md:px-4 shadow-lg z-50 border-t border-blue-500">
-        <div className="max-w-4xl mx-auto">
-          {/* Desktop Layout */}
-          <div className="hidden md:flex items-center justify-between">
-            <div className="flex items-center gap-3">
-              <DocumentTextIcon className="w-5 h-5 text-blue-100" />
-              <span className="font-semibold">Ready to download my resume?</span>
-            </div>
-            <div className="flex items-center gap-3">
-              <a
-                href="/jerry-dempsey-resume.pdf"
-                download="Jerry-Dempsey-Resume.pdf"
-                className="inline-flex items-center gap-2 px-4 py-2 bg-white text-blue-700 font-semibold rounded-lg hover:bg-blue-50 transition-all duration-200 shadow-sm"
-              >
-                <DocumentTextIcon className="w-4 h-4" />
-                Download PDF
-              </a>
-            </div>
-          </div>
-          
-          {/* Mobile Layout */}
-          <div className="md:hidden">
-            <div className="flex items-center justify-center mb-2">
-              <DocumentTextIcon className="w-4 h-4 text-blue-100 mr-2" />
-              <span className="font-semibold text-xs text-center">Ready to download my resume?</span>
-            </div>
-            <div className="flex items-center justify-center">
-              <a
-                href="/jerry-dempsey-resume.pdf"
-                download="Jerry-Dempsey-Resume.pdf"
-                className="inline-flex items-center gap-1 px-2 py-1 bg-white text-blue-700 font-semibold rounded-md hover:bg-blue-50 transition-all duration-200 shadow-sm text-xs"
-              >
-                <DocumentTextIcon className="w-3 h-3" />
-                Download
-              </a>
-            </div>
-          </div>
+      <div className="fixed bottom-0 left-0 right-0 bg-gradient-to-r from-blue-600 to-blue-700 text-white py-1 md:py-2 px-3 md:px-4 shadow-lg z-50 border-t border-blue-500">
+        <div className="max-w-4xl mx-auto flex items-center justify-center">
+          <a
+            href="/jerry-dempsey-resume.pdf"
+            download="Jerry-Dempsey-Resume.pdf"
+            className="inline-flex items-center gap-2 px-4 py-2 bg-white text-blue-700 font-semibold rounded-lg hover:bg-blue-50 transition-all duration-200 shadow-sm"
+          >
+            <DocumentTextIcon className="w-4 h-4" />
+            Download Resume
+          </a>
         </div>
       </div>
     </div>
