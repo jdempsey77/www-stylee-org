@@ -29,21 +29,21 @@ export default function Resume() {
             </p>
             
             {/* Contact Information */}
-            <div className="flex flex-wrap justify-center gap-3">
+            <div className="flex flex-wrap justify-center gap-4">
               <a 
                 href="mailto:jerry@stylee.org"
-                className="inline-flex items-center gap-2 rounded-lg bg-slate-600 px-4 py-2 text-white hover:bg-slate-700 transition-colors"
+                className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-blue-600 to-blue-700 px-6 py-3 text-white font-semibold shadow-lg hover:shadow-xl hover:from-blue-700 hover:to-blue-800 transform hover:-translate-y-1 transition-all duration-200 border border-blue-500"
               >
                 <EnvelopeIcon className="w-5 h-5" />
-                Email
+                Email Me
               </a>
               <a 
                 href="/jerry-dempsey-resume.pdf"
                 download="Jerry-Dempsey-Resume.pdf"
-                className="inline-flex items-center gap-2 rounded-lg bg-slate-800 px-4 py-2 text-white hover:bg-slate-900 transition-colors"
+                className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-emerald-600 to-emerald-700 px-6 py-3 text-white font-semibold shadow-lg hover:shadow-xl hover:from-emerald-700 hover:to-emerald-800 transform hover:-translate-y-1 transition-all duration-200 border border-emerald-500"
               >
                 <DocumentTextIcon className="w-5 h-5" />
-                Resume
+                Download Resume
               </a>
             </div>
           </div>
@@ -171,7 +171,7 @@ export default function Resume() {
                           }
                         }, 100);
                       }}
-                      className="inline-flex items-center gap-2 px-6 py-3 bg-slate-600 hover:bg-slate-700 text-white font-semibold rounded-lg transition-all duration-200 hover:shadow-lg"
+                      className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-purple-600 to-purple-700 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl hover:from-purple-700 hover:to-purple-800 transform hover:-translate-y-1 transition-all duration-200 border border-purple-500"
                     >
                       {showAllExperience ? (
                         <>
@@ -431,7 +431,7 @@ export default function Resume() {
             <a
               href="/jerry-dempsey-resume.pdf"
               download="Jerry-Dempsey-Resume.pdf"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-slate-800 hover:bg-slate-900 text-white font-semibold rounded-lg transition-all duration-200 hover:shadow-lg text-lg"
+            className="inline-flex items-center gap-3 px-10 py-5 bg-gradient-to-r from-indigo-600 to-indigo-700 text-white font-bold rounded-xl shadow-xl hover:shadow-2xl hover:from-indigo-700 hover:to-indigo-800 transform hover:-translate-y-1 transition-all duration-200 border border-indigo-500 text-lg"
             >
               <DocumentTextIcon className="w-6 h-6" />
               Download Resume PDF
