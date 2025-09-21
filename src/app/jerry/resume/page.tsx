@@ -1,9 +1,8 @@
 'use client';
 
-import { 
+import {
   BriefcaseIcon,
   DocumentTextIcon,
-  EnvelopeIcon,
   ChevronDownIcon,
   ChevronUpIcon
 } from '@heroicons/react/24/outline';
@@ -402,16 +401,9 @@ export default function Resume() {
           <div className="hidden md:flex items-center justify-between">
             <div className="flex items-center gap-3">
               <DocumentTextIcon className="w-5 h-5 text-blue-100" />
-              <span className="font-semibold">Ready to download my resume? Want to send me an email?</span>
+              <span className="font-semibold">Ready to download my resume?</span>
             </div>
             <div className="flex items-center gap-3">
-              <a
-                href="mailto:jerry@stylee.org"
-                className="inline-flex items-center gap-2 px-4 py-2 bg-white text-blue-700 font-semibold rounded-lg hover:bg-blue-50 transition-all duration-200 shadow-sm"
-              >
-                <EnvelopeIcon className="w-4 h-4" />
-                Email Me
-              </a>
               <a
                 href="/jerry-dempsey-resume.pdf"
                 download="Jerry-Dempsey-Resume.pdf"
@@ -427,16 +419,9 @@ export default function Resume() {
           <div className="md:hidden">
             <div className="flex items-center justify-center mb-3">
               <DocumentTextIcon className="w-5 h-5 text-blue-100 mr-2" />
-              <span className="font-semibold text-sm text-center">Ready to download or email?</span>
+              <span className="font-semibold text-sm text-center">Ready to download my resume?</span>
             </div>
             <div className="flex items-center justify-center gap-3">
-              <a
-                href="mailto:jerry@stylee.org"
-                className="inline-flex items-center gap-2 px-3 py-2 bg-white text-blue-700 font-semibold rounded-lg hover:bg-blue-50 transition-all duration-200 shadow-sm text-sm"
-              >
-                <EnvelopeIcon className="w-4 h-4" />
-                Email
-              </a>
               <a
                 href="/jerry-dempsey-resume.pdf"
                 download="Jerry-Dempsey-Resume.pdf"
