@@ -2,31 +2,14 @@
 
 const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
 
-console.log('🚀 Simple Resume Pipeline');
-console.log('=========================\n');
+console.log('🧪 Test Resume Pipeline - Comparison Mode');
+console.log('==========================================\n');
 
-class SimpleResumePipeline {
+class TestResumePipeline {
   constructor() {
-    this.docPath = path.join(__dirname, '..', 'public', 'Jerry_Dempsey_Resume.docx');
-    this.resumePagePath = path.join(__dirname, '..', 'src', 'app', 'jerry', 'resume', 'page.tsx');
-    this.publicPath = path.join(__dirname, '..', 'public', 'jerry-dempsey-resume.pdf');
-    this.outPath = path.join(__dirname, '..', 'out', 'jerry-dempsey-resume.pdf');
-  }
-
-  // Check if the Word document exists
-  checkWordDocument() {
-    console.log('📄 Checking Word document...');
-    
-    if (!fs.existsSync(this.docPath)) {
-      console.error('❌ Word document not found at:', this.docPath);
-      console.log('💡 Please ensure Jerry_Dempsey_Resume.docx exists in the public directory');
-      return false;
-    }
-    
-    console.log('✅ Word document found');
-    return true;
+    this.testOutputPath = path.join(__dirname, '..', 'test-resume-output.tsx');
+    this.currentPagePath = path.join(__dirname, '..', 'src', 'app', 'jerry', 'resume', 'page.tsx');
   }
 
   // Get the current resume data
@@ -238,34 +221,13 @@ class SimpleResumePipeline {
             'Provided workarounds to overcome software limitations.'
           ]
         }
-      ],
-      education: [
-        'Bachelor of Science in Computer Science',
-        'Georgia Institute of Technology, Atlanta, GA'
-      ],
-      certifications: [
-        'Certified Information Security Manager (CISM)',
-        'Certified Information Systems Security Professional (CISSP)',
-        'Certified Ethical Hacker (CEH)',
-        'AWS Certified Security - Specialty',
-        'CompTIA Security+'
       ]
     };
-
-    return resumeData;
   }
 
-  // Create a simple HTML version from the current resume data
-  createSimpleResumeHTML() {
-    console.log('📝 Creating simple resume HTML...');
-    
-    const resumeData = this.getResumeData();
-    return this.generateResumePage(resumeData);
-  }
-
-  // Generate the React component for the resume page
+  // Generate the React component for the resume page (same as pipeline)
   generateResumePage(resumeData) {
-    console.log('⚛️  Generating resume page component...');
+    console.log('⚛️  Generating test resume page component...');
     
     const componentContent = `'use client';
 
@@ -443,65 +405,7 @@ export default function Resume() {
                       </div>`).join('\n');
   }
 
-
-  // Generate PDF from resume data
-  async generatePDF(resumeData) {
-    console.log('📄 Generating PDF...');
-    
-    try {
-      // Create a simple HTML file for PDF generation
-      const htmlContent = this.generatePDFHTML(resumeData);
-      const htmlPath = path.join(__dirname, '..', 'temp-resume.html');
-      
-      fs.writeFileSync(htmlPath, htmlContent);
-      
-      // Use Puppeteer to generate PDF
-      const puppeteer = require('puppeteer');
-      const browser = await puppeteer.launch({
-        headless: true,
-        args: ['--no-sandbox', '--disable-setuid-sandbox']
-      });
-      
-      const page = await browser.newPage();
-      await page.setViewport({
-        width: 1200,
-        height: 800,
-        deviceScaleFactor: 2
-      });
-      
-      await page.goto(`file://${htmlPath}`, {
-        waitUntil: 'networkidle0',
-        timeout: 30000
-      });
-      
-      const pdf = await page.pdf({
-        path: this.publicPath,
-        format: 'A4',
-        printBackground: true,
-        margin: {
-          top: '0.5in',
-          right: '0.5in',
-          bottom: '0.5in',
-          left: '0.5in'
-        }
-      });
-      
-      await browser.close();
-      
-      // Copy to out directory
-      fs.copyFileSync(this.publicPath, this.outPath);
-      
-      // Clean up temp file
-      fs.unlinkSync(htmlPath);
-      
-      console.log('✅ PDF generated successfully');
-    } catch (error) {
-      console.error('❌ Error generating PDF:', error.message);
-      throw error;
-    }
-  }
-
-  // Generate HTML for PDF (matching current timeline design)
+  // Generate HTML for PDF (same as updated pipeline)
   generatePDFHTML(resumeData) {
     return `<!DOCTYPE html>
 <html lang="en">
@@ -591,53 +495,93 @@ export default function Resume() {
 </html>`;
   }
 
-  // Main pipeline execution
-  async run() {
+  // Compare current page with pipeline output
+  compareOutputs() {
+    console.log('🔍 Comparing current page with pipeline output...\n');
+    
+    const currentContent = fs.readFileSync(this.currentPagePath, 'utf8');
+    const resumeData = this.getResumeData();
+    const pipelineContent = this.generateResumePage(resumeData);
+    const pdfContent = this.generatePDFHTML(resumeData);
+    
+    // Write test outputs
+    fs.writeFileSync(this.testOutputPath, pipelineContent);
+    fs.writeFileSync(path.join(__dirname, '..', 'test-pdf-output.html'), pdfContent);
+    
+    console.log('📊 COMPARISON RESULTS:');
+    console.log('=====================\n');
+    
+    // Compare key sections
+    const currentLines = currentContent.split('\n');
+    const pipelineLines = pipelineContent.split('\n');
+    
+    console.log(`📏 Current page lines: ${currentLines.length}`);
+    console.log(`📏 Pipeline output lines: ${pipelineLines.length}`);
+    console.log('');
+    
+    // Check for key differences
+    const keyFeatures = [
+      'pb-20',
+      'space-y-2',
+      'pb-2',
+      'hover:scale-125',
+      'justify-center sm:justify-end',
+      'bg-white dark:bg-slate-800',
+      'bg-gradient-to-r from-blue-600 to-blue-700'
+    ];
+    
+    console.log('🔍 Key Features Check:');
+    keyFeatures.forEach(feature => {
+      const currentHas = currentContent.includes(feature);
+      const pipelineHas = pipelineContent.includes(feature);
+      const status = currentHas === pipelineHas ? '✅' : '❌';
+      console.log(`${status} ${feature}: Current(${currentHas}) | Pipeline(${pipelineHas})`);
+    });
+    
+    console.log('\n📊 PDF Design Check:');
+    const pdfFeatures = [
+      'timeline',
+      'job-card',
+      'linear-gradient',
+      'border-left: 4px',
+      'border-radius: 50%'
+    ];
+    
+    pdfFeatures.forEach(feature => {
+      const pdfHas = pdfContent.includes(feature);
+      const status = pdfHas ? '✅' : '❌';
+      console.log(`${status} PDF ${feature}: ${pdfHas}`);
+    });
+    
+    console.log('\n📁 Files created:');
+    console.log(`   Current page: ${this.currentPagePath}`);
+    console.log(`   Test output:  ${this.testOutputPath}`);
+    console.log(`   PDF preview:  ${path.join(__dirname, '..', 'test-pdf-output.html')}`);
+    console.log('\n💡 You can now compare the files manually or use a diff tool.');
+    console.log('🌐 Open the PDF preview HTML file in your browser to see the new PDF design.');
+  }
+
+  // Main execution
+  run() {
     try {
-      console.log('🔄 Starting simple resume pipeline...\n');
+      console.log('🔄 Starting test resume pipeline...\n');
       
-      // Step 1: Check Word document exists
-      if (!this.checkWordDocument()) {
-        return;
-      }
+      this.compareOutputs();
       
-      // Step 2: Create resume data (for now, using current data)
-      console.log('📋 Creating resume data...');
-      const resumeData = this.createSimpleResumeHTML();
-      
-      // Step 3: Generate website resume page
-      console.log('🌐 Generating website resume page...');
-      const componentContent = this.generateResumePage(resumeData);
-      fs.writeFileSync(this.resumePagePath, componentContent);
-      console.log('✅ Website resume page updated');
-      
-      // Step 4: Generate PDF
-      await this.generatePDF(resumeData);
-      
-      // Step 5: Build the site
-      console.log('🏗️  Building website...');
-      execSync('npm run build:staging', { stdio: 'inherit' });
-      console.log('✅ Website built successfully');
-      
-      console.log('\n🎉 Simple resume pipeline completed successfully!');
-      console.log('📝 Website updated: /jerry/resume');
-      console.log('📄 PDF updated: /jerry-dempsey-resume.pdf');
-      console.log('\n💡 To update your resume:');
-      console.log('   1. Edit: public/Jerry_Dempsey_Resume.docx');
-      console.log('   2. Run: npm run resume:simple');
-      console.log('   3. Deploy your changes');
+      console.log('\n🎉 Test comparison completed!');
+      console.log('📝 Check the test output file to see what the pipeline would generate.');
       
     } catch (error) {
-      console.error('\n❌ Simple resume pipeline failed:', error.message);
+      console.error('\n❌ Test pipeline failed:', error.message);
       process.exit(1);
     }
   }
 }
 
-// Run the pipeline
+// Run the test pipeline
 if (require.main === module) {
-  const pipeline = new SimpleResumePipeline();
+  const pipeline = new TestResumePipeline();
   pipeline.run();
 }
 
-module.exports = SimpleResumePipeline;
+module.exports = TestResumePipeline;
