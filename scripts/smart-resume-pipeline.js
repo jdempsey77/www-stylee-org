@@ -311,11 +311,7 @@ class SmartResumePipeline {
           location: 'Atlanta, GA',
           dates: 'March 2021 – October 2021',
           bullets: [
-            'Developed cutting-edge Software Development Security strategy for entire company',
-            'Built on existing WarnerMedia CSO Application Security platform',
-            'Made tremendous progress towards three-year strategic plan',
-            'Led team reporting directly to AT&T Chief Security Office',
-            'Focused on innovative solutions driving security forward.'
+            'Developed cutting-edge Software Development Security strategy for entire company. Built on existing WarnerMedia CSO Application Security platform. Made tremendous progress towards three-year strategic plan. Led team reporting directly to AT&T Chief Security Office. Focused on innovative solutions driving security forward.'
           ]
         },
         {
@@ -324,11 +320,7 @@ class SmartResumePipeline {
           location: 'Atlanta, GA',
           dates: 'June 2019 – May 2020',
           bullets: [
-            'Transformed Turner DevSecOps team into robust WarnerMedia program',
-            'Catered to development processes for legacy TimeWarner, HBO, WarnerBros., and Turner',
-            'Designed advanced platform for streamlined source code scanning and automation',
-            'Led Security Tools Engineering function for Architecture and Engineering division',
-            'Acted as security sounding board for entire WarnerMedia development community.'
+            'Transformed Turner DevSecOps team into robust WarnerMedia program. Catered to development processes for legacy TimeWarner, HBO, WarnerBros., and Turner. Designed advanced platform for streamlined source code scanning and automation. Led Security Tools Engineering function for Architecture and Engineering division. Acted as security sounding board for entire WarnerMedia development community.'
           ]
         },
         {
@@ -337,12 +329,7 @@ class SmartResumePipeline {
           location: 'Atlanta, GA',
           dates: 'June 2017 – June 2019',
           bullets: [
-            'Established a cutting-edge DevSecOps team from scratch in the Information Security Office (ISO) at Turner',
-            'Aimed at helping various brands within the company adopt a &quot;secure by default&quot; mindset',
-            'Championed a culture of security and integrated critical tools into the CI/CD pipelines',
-            'Minimized security risks earlier in the development process',
-            'Worked alongside different teams at Turner, bridging the gap between security and developers',
-            'Identified and achieved top-notch security standards within each brand.'
+            'Established a cutting-edge DevSecOps team from scratch in the Information Security Office (ISO) at Turner. Aimed at helping various brands within the company adopt a &quot;secure by default&quot; mindset. Championed a culture of security and integrated critical tools into the CI/CD pipelines. Minimized security risks earlier in the development process. Worked alongside different teams at Turner, bridging the gap between security and developers. Identified and achieved top-notch security standards within each brand.'
           ]
         },
         {

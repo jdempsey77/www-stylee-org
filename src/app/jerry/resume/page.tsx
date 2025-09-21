@@ -169,7 +169,7 @@ export default function Resume() {
                             WarnerMedia, Atlanta, GA
                           </p>
                           <div className="text-slate-700 dark:text-slate-300">
-                            <p className="mb-4">Developed cutting-edge Software Development Security strategy for entire company</p><p className="mb-4">Built on existing WarnerMedia CSO Application Security platform</p><p className="mb-4">Made tremendous progress towards three-year strategic plan</p><p className="mb-4">Led team reporting directly to AT&T Chief Security Office</p><p className="mb-4">Focused on innovative solutions driving security forward.</p>
+                            <p className="mb-4">Developed cutting-edge Software Development Security strategy for entire company. Built on existing WarnerMedia CSO Application Security platform. Made tremendous progress towards three-year strategic plan. Led team reporting directly to AT&T Chief Security Office. Focused on innovative solutions driving security forward.</p>
                           </div>
                         </div>
                       </div>
@@ -189,7 +189,7 @@ export default function Resume() {
                             WarnerMedia, Atlanta, GA
                           </p>
                           <div className="text-slate-700 dark:text-slate-300">
-                            <p className="mb-4">Transformed Turner DevSecOps team into robust WarnerMedia program</p><p className="mb-4">Catered to development processes for legacy TimeWarner, HBO, WarnerBros., and Turner</p><p className="mb-4">Designed advanced platform for streamlined source code scanning and automation</p><p className="mb-4">Led Security Tools Engineering function for Architecture and Engineering division</p><p className="mb-4">Acted as security sounding board for entire WarnerMedia development community.</p>
+                            <p className="mb-4">Transformed Turner DevSecOps team into robust WarnerMedia program. Catered to development processes for legacy TimeWarner, HBO, WarnerBros., and Turner. Designed advanced platform for streamlined source code scanning and automation. Led Security Tools Engineering function for Architecture and Engineering division. Acted as security sounding board for entire WarnerMedia development community.</p>
                           </div>
                         </div>
                       </div>
@@ -209,7 +209,7 @@ export default function Resume() {
                             Turner Broadcasting (became WarnerMedia), Atlanta, GA
                           </p>
                           <div className="text-slate-700 dark:text-slate-300">
-                            <p className="mb-4">Established a cutting-edge DevSecOps team from scratch in the Information Security Office (ISO) at Turner</p><p className="mb-4">Aimed at helping various brands within the company adopt a &quot;secure by default&quot; mindset</p><p className="mb-4">Championed a culture of security and integrated critical tools into the CI/CD pipelines</p><p className="mb-4">Minimized security risks earlier in the development process</p><p className="mb-4">Worked alongside different teams at Turner, bridging the gap between security and developers</p><p className="mb-4">Identified and achieved top-notch security standards within each brand.</p>
+                            <p className="mb-4">Established a cutting-edge DevSecOps team from scratch in the Information Security Office (ISO) at Turner. Aimed at helping various brands within the company adopt a &quot;secure by default&quot; mindset. Championed a culture of security and integrated critical tools into the CI/CD pipelines. Minimized security risks earlier in the development process. Worked alongside different teams at Turner, bridging the gap between security and developers. Identified and achieved top-notch security standards within each brand.</p>
                           </div>
                         </div>
                       </div>
