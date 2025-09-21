@@ -149,7 +149,7 @@ export default function Resume() {
                             WarnerMedia, Atlanta, GA
                           </p>
                           <div className="text-slate-700 dark:text-slate-300">
-                            <p className="mb-4">Expanded role to include Product Security and Application Security Vulnerability Management</p><p className="mb-4">Created new Product Security team for Direct-to-Consumer platforms</p><p className="mb-4">Assembled Security Operations team for CNN+ launch with successful platform integration</p><p className="mb-4">Developed protection layers against account takeover and fraud</p><p className="mb-4">Oversaw critical programs including bug bounty, DAST, and vulnerability remediation.</p>
+                            <p className="mb-4">Expanded role to include Product Security and Application Security Vulnerability Management. Created new Product Security team for Direct-to-Consumer platforms. Assembled Security Operations team for CNN+ launch with successful platform integration. Developed protection layers against account takeover and fraud. Oversaw critical programs including bug bounty, DAST, and vulnerability remediation.</p>
                           </div>
                         </div>
                       </div>
@@ -229,7 +229,7 @@ export default function Resume() {
                             Tripwire Inc., Alpharetta, GA
                           </p>
                           <div className="text-slate-700 dark:text-slate-300">
-                            <p className="mb-4">Oversaw the SaaSOps and IT DevOps groups at Tripwire</p><p className="mb-4">Managed the Purecloud application and led the development of a cloud-hosted service</p><p className="mb-4">Led the development of a cloud-hosted service for our flagship product</p><p className="mb-4">Managed the R&D Dev/Test infrastructure, which is Tripwire&apos;s largest private cloud</p><p className="mb-4">Facilitated self-service virtual machine deployment using tools like Cloudbolt and Chef/Vagrant</p><p className="mb-4">Streamlined development workflows.</p>
+                            <p className="mb-4">Oversaw the SaaSOps and IT DevOps groups at Tripwire. Managed the Purecloud application and led the development of a cloud-hosted service. Led the development of a cloud-hosted service for our flagship product. Managed the R&D Dev/Test infrastructure, which is Tripwire&apos;s largest private cloud. Facilitated self-service virtual machine deployment using tools like Cloudbolt and Chef/Vagrant. Streamlined development workflows.</p>
                           </div>
                         </div>
                       </div>
@@ -249,7 +249,7 @@ export default function Resume() {
                             Tripwire Inc. (acquired nCircle Network Security), Alpharetta, GA
                           </p>
                           <div className="text-slate-700 dark:text-slate-300">
-                            <p className="mb-4">As an Engineering Manager for IP360, Purecloud, and SIH at Tripwire</p><p className="mb-4">Led the charge in driving top-notch product quality</p><p className="mb-4">Ensured that customer escalations were kept in check</p><p className="mb-4">Resolved conflicts, mentored team members, and recruited new talent</p><p className="mb-4">Maintained employee retention and building a top-performing team</p><p className="mb-4">Played a critical role in smoothly transitioning build infrastructure into the Tripwire environment when nCircle was acquired.</p>
+                            <p className="mb-4">As an Engineering Manager for IP360, Purecloud, and SIH at Tripwire, I led the charge in driving top-notch product quality. Ensured that customer escalations were kept in check. Resolved conflicts, mentored team members, and recruited new talent. Maintained employee retention and building a top-performing team. Played a critical role in smoothly transitioning build infrastructure into the Tripwire environment when nCircle was acquired.</p>
                           </div>
                         </div>
                       </div>

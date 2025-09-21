@@ -298,11 +298,7 @@ class SmartResumePipeline {
           location: 'Atlanta, GA',
           dates: 'October 2021 – April 2022',
           bullets: [
-            'Expanded role to include Product Security and Application Security Vulnerability Management',
-            'Created new Product Security team for Direct-to-Consumer platforms',
-            'Assembled Security Operations team for CNN+ launch with successful platform integration',
-            'Developed protection layers against account takeover and fraud',
-            'Oversaw critical programs including bug bounty, DAST, and vulnerability remediation.'
+            'Expanded role to include Product Security and Application Security Vulnerability Management. Created new Product Security team for Direct-to-Consumer platforms. Assembled Security Operations team for CNN+ launch with successful platform integration. Developed protection layers against account takeover and fraud. Oversaw critical programs including bug bounty, DAST, and vulnerability remediation.'
           ]
         },
         {
@@ -338,12 +334,7 @@ class SmartResumePipeline {
           location: 'Alpharetta, GA',
           dates: 'February 2015 – May 2017',
           bullets: [
-            'Oversaw the SaaSOps and IT DevOps groups at Tripwire',
-            'Managed the Purecloud application and led the development of a cloud-hosted service',
-            'Led the development of a cloud-hosted service for our flagship product',
-            'Managed the R&D Dev/Test infrastructure, which is Tripwire&apos;s largest private cloud',
-            'Facilitated self-service virtual machine deployment using tools like Cloudbolt and Chef/Vagrant',
-            'Streamlined development workflows.'
+            'Oversaw the SaaSOps and IT DevOps groups at Tripwire. Managed the Purecloud application and led the development of a cloud-hosted service. Led the development of a cloud-hosted service for our flagship product. Managed the R&D Dev/Test infrastructure, which is Tripwire&apos;s largest private cloud. Facilitated self-service virtual machine deployment using tools like Cloudbolt and Chef/Vagrant. Streamlined development workflows.'
           ]
         },
         {
@@ -352,12 +343,7 @@ class SmartResumePipeline {
           location: 'Alpharetta, GA',
           dates: 'April 2013 – February 2015',
           bullets: [
-            'As an Engineering Manager for IP360, Purecloud, and SIH at Tripwire',
-            'Led the charge in driving top-notch product quality',
-            'Ensured that customer escalations were kept in check',
-            'Resolved conflicts, mentored team members, and recruited new talent',
-            'Maintained employee retention and building a top-performing team',
-            'Played a critical role in smoothly transitioning build infrastructure into the Tripwire environment when nCircle was acquired.'
+            'As an Engineering Manager for IP360, Purecloud, and SIH at Tripwire, I led the charge in driving top-notch product quality. Ensured that customer escalations were kept in check. Resolved conflicts, mentored team members, and recruited new talent. Maintained employee retention and building a top-performing team. Played a critical role in smoothly transitioning build infrastructure into the Tripwire environment when nCircle was acquired.'
           ]
         },
         {
