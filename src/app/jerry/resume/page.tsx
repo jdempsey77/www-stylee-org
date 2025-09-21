@@ -41,8 +41,8 @@ export default function Resume() {
         </div>
       </section>
 
-      {/* Resume Content */}
-      <section className="py-12 bg-white dark:bg-slate-800">
+          {/* Resume Content */}
+          <section className="py-12 bg-white dark:bg-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="space-y-8">
             {/* Main Content */}
@@ -403,42 +403,24 @@ export default function Resume() {
         </div>
       </section>
 
-      {/* Download Resume Section */}
-      <section className="py-12 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 dark:from-slate-900 dark:via-blue-900 dark:to-purple-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-4">
-              Download My Resume
-            </h2>
-          <p className="text-xl text-slate-600 dark:text-slate-300 mb-8 max-w-2xl mx-auto">
-              Get a complete PDF version of my resume for your records or to share with your team.
-            </p>
-            <a
-              href="/jerry-dempsey-resume.pdf"
-              download="Jerry-Dempsey-Resume.pdf"
-            className="inline-flex items-center gap-3 px-10 py-5 bg-gradient-to-r from-blue-600 to-blue-700 text-white font-bold rounded-xl shadow-xl hover:shadow-2xl hover:from-blue-700 hover:to-blue-800 transform hover:-translate-y-1 transition-all duration-200 border border-blue-500 text-lg"
-            >
-              <DocumentTextIcon className="w-6 h-6" />
-              Download Resume PDF</a>
-                </div>
-      </section>
 
       {/* Sticky Download Banner */}
       <div className="fixed bottom-0 left-0 right-0 bg-gradient-to-r from-blue-600 to-blue-700 text-white py-3 px-4 shadow-lg z-50 border-t border-blue-500">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <DocumentTextIcon className="w-5 h-5" />
+            <DocumentTextIcon className="w-5 h-5 text-blue-100" />
             <span className="font-semibold">Ready to download my resume?</span>
           </div>
           <a
             href="/jerry-dempsey-resume.pdf"
             download="Jerry-Dempsey-Resume.pdf"
-            className="inline-flex items-center gap-2 px-4 py-2 bg-white text-blue-700 font-semibold rounded-lg hover:bg-blue-50 transition-colors shadow-sm"
+            className="inline-flex items-center gap-2 px-4 py-2 bg-white text-blue-700 font-semibold rounded-lg hover:bg-blue-50 transition-all duration-200 shadow-sm"
           >
             <DocumentTextIcon className="w-4 h-4" />
             Download PDF
-          </a>
+            </a>
+          </div>
         </div>
-      </div>
     </div>
   );
 }
