@@ -25,7 +25,7 @@ export default function Resume() {
               Product and Application Security Leader
             </p>
             <p className="text-lg text-slate-600 dark:text-slate-300 max-w-5xl mx-auto mb-8">
-              More than 20 years of experience in cybersecurity with outstanding communication skills and expertise in recruiting and mentoring top-performing teams. As a Product and Application Security leader, I possess outstanding communication skills and excel at recruiting and mentoring top-performing teams. I am a proven problem-solver with a knack for finding creative solutions to complex challenges. I am also an advocate for forward-thinking security concepts, and I am committed to driving collaboration and partnership with development organizations to help them adopt cutting-edge security strategies.
+              More than 20 years of experience in cybersecurity with outstanding communication skills and expertise in recruiting and mentoring top-performing teams. As a Product and Application Security leader, I excel at building comprehensive security programs that seamlessly integrate with development workflows. I am a proven problem-solver with a knack for finding creative solutions to complex challenges and an advocate for forward-thinking security concepts. I am committed to driving collaboration and partnership with development organizations to help them adopt cutting-edge security strategies.
             </p>
             
             {/* Contact Information */}
@@ -41,8 +41,8 @@ export default function Resume() {
         </div>
       </section>
 
-          {/* Resume Content */}
-          <section className="py-12 bg-white dark:bg-slate-800">
+      {/* Resume Content */}
+      <section className="py-12 bg-white dark:bg-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="space-y-8">
             {/* Main Content */}
@@ -54,7 +54,7 @@ export default function Resume() {
                   Professional Summary
                 </h2>
                 <p className="text-slate-700 dark:text-slate-300 leading-relaxed">
-                  More than 20 years of experience in cybersecurity with outstanding communication skills and expertise in recruiting and mentoring top-performing teams. As a Product and Application Security leader, I possess outstanding communication skills and excel at recruiting and mentoring top-performing teams. I am a proven problem-solver with a knack for finding creative solutions to complex challenges. I am also an advocate for forward-thinking security concepts, and I am committed to driving collaboration and partnership with development organizations to help them adopt cutting-edge security strategies.
+                  More than 20 years of experience in cybersecurity with outstanding communication skills and expertise in recruiting and mentoring top-performing teams. As a Product and Application Security leader, I excel at building comprehensive security programs that seamlessly integrate with development workflows. I am a proven problem-solver with a knack for finding creative solutions to complex challenges and an advocate for forward-thinking security concepts. I am committed to driving collaboration and partnership with development organizations to help them adopt cutting-edge security strategies.
                 </p>
               </div>
 
@@ -411,11 +411,11 @@ export default function Resume() {
             <DocumentTextIcon className="w-5 h-5 text-blue-100" />
             <span className="font-semibold">Ready to download my resume?</span>
           </div>
-          <a
-            href="/jerry-dempsey-resume.pdf"
-            download="Jerry-Dempsey-Resume.pdf"
+            <a
+              href="/jerry-dempsey-resume.pdf"
+              download="Jerry-Dempsey-Resume.pdf"
             className="inline-flex items-center gap-2 px-4 py-2 bg-white text-blue-700 font-semibold rounded-lg hover:bg-blue-50 transition-all duration-200 shadow-sm"
-          >
+            >
             <DocumentTextIcon className="w-4 h-4" />
             Download PDF
             </a>
