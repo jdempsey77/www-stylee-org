@@ -135,8 +135,10 @@ class SmartResumePipeline {
         writeStream.on('error', reject);
       });
       
-      // Copy to out directory
-      fs.copyFileSync(this.publicPath, this.outPath);
+        // Copy to out directory only if it exists (production builds)
+        if (fs.existsSync(path.dirname(this.outPath))) {
+          fs.copyFileSync(this.publicPath, this.outPath);
+        }
       
       console.log('✅ PDF generated from Google Doc');
     } catch (error) {
@@ -605,7 +607,7 @@ export default function Resume() {
                         ${job.company}, ${job.location}
                       </p>
                       <div className="text-slate-700 dark:text-slate-300">
-                        ${job.bullets.join(' ')}
+                        ${job.bullets.map(bullet => `<p className="mb-4">${bullet}</p>`).join('')}
                       </div>
                     </div>
                   </div>`).join('\n');
@@ -632,7 +634,7 @@ export default function Resume() {
                             ${job.company}, ${job.location}
                           </p>
                           <div className="text-slate-700 dark:text-slate-300">
-                            ${job.bullets.join(' ')}
+                            ${job.bullets.map(bullet => `<p className="mb-4">${bullet}</p>`).join('')}
                           </div>
                         </div>
                       </div>`).join('\n');

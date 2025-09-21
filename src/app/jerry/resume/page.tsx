@@ -72,7 +72,7 @@ export default function Resume() {
                         FanDuel, Atlanta, GA
                       </p>
                       <div className="text-slate-700 dark:text-slate-300">
-                        As the leader of the Software Security team, I grew the organization from 3 to over 25 employees while building out three key security functions: Application, Product, and Platform Security. I established a robust Application Security program that provides automated code scanning across all repositories and pull requests, seamlessly integrating security into the development process. Furthermore, I built out the Product Security team, defining and implementing a new framework to reduce risk through threat modeling, risk assessments, and penetration testing. My focus also included creating a dedicated Platform Security function to proactively mitigate risks in the platforms we build, ensuring a secure foundation for all our services.
+                        <p className="mb-4">As the leader of the Software Security team, I grew the organization from 3 to over 25 employees while building out three key security functions: Application, Product, and Platform Security. I established a robust Application Security program that provides automated code scanning across all repositories and pull requests, seamlessly integrating security into the development process.</p><p className="mb-4">Furthermore, I built out the Product Security team, defining and implementing a new framework to reduce risk through threat modeling, risk assessments, and penetration testing. My focus also included creating a dedicated Platform Security function to proactively mitigate risks in the platforms we build, ensuring a secure foundation for all our services.</p>
                       </div>
                     </div>
                   </div>
@@ -92,7 +92,7 @@ export default function Resume() {
                         FanDuel, Atlanta, GA
                       </p>
                       <div className="text-slate-700 dark:text-slate-300">
-                        Leading application, product, and cloud security initiatives to safeguard our software and ensure trust for our players. Grew team from 3 employees to over 25 employees while building comprehensive security functions across the organization.
+                        <p className="mb-4">Leading application, product, and cloud security initiatives to safeguard our software and ensure trust for our players. Grew team from 3 employees to over 25 employees while building comprehensive security functions across the organization.</p>
                       </div>
                     </div>
                   </div>
@@ -112,7 +112,7 @@ export default function Resume() {
                         Warner Bros. Discovery, Atlanta, GA
                       </p>
                       <div className="text-slate-700 dark:text-slate-300">
-                        In just over five years, I took a program that only supported Turner Broadcasting and transformed it into one that now supports all of WarnerMedia. My team and responsibilities grew, but we remained laser-focused on collaborating with development teams to seamlessly integrate security into the Software Development Lifecycle. Today, our program supports more than 3500 developers who create over 4000 applications, providing a full range of services including threat modeling, DAST, source code scanning, bug bounties, and remediation. Under my leadership, my team developed Artemis, a state-of-the-art platform that scans source code at scale across the entire company, identifying vulnerabilities and secrets across more than 22,000 code repositories. Our platform uses cutting-edge commercial and open-source tools to orchestrate scanning, operating both as self-service and as a continuous source code security risk monitor. Additionally, I built out a Product Security team that partners with key WarnerMedia brands like HBO Max, CNN, and DC Universe to deliver top-notch security solutions and experiences directly to our consumers. Our team&apos;s expertise helps combat fraud and enhances overall platform security, ensuring that our customers enjoy the highest level of safety and peace of mind.
+                        <p className="mb-4">In just over five years, I took a program that only supported Turner Broadcasting and transformed it into one that now supports all of WarnerMedia. My team and responsibilities grew, but we remained laser-focused on collaborating with development teams to seamlessly integrate security into the Software Development Lifecycle. Today, our program supports more than 3500 developers who create over 4000 applications, providing a full range of services including threat modeling, DAST, source code scanning, bug bounties, and remediation.</p><p className="mb-4">Under my leadership, my team developed Artemis, a state-of-the-art platform that scans source code at scale across the entire company, identifying vulnerabilities and secrets across more than 22,000 code repositories. Our platform uses cutting-edge commercial and open-source tools to orchestrate scanning, operating both as self-service and as a continuous source code security risk monitor.</p><p className="mb-4">Additionally, I built out a Product Security team that partners with key WarnerMedia brands like HBO Max, CNN, and DC Universe to deliver top-notch security solutions and experiences directly to our consumers. Our team's expertise helps combat fraud and enhances overall platform security, ensuring that our customers enjoy the highest level of safety and peace of mind.</p>
                       </div>
                     </div>
                   </div>
@@ -149,7 +149,7 @@ export default function Resume() {
                             WarnerMedia, Atlanta, GA
                           </p>
                           <div className="text-slate-700 dark:text-slate-300">
-                            Expanded role to include Product Security and Application Security Vulnerability Management Created new Product Security team for Direct-to-Consumer platforms Assembled Security Operations team for CNN+ launch with successful platform integration Developed protection layers against account takeover and fraud Oversaw critical programs including bug bounty, DAST, and vulnerability remediation.
+                            <p className="mb-4">Expanded role to include Product Security and Application Security Vulnerability Management</p><p className="mb-4">Created new Product Security team for Direct-to-Consumer platforms</p><p className="mb-4">Assembled Security Operations team for CNN+ launch with successful platform integration</p><p className="mb-4">Developed protection layers against account takeover and fraud</p><p className="mb-4">Oversaw critical programs including bug bounty, DAST, and vulnerability remediation.</p>
                           </div>
                         </div>
                       </div>
@@ -169,7 +169,7 @@ export default function Resume() {
                             WarnerMedia, Atlanta, GA
                           </p>
                           <div className="text-slate-700 dark:text-slate-300">
-                            Developed cutting-edge Software Development Security strategy for entire company Built on existing WarnerMedia CSO Application Security platform Made tremendous progress towards three-year strategic plan Led team reporting directly to AT&T Chief Security Office Focused on innovative solutions driving security forward.
+                            <p className="mb-4">Developed cutting-edge Software Development Security strategy for entire company</p><p className="mb-4">Built on existing WarnerMedia CSO Application Security platform</p><p className="mb-4">Made tremendous progress towards three-year strategic plan</p><p className="mb-4">Led team reporting directly to AT&T Chief Security Office</p><p className="mb-4">Focused on innovative solutions driving security forward.</p>
                           </div>
                         </div>
                       </div>
@@ -189,7 +189,7 @@ export default function Resume() {
                             WarnerMedia, Atlanta, GA
                           </p>
                           <div className="text-slate-700 dark:text-slate-300">
-                            Transformed Turner DevSecOps team into robust WarnerMedia program Catered to development processes for legacy TimeWarner, HBO, WarnerBros., and Turner Designed advanced platform for streamlined source code scanning and automation Led Security Tools Engineering function for Architecture and Engineering division Acted as security sounding board for entire WarnerMedia development community.
+                            <p className="mb-4">Transformed Turner DevSecOps team into robust WarnerMedia program</p><p className="mb-4">Catered to development processes for legacy TimeWarner, HBO, WarnerBros., and Turner</p><p className="mb-4">Designed advanced platform for streamlined source code scanning and automation</p><p className="mb-4">Led Security Tools Engineering function for Architecture and Engineering division</p><p className="mb-4">Acted as security sounding board for entire WarnerMedia development community.</p>
                           </div>
                         </div>
                       </div>
@@ -209,7 +209,7 @@ export default function Resume() {
                             Turner Broadcasting (became WarnerMedia), Atlanta, GA
                           </p>
                           <div className="text-slate-700 dark:text-slate-300">
-                            Established a cutting-edge DevSecOps team from scratch in the Information Security Office (ISO) at Turner Aimed at helping various brands within the company adopt a &quot;secure by default&quot; mindset Championed a culture of security and integrated critical tools into the CI/CD pipelines Minimized security risks earlier in the development process Worked alongside different teams at Turner, bridging the gap between security and developers Identified and achieved top-notch security standards within each brand.
+                            <p className="mb-4">Established a cutting-edge DevSecOps team from scratch in the Information Security Office (ISO) at Turner</p><p className="mb-4">Aimed at helping various brands within the company adopt a &quot;secure by default&quot; mindset</p><p className="mb-4">Championed a culture of security and integrated critical tools into the CI/CD pipelines</p><p className="mb-4">Minimized security risks earlier in the development process</p><p className="mb-4">Worked alongside different teams at Turner, bridging the gap between security and developers</p><p className="mb-4">Identified and achieved top-notch security standards within each brand.</p>
                           </div>
                         </div>
                       </div>
@@ -229,7 +229,7 @@ export default function Resume() {
                             Tripwire Inc., Alpharetta, GA
                           </p>
                           <div className="text-slate-700 dark:text-slate-300">
-                            Oversaw the SaaSOps and IT DevOps groups at Tripwire Managed the Purecloud application and led the development of a cloud-hosted service Led the development of a cloud-hosted service for our flagship product Managed the R&D Dev/Test infrastructure, which is Tripwire&apos;s largest private cloud Facilitated self-service virtual machine deployment using tools like Cloudbolt and Chef/Vagrant Streamlined development workflows.
+                            <p className="mb-4">Oversaw the SaaSOps and IT DevOps groups at Tripwire</p><p className="mb-4">Managed the Purecloud application and led the development of a cloud-hosted service</p><p className="mb-4">Led the development of a cloud-hosted service for our flagship product</p><p className="mb-4">Managed the R&D Dev/Test infrastructure, which is Tripwire&apos;s largest private cloud</p><p className="mb-4">Facilitated self-service virtual machine deployment using tools like Cloudbolt and Chef/Vagrant</p><p className="mb-4">Streamlined development workflows.</p>
                           </div>
                         </div>
                       </div>
@@ -249,7 +249,7 @@ export default function Resume() {
                             Tripwire Inc. (acquired nCircle Network Security), Alpharetta, GA
                           </p>
                           <div className="text-slate-700 dark:text-slate-300">
-                            As an Engineering Manager for IP360, Purecloud, and SIH at Tripwire Led the charge in driving top-notch product quality Ensured that customer escalations were kept in check Resolved conflicts, mentored team members, and recruited new talent Maintained employee retention and building a top-performing team Played a critical role in smoothly transitioning build infrastructure into the Tripwire environment when nCircle was acquired.
+                            <p className="mb-4">As an Engineering Manager for IP360, Purecloud, and SIH at Tripwire</p><p className="mb-4">Led the charge in driving top-notch product quality</p><p className="mb-4">Ensured that customer escalations were kept in check</p><p className="mb-4">Resolved conflicts, mentored team members, and recruited new talent</p><p className="mb-4">Maintained employee retention and building a top-performing team</p><p className="mb-4">Played a critical role in smoothly transitioning build infrastructure into the Tripwire environment when nCircle was acquired.</p>
                           </div>
                         </div>
                       </div>
@@ -269,7 +269,7 @@ export default function Resume() {
                             nCircle Network Security, Alpharetta, GA
                           </p>
                           <div className="text-slate-700 dark:text-slate-300">
-                            As a Development Manager for nCircle&apos;s Compliance and Configuration Management software (CCM) Led the development, QA, and content teams using Agile Methodology Served as the Scrum Master and was hands-on in managing QA, design, code review, and backlog planning Collaborated with Product Management to plan releases and determine long-term project goals Maintained team retention and managed new hires Oversaw quarterly budgeting for hardware and software purchases.
+                            <p className="mb-4">As a Development Manager for nCircle&apos;s Compliance and Configuration Management software (CCM)</p><p className="mb-4">Led the development, QA, and content teams using Agile Methodology</p><p className="mb-4">Served as the Scrum Master and was hands-on in managing QA, design, code review, and backlog planning</p><p className="mb-4">Collaborated with Product Management to plan releases and determine long-term project goals</p><p className="mb-4">Maintained team retention and managed new hires</p><p className="mb-4">Oversaw quarterly budgeting for hardware and software purchases.</p>
                           </div>
                         </div>
                       </div>
@@ -289,7 +289,7 @@ export default function Resume() {
                             IBM Internet Security Systems, Inc. (ISS IBM), Atlanta, GA
                           </p>
                           <div className="text-slate-700 dark:text-slate-300">
-                            As the Team Lead of the Escalation Management Group (EMG) Responsible for overseeing the resolution of high-level software defects on all released hardware and software platforms Worked closely with customers to understand their needs and collaborated with the team to deliver solutions Met both customer requirements and product design goals My team traveled globally to customer sites, where we provided troubleshooting support Helped optimize network design and architecture Engaged with all departments across the IBM ISS organization to ensure customer issues were resolved effectively and efficiently.
+                            <p className="mb-4">As the Team Lead of the Escalation Management Group (EMG)</p><p className="mb-4">Responsible for overseeing the resolution of high-level software defects on all released hardware and software platforms</p><p className="mb-4">Worked closely with customers to understand their needs and collaborated with the team to deliver solutions</p><p className="mb-4">Met both customer requirements and product design goals</p><p className="mb-4">My team traveled globally to customer sites, where we provided troubleshooting support</p><p className="mb-4">Helped optimize network design and architecture</p><p className="mb-4">Engaged with all departments across the IBM ISS organization to ensure customer issues were resolved effectively and efficiently.</p>
                           </div>
                         </div>
                       </div>
@@ -309,7 +309,7 @@ export default function Resume() {
                             Internet Security Systems, Inc. (ISS), Atlanta, GA
                           </p>
                           <div className="text-slate-700 dark:text-slate-300">
-                            As an internal member of the Unified Threat Management (UTM) appliance team Collaborated with the development team to design and test the product Played a key role in the design and functionality of the Intrusion Prevention System (IPS) module Contributed to overall appliance security design Promoted to Team Lead for the 2.0 release Responsible for developing the test plan and ensuring thorough test case execution Ran bug triages to prioritize defect fixes Developed several automation tools to streamline testing.
+                            <p className="mb-4">As an internal member of the Unified Threat Management (UTM) appliance team</p><p className="mb-4">Collaborated with the development team to design and test the product</p><p className="mb-4">Played a key role in the design and functionality of the Intrusion Prevention System (IPS) module</p><p className="mb-4">Contributed to overall appliance security design</p><p className="mb-4">Promoted to Team Lead for the 2.0 release</p><p className="mb-4">Responsible for developing the test plan and ensuring thorough test case execution</p><p className="mb-4">Ran bug triages to prioritize defect fixes</p><p className="mb-4">Developed several automation tools to streamline testing.</p>
                           </div>
                         </div>
                       </div>
@@ -329,7 +329,7 @@ export default function Resume() {
                             Internet Security Systems, Inc. (ISS), Atlanta, GA
                           </p>
                           <div className="text-slate-700 dark:text-slate-300">
-                            Responsible for testing new security content updates for RealSecure Network Sensor Tested ISS&apos;s market-leading IDS software Played a key role in determining how security content was tested with other ISS products Collaborated closely with the X-Force Research and Development team Identified and addressed new vulnerabilities Ensured that our customers were protected quickly and effectively.
+                            <p className="mb-4">Responsible for testing new security content updates for RealSecure Network Sensor</p><p className="mb-4">Tested ISS&apos;s market-leading IDS software</p><p className="mb-4">Played a key role in determining how security content was tested with other ISS products</p><p className="mb-4">Collaborated closely with the X-Force Research and Development team</p><p className="mb-4">Identified and addressed new vulnerabilities</p><p className="mb-4">Ensured that our customers were protected quickly and effectively.</p>
                           </div>
                         </div>
                       </div>
@@ -349,7 +349,7 @@ export default function Resume() {
                             Internet Security Systems, Inc. (ISS), Atlanta, GA
                           </p>
                           <div className="text-slate-700 dark:text-slate-300">
-                            Created and implemented test cases for the RealSecure software Focused on the Solaris version testing Conducted thorough testing of Attack Signatures on all supported platforms Ensured product quality and reliability.
+                            <p className="mb-4">Created and implemented test cases for the RealSecure software</p><p className="mb-4">Focused on the Solaris version testing</p><p className="mb-4">Conducted thorough testing of Attack Signatures on all supported platforms</p><p className="mb-4">Ensured product quality and reliability.</p>
                           </div>
                         </div>
                       </div>
@@ -369,7 +369,7 @@ export default function Resume() {
                             Internet Security Systems, Inc. (ISS), Atlanta, GA
                           </p>
                           <div className="text-slate-700 dark:text-slate-300">
-                            Delivered customer support for RealSecure Network Sensor via phone and email Resolved configuration issues and identified software bugs Assisted with product deployment Provided workarounds to overcome software limitations.
+                            <p className="mb-4">Delivered customer support for RealSecure Network Sensor via phone and email</p><p className="mb-4">Resolved configuration issues and identified software bugs</p><p className="mb-4">Assisted with product deployment</p><p className="mb-4">Provided workarounds to overcome software limitations.</p>
                           </div>
                         </div>
                       </div>
