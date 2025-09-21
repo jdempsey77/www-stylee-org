@@ -239,8 +239,17 @@ class SimpleResumePipeline {
           ]
         }
       ],
-      education: [],
-      certifications: []
+      education: [
+        'Bachelor of Science in Computer Science',
+        'Georgia Institute of Technology, Atlanta, GA'
+      ],
+      certifications: [
+        'Certified Information Security Manager (CISM)',
+        'Certified Information Systems Security Professional (CISSP)',
+        'Certified Ethical Hacker (CEH)',
+        'AWS Certified Security - Specialty',
+        'CompTIA Security+'
+      ]
     };
 
     return resumeData;
@@ -258,24 +267,19 @@ class SimpleResumePipeline {
   generateResumePage(resumeData) {
     console.log('⚛️  Generating resume page component...');
     
-    const componentContent = `'use client';
-
-import { 
+    const componentContent = `import { 
   BriefcaseIcon,
   DocumentTextIcon,
   EnvelopeIcon,
-  ChevronDownIcon,
-  ChevronUpIcon
+  MapPinIcon
 } from '@heroicons/react/24/outline';
-import { useState } from 'react';
 
 export default function Resume() {
-  const [showAllExperience, setShowAllExperience] = useState(false);
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-gray-50 dark:from-slate-900 dark:to-slate-800">
       {/* Header */}
       <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
             <h1 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-4">
               ${resumeData.name}
@@ -283,7 +287,7 @@ export default function Resume() {
             <p className="text-xl text-gray-600 dark:text-gray-400 mb-6 font-semibold">
               ${resumeData.title}
             </p>
-            <p className="text-lg text-slate-600 dark:text-slate-300 max-w-5xl mx-auto mb-8">
+            <p className="text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto mb-8">
               ${resumeData.summary}
             </p>
             
@@ -291,15 +295,24 @@ export default function Resume() {
             <div className="flex flex-wrap justify-center gap-3">
               <a 
                 href="mailto:${resumeData.email}"
-                className="inline-flex items-center gap-2 rounded-lg bg-slate-100 dark:bg-slate-700 px-4 py-2 text-slate-700 dark:text-white hover:bg-slate-200 dark:hover:bg-slate-600 border border-slate-200 dark:border-slate-600 transition-all duration-200 hover:shadow-md"
+                className="inline-flex items-center gap-2 rounded-lg bg-slate-600 px-4 py-2 text-white hover:bg-slate-700 transition-colors"
               >
                 <EnvelopeIcon className="w-5 h-5" />
                 Email
               </a>
               <a 
+                href="https://www.google.com/maps/place/Roswell,+GA"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-lg bg-slate-700 px-4 py-2 text-white hover:bg-slate-800 transition-colors"
+              >
+                <MapPinIcon className="w-5 h-5" />
+                Roswell, GA
+              </a>
+              <a 
                 href="/jerry-dempsey-resume.pdf"
                 download="Jerry-Dempsey-Resume.pdf"
-                className="inline-flex items-center gap-2 rounded-lg bg-slate-100 dark:bg-slate-700 px-4 py-2 text-slate-700 dark:text-white hover:bg-slate-200 dark:hover:bg-slate-600 border border-slate-200 dark:border-slate-600 transition-all duration-200 hover:shadow-md"
+                className="inline-flex items-center gap-2 rounded-lg bg-slate-800 px-4 py-2 text-white hover:bg-slate-900 transition-colors"
               >
                 <DocumentTextIcon className="w-5 h-5" />
                 Resume
@@ -311,10 +324,10 @@ export default function Resume() {
 
       {/* Resume Content */}
       <section className="py-12 bg-white dark:bg-slate-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="space-y-8">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-3 gap-8">
             {/* Main Content */}
-            <div className="space-y-8">
+            <div className="lg:col-span-2 space-y-8">
               {/* Professional Summary */}
               <div>
                 <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-4 flex items-center">
@@ -334,53 +347,36 @@ export default function Resume() {
                 </h2>
                 
                 <div className="space-y-6">
-                  ${this.generateExperienceHTML(resumeData.experience, 'showAllExperience')}
-                  
-                  {/* Read More/Less Button */}
-                  <div className="flex justify-center pt-4">
-                    <button
-                      onClick={() => setShowAllExperience(!showAllExperience)}
-                      className="inline-flex items-center gap-2 px-6 py-3 bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-white hover:bg-slate-200 dark:hover:bg-slate-600 border border-slate-200 dark:border-slate-600 rounded-lg transition-all duration-200 hover:shadow-md"
-                    >
-                      {showAllExperience ? (
-                        <>
-                          <ChevronUpIcon className="w-5 h-5" />
-                          Show Less
-                        </>
-                      ) : (
-                        <>
-                          <ChevronDownIcon className="w-5 h-5" />
-                          Read More (Complete Career History)
-                        </>
-                      )}
-                    </button>
-                  </div>
+                  ${this.generateExperienceHTML(resumeData.experience)}
                 </div>
               </div>
             </div>
 
-          </div>
-        </div>
-      </section>
+            {/* Sidebar */}
+            <div className="space-y-8">
+              
+              {/* Education */}
+              <div>
+                <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-4 flex items-center">
+                  <BriefcaseIcon className="w-6 h-6 mr-3 text-gray-600 dark:text-gray-400" />
+                  Education
+                </h3>
+                <div className="space-y-2">
+                  ${resumeData.education.map(edu => `<p className="text-slate-700 dark:text-slate-300">${edu}</p>`).join('')}
+                </div>
+              </div>
 
-      {/* Download Resume Section */}
-      <section className="py-12 bg-slate-50 dark:bg-slate-700">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="bg-white dark:bg-slate-800 rounded-lg shadow-lg p-8 max-w-2xl mx-auto">
-            <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">
-              Download My Resume
-            </h2>
-            <p className="text-slate-600 dark:text-slate-300 mb-6">
-              Get a complete PDF version of my resume for your records or to share with your team.
-            </p>
-            <a 
-              href="/jerry-dempsey-resume.pdf"
-              download="Jerry-Dempsey-Resume.pdf"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-slate-600 hover:bg-slate-700 text-white font-semibold rounded-lg transition-all duration-200 hover:shadow-lg"
-            >
-              <DocumentTextIcon className="w-6 h-6" />
-              Download Resume PDF
-            </a>
+              {/* Certifications */}
+              <div>
+                <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-4 flex items-center">
+                  <BriefcaseIcon className="w-6 h-6 mr-3 text-gray-600 dark:text-gray-400" />
+                  Certifications
+                </h3>
+                <ul className="space-y-2">
+                  ${resumeData.certifications.map(cert => `<li className="text-slate-700 dark:text-slate-300">• ${cert}</li>`).join('')}
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -392,52 +388,21 @@ export default function Resume() {
   }
 
   // Generate HTML for experience section
-  generateExperienceHTML(experience, showAllVar) {
+  generateExperienceHTML(experience) {
     const colors = ['border-slate-600', 'border-gray-600', 'border-green-600', 'border-cyan-600', 'border-purple-600'];
     
-    // Generate all jobs but wrap the later ones in conditional rendering
-    const recentJobs = experience.slice(0, 3);
-    const olderJobs = experience.slice(3);
-    
-    let html = recentJobs.map((job, index) => `
+    return experience.map((job, index) => `
                   <div className="border-l-4 ${colors[index % colors.length]} pl-6">
                     <h3 className="text-xl font-semibold text-slate-900 dark:text-white">
                       ${job.title}
                     </h3>
                     <p className="text-gray-600 dark:text-gray-400 font-medium">
-                      ${job.company}, ${job.location} | ${job.dates}
+                      ${job.company}, ${job.location}, ${job.dates} | 
                     </p>
-                    <div className="mt-3 text-slate-700 dark:text-slate-300">
-                      ${job.bullets.join(' ')}
-                    </div>
+                    <ul className="mt-3 space-y-2 text-slate-700 dark:text-slate-300">
+                      ${job.bullets.map(bullet => `<li>• ${bullet}</li>`).join('')}
+                    </ul>
                   </div>`).join('\n');
-    
-    if (olderJobs.length > 0) {
-      html += `
-
-                  {/* Expandable Career History */}
-                  {${showAllVar} && (
-                    <div className="space-y-6">`;
-      
-      html += olderJobs.map((job, index) => `
-                      <div className="border-l-4 ${colors[(index + 3) % colors.length]} pl-6">
-                        <h3 className="text-xl font-semibold text-slate-900 dark:text-white">
-                          ${job.title}
-                        </h3>
-                        <p className="text-gray-600 dark:text-gray-400 font-medium">
-                          ${job.company}, ${job.location} | ${job.dates}
-                        </p>
-                        <div className="mt-3 text-slate-700 dark:text-slate-300">
-                          ${job.bullets.join(' ')}
-                        </div>
-                      </div>`).join('\n');
-      
-      html += `
-                    </div>
-                  )}`;
-    }
-    
-    return html;
   }
 
 
