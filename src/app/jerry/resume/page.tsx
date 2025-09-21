@@ -322,19 +322,19 @@ export default function Resume() {
       </section>
 
       {/* Download Resume Section */}
-      <section className="py-12 bg-slate-50 dark:bg-slate-700">
+      <section className="py-20 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 dark:from-slate-900 dark:via-blue-900 dark:to-purple-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="bg-white dark:bg-slate-800 rounded-lg shadow-lg p-8 max-w-2xl mx-auto">
-            <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">
-              Download My Resume
-            </h2>
-            <p className="text-slate-600 dark:text-slate-300 mb-6">
-              Get a complete PDF version of my resume for your records or to share with your team.
-            </p>
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-6 animate-fade-in-up">
+            Download My Resume
+          </h2>
+          <p className="text-lg text-slate-600 dark:text-slate-300 mb-8 max-w-2xl mx-auto animate-slide-in-left">
+            Get a complete PDF version of my resume for your records or to share with your team.
+          </p>
+          <div className="animate-slide-in-right">
             <a
               href="/jerry-dempsey-resume.pdf"
               download="Jerry-Dempsey-Resume.pdf"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-all duration-200 hover:shadow-lg"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-all duration-200 hover:shadow-lg hover-lift"
             >
               <DocumentTextIcon className="w-6 h-6" />
               Download Resume PDF
