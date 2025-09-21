@@ -82,7 +82,7 @@ export default function Resume() {
                             FanDuel, Atlanta, GA
                           </p>
                       <div className="text-slate-700 dark:text-slate-300">
-                        As the leader of the Software Security team, I grew the organization from 3 to over 25 employees while building out three key security functions: Application, Product, and Platform Security. I established a robust Application Security program that provides automated code scanning across all repositories and pull requests, seamlessly integrating security into the development process. Furthermore, I built out the Product Security team, defining and implementing a new framework to reduce risk through threat modeling, risk assessments, and penetration testing. My focus also included creating a dedicated Platform Security function to proactively mitigate risks in the platforms we build, ensuring a secure foundation for all our services..
+                        As the leader of the Software Security team, I grew the organization from 3 to over 25 employees while building out three key security functions: Application, Product, and Platform Security. I established a robust Application Security program that provides automated code scanning across all repositories and pull requests, seamlessly integrating security into the development process. Furthermore, I built out the Product Security team, defining and implementing a new framework to reduce risk through threat modeling, risk assessments, and penetration testing. My focus also included creating a dedicated Platform Security function to proactively mitigate risks in the platforms we build, ensuring a secure foundation for all our services.
                         </div>
                       </div>
                     </div>
@@ -102,7 +102,7 @@ export default function Resume() {
                             FanDuel, Atlanta, GA
                           </p>
                       <div className="text-slate-700 dark:text-slate-300">
-                        Leading application, product, and cloud security initiatives to safeguard our software and ensure trust for our players. Grew team from 3 employees to over 25 employees while building comprehensive security functions..
+                        Leading application, product, and cloud security initiatives to safeguard our software and ensure trust for our players. Grew team from 3 employees to over 25 employees while building comprehensive security functions.
                         </div>
                       </div>
                   </div>
@@ -122,7 +122,7 @@ export default function Resume() {
                             Warner Bros. Discovery, Atlanta, GA
                           </p>
                       <div className="text-slate-700 dark:text-slate-300">
-                        Transformed program from supporting only Turner Broadcasting to supporting all of WarnerMedia. Support more than 3500 developers creating over 4000 applications with full security services. Developed Artemis, a state-of-the-art platform scanning 22,000+ code repositories. Built Product Security team partnering with HBO Max, CNN, and DC Universe brands. Provide threat modeling, DAST, source code scanning, bug bounties, and remediation..
+                        Transformed program from supporting only Turner Broadcasting to supporting all of WarnerMedia. Support more than 3500 developers creating over 4000 applications with full security services. Developed Artemis, a state-of-the-art platform scanning 22,000+ code repositories. Built Product Security team partnering with HBO Max, CNN, and DC Universe brands. Provide threat modeling, DAST, source code scanning, bug bounties, and remediation.
                         </div>
                       </div>
                   </div>
@@ -178,7 +178,7 @@ export default function Resume() {
                                 WarnerMedia, Atlanta, GA
                               </p>
                           <div className="text-slate-700 dark:text-slate-300">
-                            Developed cutting-edge Software Development Security strategy for entire company. Built on existing WarnerMedia CSO Application Security platform. Made tremendous progress towards three-year strategic plan. Led team reporting directly to AT&T Chief Security Office. Focused on innovative solutions driving security forward..
+                            Developed cutting-edge Software Development Security strategy for entire company. Built on existing WarnerMedia CSO Application Security platform. Made tremendous progress towards three-year strategic plan. Led team reporting directly to AT&T Chief Security Office. Focused on innovative solutions driving security forward.
                             </div>
                           </div>
                         </div>
