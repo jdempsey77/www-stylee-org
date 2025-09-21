@@ -607,7 +607,7 @@ export default function Resume() {
                         ${job.company}, ${job.location}
                       </p>
                       <div className="text-slate-700 dark:text-slate-300">
-                        ${job.bullets.map(bullet => `<p className="mb-4">${bullet}</p>`).join('')}
+                        ${job.bullets.map(bullet => `<p className="mb-4">${bullet.replace(/'/g, '&apos;').replace(/"/g, '&quot;')}</p>`).join('')}
                       </div>
                     </div>
                   </div>`).join('\n');
@@ -634,7 +634,7 @@ export default function Resume() {
                             ${job.company}, ${job.location}
                           </p>
                           <div className="text-slate-700 dark:text-slate-300">
-                            ${job.bullets.map(bullet => `<p className="mb-4">${bullet}</p>`).join('')}
+                            ${job.bullets.map(bullet => `<p className="mb-4">${bullet.replace(/'/g, '&apos;').replace(/"/g, '&quot;')}</p>`).join('')}
                           </div>
                         </div>
                       </div>`).join('\n');
