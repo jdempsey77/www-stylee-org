@@ -444,60 +444,73 @@ export default function Resume() {
   }
 
 
-  // Generate PDF from resume data
+  // Generate PDF directly from Google Doc (like the hybrid approach)
   async generatePDF(resumeData) {
-    console.log('📄 Generating PDF...');
+    console.log('📄 Generating PDF directly from Google Doc...');
     
     try {
-      // Create a simple HTML file for PDF generation
-      const htmlContent = this.generatePDFHTML(resumeData);
-      const htmlPath = path.join(__dirname, '..', 'temp-resume.html');
+      // Use the Google Drive API approach for PDF generation
+      const GoogleDriveAPIPipeline = require('./google-drive-api-pipeline');
+      const googleDrivePipeline = new GoogleDriveAPIPipeline();
       
-      fs.writeFileSync(htmlPath, htmlContent);
+      // Generate PDF from Google Doc
+      await googleDrivePipeline.generatePDFFromGoogleDoc();
       
-      // Use Puppeteer to generate PDF
-      const puppeteer = require('puppeteer');
-      const browser = await puppeteer.launch({
-        headless: true,
-        args: ['--no-sandbox', '--disable-setuid-sandbox']
-      });
-      
-      const page = await browser.newPage();
-      await page.setViewport({
-        width: 1200,
-        height: 800,
-        deviceScaleFactor: 2
-      });
-      
-      await page.goto(`file://${htmlPath}`, {
-        waitUntil: 'networkidle0',
-        timeout: 30000
-      });
-      
-      const pdf = await page.pdf({
-        path: this.publicPath,
-        format: 'A4',
-        printBackground: true,
-        margin: {
-          top: '0.5in',
-          right: '0.5in',
-          bottom: '0.5in',
-          left: '0.5in'
-        }
-      });
-      
-      await browser.close();
-      
-      // Copy to out directory
-      fs.copyFileSync(this.publicPath, this.outPath);
-      
-      // Clean up temp file
-      fs.unlinkSync(htmlPath);
-      
-      console.log('✅ PDF generated successfully');
+      console.log('✅ PDF generated directly from Google Doc');
     } catch (error) {
-      console.error('❌ Error generating PDF:', error.message);
-      throw error;
+      console.error('❌ Error generating PDF from Google Doc:', error.message);
+      console.log('💡 Falling back to custom template...');
+      
+      // Fallback to custom template if Google Drive API fails
+      try {
+        const htmlContent = this.generatePDFHTML(resumeData);
+        const htmlPath = path.join(__dirname, '..', 'temp-resume.html');
+        
+        fs.writeFileSync(htmlPath, htmlContent);
+        
+        const puppeteer = require('puppeteer');
+        const browser = await puppeteer.launch({
+          headless: true,
+          args: ['--no-sandbox', '--disable-setuid-sandbox']
+        });
+        
+        const page = await browser.newPage();
+        await page.setViewport({
+          width: 1200,
+          height: 800,
+          deviceScaleFactor: 2
+        });
+        
+        await page.goto(`file://${htmlPath}`, {
+          waitUntil: 'networkidle0',
+          timeout: 30000
+        });
+        
+        const pdf = await page.pdf({
+          path: this.publicPath,
+          format: 'A4',
+          printBackground: true,
+          margin: {
+            top: '0.5in',
+            right: '0.5in',
+            bottom: '0.5in',
+            left: '0.5in'
+          }
+        });
+        
+        await browser.close();
+        
+        // Copy to out directory
+        fs.copyFileSync(this.publicPath, this.outPath);
+        
+        // Clean up temp file
+        fs.unlinkSync(htmlPath);
+        
+        console.log('✅ PDF generated using fallback template');
+      } catch (fallbackError) {
+        console.error('❌ Fallback PDF generation also failed:', fallbackError.message);
+        throw fallbackError;
+      }
     }
   }
 

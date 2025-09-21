@@ -118,59 +118,25 @@ class SmartResumePipeline {
       const auth = await this.authenticate();
       const drive = google.drive({ version: 'v3', auth });
       
-      // Export Google Doc as HTML
+      // Export Google Doc as PDF directly
       const response = await drive.files.export({
         fileId: this.documentId,
-        mimeType: 'text/html'
+        mimeType: 'application/pdf'
+      }, { responseType: 'stream' });
+      
+      console.log('✅ Google Doc exported as PDF');
+      
+      // Write PDF directly to files
+      const writeStream = fs.createWriteStream(this.publicPath);
+      response.data.pipe(writeStream);
+      
+      await new Promise((resolve, reject) => {
+        writeStream.on('finish', resolve);
+        writeStream.on('error', reject);
       });
-      
-      const htmlContent = response.data;
-      console.log('✅ Google Doc exported as HTML');
-      
-      // Create clean HTML for PDF generation
-      const cleanHtml = this.cleanGoogleDocHTML(htmlContent);
-      const htmlPath = path.join(__dirname, '..', 'temp-resume.html');
-      
-      fs.writeFileSync(htmlPath, cleanHtml);
-      
-      // Use Puppeteer to generate PDF
-      const puppeteer = require('puppeteer');
-      const browser = await puppeteer.launch({
-        headless: true,
-        args: ['--no-sandbox', '--disable-setuid-sandbox']
-      });
-      
-      const page = await browser.newPage();
-      await page.setViewport({
-        width: 1200,
-        height: 800,
-        deviceScaleFactor: 2
-      });
-      
-      await page.goto(`file://${htmlPath}`, {
-        waitUntil: 'networkidle0',
-        timeout: 30000
-      });
-      
-      const pdf = await page.pdf({
-        path: this.publicPath,
-        format: 'A4',
-        printBackground: true,
-        margin: {
-          top: '0.5in',
-          right: '0.5in',
-          bottom: '0.5in',
-          left: '0.5in'
-        }
-      });
-      
-      await browser.close();
       
       // Copy to out directory
       fs.copyFileSync(this.publicPath, this.outPath);
-      
-      // Clean up temp file
-      fs.unlinkSync(htmlPath);
       
       console.log('✅ PDF generated from Google Doc');
     } catch (error) {
