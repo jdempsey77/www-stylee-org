@@ -11,7 +11,7 @@ export default function Jerry() {
           <div className="absolute -bottom-40 -left-32 w-80 h-80 bg-gradient-to-br from-emerald-400 to-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float" style={{animationDelay: '2s'}}></div>
         </div>
         
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
           <div className="text-center">
             {/* Profile Photo with enhanced styling */}
             <div className="mb-8 flex justify-center animate-fade-in-up">
@@ -48,7 +48,7 @@ export default function Jerry() {
 
       {/* Personal About Me & Hobbies */}
       <section className="py-20 bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             <div className="animate-slide-in-left">
               <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-6">
