@@ -352,12 +352,7 @@ class SmartResumePipeline {
           location: 'Alpharetta, GA',
           dates: 'March 2010 – April 2013',
           bullets: [
-            'As a Development Manager for nCircle&apos;s Compliance and Configuration Management software (CCM)',
-            'Led the development, QA, and content teams using Agile Methodology',
-            'Served as the Scrum Master and was hands-on in managing QA, design, code review, and backlog planning',
-            'Collaborated with Product Management to plan releases and determine long-term project goals',
-            'Maintained team retention and managed new hires',
-            'Oversaw quarterly budgeting for hardware and software purchases.'
+            'As a Development Manager for nCircle&apos;s Compliance and Configuration Management software (CCM), I led the development, QA, and content teams using Agile Methodology. Served as the Scrum Master and was hands-on in managing QA, design, code review, and backlog planning. Collaborated with Product Management to plan releases and determine long-term project goals. Maintained team retention and managed new hires. Oversaw quarterly budgeting for hardware and software purchases.'
           ]
         },
         {
@@ -366,13 +361,7 @@ class SmartResumePipeline {
           location: 'Atlanta, GA',
           dates: 'March 2005 – March 2010',
           bullets: [
-            'As the Team Lead of the Escalation Management Group (EMG)',
-            'Responsible for overseeing the resolution of high-level software defects on all released hardware and software platforms',
-            'Worked closely with customers to understand their needs and collaborated with the team to deliver solutions',
-            'Met both customer requirements and product design goals',
-            'My team traveled globally to customer sites, where we provided troubleshooting support',
-            'Helped optimize network design and architecture',
-            'Engaged with all departments across the IBM ISS organization to ensure customer issues were resolved effectively and efficiently.'
+            'As the Team Lead of the Escalation Management Group (EMG), I was responsible for overseeing the resolution of high-level software defects on all released hardware and software platforms. Worked closely with customers to understand their needs and collaborated with the team to deliver solutions. Met both customer requirements and product design goals. My team traveled globally to customer sites, where we provided troubleshooting support. Helped optimize network design and architecture. Engaged with all departments across the IBM ISS organization to ensure customer issues were resolved effectively and efficiently.'
           ]
         },
         {
@@ -381,14 +370,7 @@ class SmartResumePipeline {
           location: 'Atlanta, GA',
           dates: 'February 2003 – March 2005',
           bullets: [
-            'As an internal member of the Unified Threat Management (UTM) appliance team',
-            'Collaborated with the development team to design and test the product',
-            'Played a key role in the design and functionality of the Intrusion Prevention System (IPS) module',
-            'Contributed to overall appliance security design',
-            'Promoted to Team Lead for the 2.0 release',
-            'Responsible for developing the test plan and ensuring thorough test case execution',
-            'Ran bug triages to prioritize defect fixes',
-            'Developed several automation tools to streamline testing.'
+            'As an internal member of the Unified Threat Management (UTM) appliance team, I collaborated with the development team to design and test the product. Played a key role in the design and functionality of the Intrusion Prevention System (IPS) module. Contributed to overall appliance security design. Promoted to Team Lead for the 2.0 release. Responsible for developing the test plan and ensuring thorough test case execution. Ran bug triages to prioritize defect fixes. Developed several automation tools to streamline testing.'
           ]
         },
         {
@@ -397,12 +379,7 @@ class SmartResumePipeline {
           location: 'Atlanta, GA',
           dates: 'June 2001 – February 2003',
           bullets: [
-            'Responsible for testing new security content updates for RealSecure Network Sensor',
-            'Tested ISS&apos;s market-leading IDS software',
-            'Played a key role in determining how security content was tested with other ISS products',
-            'Collaborated closely with the X-Force Research and Development team',
-            'Identified and addressed new vulnerabilities',
-            'Ensured that our customers were protected quickly and effectively.'
+            'Responsible for testing new security content updates for RealSecure Network Sensor. Tested ISS&apos;s market-leading IDS software. Played a key role in determining how security content was tested with other ISS products. Collaborated closely with the X-Force Research and Development team. Identified and addressed new vulnerabilities. Ensured that our customers were protected quickly and effectively.'
           ]
         },
         {
@@ -411,10 +388,7 @@ class SmartResumePipeline {
           location: 'Atlanta, GA',
           dates: 'June 2000 – June 2001',
           bullets: [
-            'Created and implemented test cases for the RealSecure software',
-            'Focused on the Solaris version testing',
-            'Conducted thorough testing of Attack Signatures on all supported platforms',
-            'Ensured product quality and reliability.'
+            'Created and implemented test cases for the RealSecure software. Focused on the Solaris version testing. Conducted thorough testing of Attack Signatures on all supported platforms. Ensured product quality and reliability.'
           ]
         },
         {
@@ -423,10 +397,7 @@ class SmartResumePipeline {
           location: 'Atlanta, GA',
           dates: 'November 1998 – June 2000',
           bullets: [
-            'Delivered customer support for RealSecure Network Sensor via phone and email',
-            'Resolved configuration issues and identified software bugs',
-            'Assisted with product deployment',
-            'Provided workarounds to overcome software limitations.'
+            'Delivered customer support for RealSecure Network Sensor via phone and email. Resolved configuration issues and identified software bugs. Assisted with product deployment. Provided workarounds to overcome software limitations.'
           ]
         }
       ]

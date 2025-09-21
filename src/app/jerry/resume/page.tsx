@@ -269,7 +269,7 @@ export default function Resume() {
                             nCircle Network Security, Alpharetta, GA
                           </p>
                           <div className="text-slate-700 dark:text-slate-300">
-                            <p className="mb-4">As a Development Manager for nCircle&apos;s Compliance and Configuration Management software (CCM)</p><p className="mb-4">Led the development, QA, and content teams using Agile Methodology</p><p className="mb-4">Served as the Scrum Master and was hands-on in managing QA, design, code review, and backlog planning</p><p className="mb-4">Collaborated with Product Management to plan releases and determine long-term project goals</p><p className="mb-4">Maintained team retention and managed new hires</p><p className="mb-4">Oversaw quarterly budgeting for hardware and software purchases.</p>
+                            <p className="mb-4">As a Development Manager for nCircle&apos;s Compliance and Configuration Management software (CCM), I led the development, QA, and content teams using Agile Methodology. Served as the Scrum Master and was hands-on in managing QA, design, code review, and backlog planning. Collaborated with Product Management to plan releases and determine long-term project goals. Maintained team retention and managed new hires. Oversaw quarterly budgeting for hardware and software purchases.</p>
                           </div>
                         </div>
                       </div>
@@ -289,7 +289,7 @@ export default function Resume() {
                             IBM Internet Security Systems, Inc. (ISS IBM), Atlanta, GA
                           </p>
                           <div className="text-slate-700 dark:text-slate-300">
-                            <p className="mb-4">As the Team Lead of the Escalation Management Group (EMG)</p><p className="mb-4">Responsible for overseeing the resolution of high-level software defects on all released hardware and software platforms</p><p className="mb-4">Worked closely with customers to understand their needs and collaborated with the team to deliver solutions</p><p className="mb-4">Met both customer requirements and product design goals</p><p className="mb-4">My team traveled globally to customer sites, where we provided troubleshooting support</p><p className="mb-4">Helped optimize network design and architecture</p><p className="mb-4">Engaged with all departments across the IBM ISS organization to ensure customer issues were resolved effectively and efficiently.</p>
+                            <p className="mb-4">As the Team Lead of the Escalation Management Group (EMG), I was responsible for overseeing the resolution of high-level software defects on all released hardware and software platforms. Worked closely with customers to understand their needs and collaborated with the team to deliver solutions. Met both customer requirements and product design goals. My team traveled globally to customer sites, where we provided troubleshooting support. Helped optimize network design and architecture. Engaged with all departments across the IBM ISS organization to ensure customer issues were resolved effectively and efficiently.</p>
                           </div>
                         </div>
                       </div>
@@ -309,7 +309,7 @@ export default function Resume() {
                             Internet Security Systems, Inc. (ISS), Atlanta, GA
                           </p>
                           <div className="text-slate-700 dark:text-slate-300">
-                            <p className="mb-4">As an internal member of the Unified Threat Management (UTM) appliance team</p><p className="mb-4">Collaborated with the development team to design and test the product</p><p className="mb-4">Played a key role in the design and functionality of the Intrusion Prevention System (IPS) module</p><p className="mb-4">Contributed to overall appliance security design</p><p className="mb-4">Promoted to Team Lead for the 2.0 release</p><p className="mb-4">Responsible for developing the test plan and ensuring thorough test case execution</p><p className="mb-4">Ran bug triages to prioritize defect fixes</p><p className="mb-4">Developed several automation tools to streamline testing.</p>
+                            <p className="mb-4">As an internal member of the Unified Threat Management (UTM) appliance team, I collaborated with the development team to design and test the product. Played a key role in the design and functionality of the Intrusion Prevention System (IPS) module. Contributed to overall appliance security design. Promoted to Team Lead for the 2.0 release. Responsible for developing the test plan and ensuring thorough test case execution. Ran bug triages to prioritize defect fixes. Developed several automation tools to streamline testing.</p>
                           </div>
                         </div>
                       </div>
@@ -329,7 +329,7 @@ export default function Resume() {
                             Internet Security Systems, Inc. (ISS), Atlanta, GA
                           </p>
                           <div className="text-slate-700 dark:text-slate-300">
-                            <p className="mb-4">Responsible for testing new security content updates for RealSecure Network Sensor</p><p className="mb-4">Tested ISS&apos;s market-leading IDS software</p><p className="mb-4">Played a key role in determining how security content was tested with other ISS products</p><p className="mb-4">Collaborated closely with the X-Force Research and Development team</p><p className="mb-4">Identified and addressed new vulnerabilities</p><p className="mb-4">Ensured that our customers were protected quickly and effectively.</p>
+                            <p className="mb-4">Responsible for testing new security content updates for RealSecure Network Sensor. Tested ISS&apos;s market-leading IDS software. Played a key role in determining how security content was tested with other ISS products. Collaborated closely with the X-Force Research and Development team. Identified and addressed new vulnerabilities. Ensured that our customers were protected quickly and effectively.</p>
                           </div>
                         </div>
                       </div>
@@ -349,7 +349,7 @@ export default function Resume() {
                             Internet Security Systems, Inc. (ISS), Atlanta, GA
                           </p>
                           <div className="text-slate-700 dark:text-slate-300">
-                            <p className="mb-4">Created and implemented test cases for the RealSecure software</p><p className="mb-4">Focused on the Solaris version testing</p><p className="mb-4">Conducted thorough testing of Attack Signatures on all supported platforms</p><p className="mb-4">Ensured product quality and reliability.</p>
+                            <p className="mb-4">Created and implemented test cases for the RealSecure software. Focused on the Solaris version testing. Conducted thorough testing of Attack Signatures on all supported platforms. Ensured product quality and reliability.</p>
                           </div>
                         </div>
                       </div>
@@ -369,7 +369,7 @@ export default function Resume() {
                             Internet Security Systems, Inc. (ISS), Atlanta, GA
                           </p>
                           <div className="text-slate-700 dark:text-slate-300">
-                            <p className="mb-4">Delivered customer support for RealSecure Network Sensor via phone and email</p><p className="mb-4">Resolved configuration issues and identified software bugs</p><p className="mb-4">Assisted with product deployment</p><p className="mb-4">Provided workarounds to overcome software limitations.</p>
+                            <p className="mb-4">Delivered customer support for RealSecure Network Sensor via phone and email. Resolved configuration issues and identified software bugs. Assisted with product deployment. Provided workarounds to overcome software limitations.</p>
                           </div>
                         </div>
                       </div>
