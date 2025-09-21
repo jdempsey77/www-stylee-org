@@ -13,7 +13,7 @@ export default function Resume() {
   const [showAllExperience, setShowAllExperience] = useState(false);
   const expandedContentRef = useRef<HTMLDivElement>(null);
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-gray-50 dark:from-slate-900 dark:to-slate-800">
+        <div className="min-h-screen bg-gradient-to-br from-slate-50 to-gray-50 dark:from-slate-900 dark:to-slate-800 pb-20">
       {/* Header */}
       <section className="py-20 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 dark:from-slate-900 dark:via-blue-900 dark:to-purple-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -36,7 +36,7 @@ export default function Resume() {
               >
                 <EnvelopeIcon className="w-5 h-5" />
                 Email Me</a>
-                </div>
+            </div>
           </div>
         </div>
       </section>
@@ -421,6 +421,24 @@ export default function Resume() {
               Download Resume PDF</a>
                 </div>
       </section>
+
+      {/* Sticky Download Banner */}
+      <div className="fixed bottom-0 left-0 right-0 bg-gradient-to-r from-blue-600 to-blue-700 text-white py-3 px-4 shadow-lg z-50 border-t border-blue-500">
+        <div className="max-w-7xl mx-auto flex items-center justify-between">
+          <div className="flex items-center gap-3">
+            <DocumentTextIcon className="w-5 h-5" />
+            <span className="font-semibold">Ready to download my resume?</span>
+          </div>
+          <a
+            href="/jerry-dempsey-resume.pdf"
+            download="Jerry-Dempsey-Resume.pdf"
+            className="inline-flex items-center gap-2 px-4 py-2 bg-white text-blue-700 font-semibold rounded-lg hover:bg-blue-50 transition-colors shadow-sm"
+          >
+            <DocumentTextIcon className="w-4 h-4" />
+            Download PDF
+          </a>
+        </div>
+      </div>
     </div>
   );
 }
