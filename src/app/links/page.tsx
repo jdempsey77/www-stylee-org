@@ -69,15 +69,15 @@ export default function Links() {
   const categories = [...new Set(favoriteLinks.map(link => link.category))];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 dark:from-slate-900 dark:via-blue-900 dark:to-purple-900">
       {/* Hero Section */}
       <section className="relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-slate-900 dark:text-white mb-6">
+            <h1 className="text-4xl md:text-6xl font-bold text-slate-900 dark:text-white mb-6 animate-fade-in-up gradient-text">
               My Favorite Links
             </h1>
-            <p className="text-xl md:text-2xl text-slate-600 dark:text-slate-400 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl text-slate-600 dark:text-slate-400 mb-8 max-w-3xl mx-auto animate-slide-in-left">
               A curated collection of websites I visit regularly for work, play, and everything in between.
             </p>
           </div>

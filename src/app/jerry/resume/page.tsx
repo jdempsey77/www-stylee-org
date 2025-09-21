@@ -12,39 +12,39 @@ import { useState } from 'react';
 export default function Resume() {
   const [showAllExperience, setShowAllExperience] = useState(false);
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-gray-50 dark:from-slate-900 dark:to-slate-800">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 dark:from-slate-900 dark:via-blue-900 dark:to-purple-900">
       {/* Header */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
-            <h1 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-4">
+            <h1 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-4 animate-fade-in-up gradient-text">
               Jerry Dempsey
             </h1>
-            <p className="text-xl text-gray-600 dark:text-gray-400 mb-6 font-semibold">
+            <p className="text-xl text-gray-600 dark:text-gray-400 mb-6 font-semibold animate-slide-in-left">
               Product and Application Security Leader
             </p>
             <p className="text-lg text-slate-600 dark:text-slate-300 max-w-5xl mx-auto mb-8">
               More than 20 years of experience in cybersecurity with outstanding communication skills and expertise in recruiting and mentoring top-performing teams. As a Product and Application Security leader, I possess outstanding communication skills and excel at recruiting and mentoring top-performing teams. I am a proven problem-solver with a knack for finding creative solutions to complex challenges. I am also an advocate for forward-thinking security concepts, and I am committed to driving collaboration and partnership with development organizations to help them adopt cutting-edge security strategies.
             </p>
             
-            {/* Contact Information */}
-            <div className="flex flex-wrap justify-center gap-3">
-              <a 
-                href="mailto:jerry@stylee.org"
-                className="inline-flex items-center gap-2 rounded-lg bg-slate-100 dark:bg-slate-700 px-4 py-2 text-slate-700 dark:text-white hover:bg-slate-200 dark:hover:bg-slate-600 border border-slate-200 dark:border-slate-600 transition-all duration-200 hover:shadow-md"
-              >
-                <EnvelopeIcon className="w-5 h-5" />
-                Email
-              </a>
-              <a 
-                href="/jerry-dempsey-resume.pdf"
-                download="Jerry-Dempsey-Resume.pdf"
-                className="inline-flex items-center gap-2 rounded-lg bg-slate-100 dark:bg-slate-700 px-4 py-2 text-slate-700 dark:text-white hover:bg-slate-200 dark:hover:bg-slate-600 border border-slate-200 dark:border-slate-600 transition-all duration-200 hover:shadow-md"
-              >
-                <DocumentTextIcon className="w-5 h-5" />
-                Resume
-              </a>
-            </div>
+                {/* Contact Information */}
+                <div className="flex flex-wrap justify-center gap-4 animate-slide-in-right">
+                  <a 
+                    href="mailto:jerry@stylee.org"
+                    className="btn-primary inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold hover-lift"
+                  >
+                    <EnvelopeIcon className="w-5 h-5" />
+                    Email Me
+                  </a>
+                  <a 
+                    href="/jerry-dempsey-resume.pdf"
+                    download="Jerry-Dempsey-Resume.pdf"
+                    className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold bg-gradient-to-r from-emerald-500 to-blue-500 text-white hover-lift"
+                  >
+                    <DocumentTextIcon className="w-5 h-5" />
+                    Download Resume
+                  </a>
+                </div>
           </div>
         </div>
       </section>
