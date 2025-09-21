@@ -31,7 +31,7 @@ export default function Resume() {
                 <div className="flex flex-wrap justify-center gap-4 animate-slide-in-right">
                   <a 
                     href="mailto:jerry@stylee.org"
-                    className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold bg-slate-600 hover:bg-slate-700 text-white hover-lift transition-all duration-200"
+                    className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold bg-blue-600 hover:bg-blue-700 text-white hover-lift transition-all duration-200"
                   >
                     <EnvelopeIcon className="w-5 h-5" />
                     Email Me
@@ -82,7 +82,7 @@ export default function Resume() {
                   <div className="space-y-8">
                     {/* FanDuel Sr. Director */}
                     <div className="relative flex items-start">
-                      <div className="absolute left-3 w-3 h-3 bg-slate-600 rounded-full border-2 border-white dark:border-slate-800 shadow-sm"></div>
+                      <div className="absolute left-3 w-4 h-4 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full border-2 border-white dark:border-slate-800 shadow-lg animate-pulse"></div>
                       <div className="ml-8 flex-1">
                         <div className="bg-white dark:bg-slate-800 rounded-lg shadow-sm border border-slate-200 dark:border-slate-700 p-6">
                           <div className="flex items-center justify-between mb-2">
@@ -105,7 +105,7 @@ export default function Resume() {
 
                     {/* FanDuel Director */}
                     <div className="relative flex items-start">
-                      <div className="absolute left-3 w-3 h-3 bg-gray-600 rounded-full border-2 border-white dark:border-slate-800 shadow-sm"></div>
+                      <div className="absolute left-3 w-4 h-4 bg-gradient-to-r from-emerald-500 to-emerald-600 rounded-full border-2 border-white dark:border-slate-800 shadow-lg animate-pulse"></div>
                       <div className="ml-8 flex-1">
                         <div className="bg-white dark:bg-slate-800 rounded-lg shadow-sm border border-slate-200 dark:border-slate-700 p-6">
                           <div className="flex items-center justify-between mb-2">
@@ -128,7 +128,7 @@ export default function Resume() {
 
                     {/* Warner Bros. Discovery */}
                     <div className="relative flex items-start">
-                      <div className="absolute left-3 w-3 h-3 bg-green-600 rounded-full border-2 border-white dark:border-slate-800 shadow-sm"></div>
+                      <div className="absolute left-3 w-4 h-4 bg-gradient-to-r from-purple-500 to-purple-600 rounded-full border-2 border-white dark:border-slate-800 shadow-lg animate-pulse"></div>
                       <div className="ml-8 flex-1">
                         <div className="bg-white dark:bg-slate-800 rounded-lg shadow-sm border border-slate-200 dark:border-slate-700 p-6">
                           <div className="flex items-center justify-between mb-2">
@@ -154,7 +154,7 @@ export default function Resume() {
                       <>
                         {/* WarnerMedia Director */}
                         <div className="relative flex items-start">
-                          <div className="absolute left-3 w-3 h-3 bg-cyan-600 rounded-full border-2 border-white dark:border-slate-800 shadow-sm"></div>
+                          <div className="absolute left-3 w-4 h-4 bg-gradient-to-r from-cyan-500 to-cyan-600 rounded-full border-2 border-white dark:border-slate-800 shadow-lg animate-pulse"></div>
                           <div className="ml-8 flex-1">
                             <div className="bg-white dark:bg-slate-800 rounded-lg shadow-sm border border-slate-200 dark:border-slate-700 p-6">
                               <div className="flex items-center justify-between mb-2">
@@ -177,7 +177,7 @@ export default function Resume() {
 
                         {/* Continue with more timeline items... */}
                         <div className="relative flex items-start">
-                          <div className="absolute left-3 w-3 h-3 bg-purple-600 rounded-full border-2 border-white dark:border-slate-800 shadow-sm"></div>
+                          <div className="absolute left-3 w-4 h-4 bg-gradient-to-r from-orange-500 to-orange-600 rounded-full border-2 border-white dark:border-slate-800 shadow-lg animate-pulse"></div>
                           <div className="ml-8 flex-1">
                             <div className="bg-white dark:bg-slate-800 rounded-lg shadow-sm border border-slate-200 dark:border-slate-700 p-6">
                               <div className="flex items-center justify-between mb-2">
@@ -200,7 +200,7 @@ export default function Resume() {
 
                         {/* Add more timeline items for the rest of the career... */}
                         <div className="relative flex items-start">
-                          <div className="absolute left-3 w-3 h-3 bg-slate-600 rounded-full border-2 border-white dark:border-slate-800 shadow-sm"></div>
+                          <div className="absolute left-3 w-4 h-4 bg-gradient-to-r from-indigo-500 to-indigo-600 rounded-full border-2 border-white dark:border-slate-800 shadow-lg animate-pulse"></div>
                           <div className="ml-8 flex-1">
                             <div className="bg-white dark:bg-slate-800 rounded-lg shadow-sm border border-slate-200 dark:border-slate-700 p-6">
                               <div className="flex items-center justify-between mb-2">
@@ -223,7 +223,7 @@ export default function Resume() {
 
                         {/* Tripwire and earlier roles... */}
                         <div className="relative flex items-start">
-                          <div className="absolute left-3 w-3 h-3 bg-cyan-600 rounded-full border-2 border-white dark:border-slate-800 shadow-sm"></div>
+                          <div className="absolute left-3 w-4 h-4 bg-gradient-to-r from-teal-500 to-teal-600 rounded-full border-2 border-white dark:border-slate-800 shadow-lg animate-pulse"></div>
                           <div className="ml-8 flex-1">
                             <div className="bg-white dark:bg-slate-800 rounded-lg shadow-sm border border-slate-200 dark:border-slate-700 p-6">
                               <div className="flex items-center justify-between mb-2">
@@ -246,7 +246,7 @@ export default function Resume() {
 
                         {/* ISS/IBM roles */}
                         <div className="relative flex items-start">
-                          <div className="absolute left-3 w-3 h-3 bg-purple-600 rounded-full border-2 border-white dark:border-slate-800 shadow-sm"></div>
+                          <div className="absolute left-3 w-4 h-4 bg-gradient-to-r from-pink-500 to-pink-600 rounded-full border-2 border-white dark:border-slate-800 shadow-lg animate-pulse"></div>
                           <div className="ml-8 flex-1">
                             <div className="bg-white dark:bg-slate-800 rounded-lg shadow-sm border border-slate-200 dark:border-slate-700 p-6">
                               <div className="flex items-center justify-between mb-2">
@@ -269,7 +269,7 @@ export default function Resume() {
 
                         {/* Early ISS roles */}
                         <div className="relative flex items-start">
-                          <div className="absolute left-3 w-3 h-3 bg-green-600 rounded-full border-2 border-white dark:border-slate-800 shadow-sm"></div>
+                          <div className="absolute left-3 w-4 h-4 bg-gradient-to-r from-rose-500 to-rose-600 rounded-full border-2 border-white dark:border-slate-800 shadow-lg animate-pulse"></div>
                           <div className="ml-8 flex-1">
                             <div className="bg-white dark:bg-slate-800 rounded-lg shadow-sm border border-slate-200 dark:border-slate-700 p-6">
                               <div className="flex items-center justify-between mb-2">
@@ -298,7 +298,7 @@ export default function Resume() {
                   <div className="flex justify-center pt-6">
                     <button
                       onClick={() => setShowAllExperience(!showAllExperience)}
-                      className="inline-flex items-center gap-2 px-6 py-3 bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-white hover:bg-slate-200 dark:hover:bg-slate-600 border border-slate-200 dark:border-slate-600 rounded-lg transition-all duration-200 hover:shadow-md"
+                      className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-all duration-200 hover:shadow-md font-semibold"
                     >
                       {showAllExperience ? (
                         <>
@@ -334,7 +334,7 @@ export default function Resume() {
             <a
               href="/jerry-dempsey-resume.pdf"
               download="Jerry-Dempsey-Resume.pdf"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-slate-600 hover:bg-slate-700 text-white font-semibold rounded-lg transition-all duration-200 hover:shadow-lg"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-all duration-200 hover:shadow-lg"
             >
               <DocumentTextIcon className="w-6 h-6" />
               Download Resume PDF
