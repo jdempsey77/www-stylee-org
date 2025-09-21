@@ -7,10 +7,11 @@ import {
   ChevronDownIcon,
   ChevronUpIcon
 } from '@heroicons/react/24/outline';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 
 export default function Resume() {
   const [showAllExperience, setShowAllExperience] = useState(false);
+  const expandedContentRef = useRef<HTMLDivElement>(null);
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-gray-50 dark:from-slate-900 dark:to-slate-800">
       {/* Header */}
@@ -50,7 +51,7 @@ export default function Resume() {
       </section>
 
       {/* Resume Content */}
-      <section className="py-12 bg-white dark:bg-slate-800">
+      <section className="py-12 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 dark:from-slate-900 dark:via-blue-900 dark:to-purple-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="space-y-8">
             {/* Main Content */}
@@ -91,7 +92,7 @@ export default function Resume() {
                           </p>
                       <div className="text-slate-700 dark:text-slate-300">
                         • As the leader of the Software Security team, I grew the organization from 3 to over 25 employees while building out three key security functions • Application, Product, and Platform Security. I established a robust Application Security program that provides automated code scanning across all repositories and pull requests • Seamlessly integrating security into the development process. Furthermore, I built out the Product Security team, defining and implementing a new framework to reduce risk through threat modeling • Risk assessments, and penetration testing. My focus also included creating a dedicated Platform Security function to proactively mitigate risks in the platforms we build • Ensuring a secure foundation for all our services.
-                      </div>
+                        </div>
                       </div>
                     </div>
 
@@ -111,7 +112,7 @@ export default function Resume() {
                           </p>
                       <div className="text-slate-700 dark:text-slate-300">
                         • Leading application, product, and cloud security initiatives to safeguard our software and ensure trust for our players • Grew team from 3 employees to over 25 employees while building comprehensive security functions.
-                      </div>
+                        </div>
                       </div>
                   </div>
 
@@ -131,7 +132,7 @@ export default function Resume() {
                           </p>
                       <div className="text-slate-700 dark:text-slate-300">
                         • Transformed program from supporting only Turner Broadcasting to supporting all of WarnerMedia • Support more than 3500 developers creating over 4000 applications with full security services • Developed Artemis, a state-of-the-art platform scanning 22,000+ code repositories • Built Product Security team partnering with HBO Max, CNN, and DC Universe brands • Provide threat modeling, DAST, source code scanning, bug bounties, and remediation
-                      </div>
+                        </div>
                       </div>
                   </div>
 
@@ -158,7 +159,18 @@ export default function Resume() {
                   {/* Show More/Less Button */}
                   <div className="flex justify-center pt-4">
                     <button
-                      onClick={() => setShowAllExperience(!showAllExperience)}
+                      onClick={() => {
+                        setShowAllExperience(!showAllExperience);
+                        // Scroll to bottom after content expands
+                        setTimeout(() => {
+                          if (expandedContentRef.current) {
+                            expandedContentRef.current.scrollIntoView({ 
+                              behavior: 'smooth', 
+                              block: 'end' 
+                            });
+                          }
+                        }, 100);
+                      }}
                       className="inline-flex items-center gap-2 px-6 py-3 bg-slate-600 hover:bg-slate-700 text-white font-semibold rounded-lg transition-all duration-200 hover:shadow-lg"
                     >
                       {showAllExperience ? (
@@ -177,7 +189,7 @@ export default function Resume() {
 
                   {/* Additional Experience (Hidden by default) */}
                   {showAllExperience && (
-                    <div className="space-y-6">
+                    <div ref={expandedContentRef} className="space-y-6">
                       <div className="relative pl-8 pb-8">
                         <div className="absolute left-0 top-2 w-4 h-4 bg-gradient-to-r from-orange-500 to-orange-600 rounded-full shadow-lg animate-pulse"></div>
                         <div className="bg-white dark:bg-slate-800 rounded-lg shadow-lg p-6 border-l-4 border-orange-500">
@@ -194,7 +206,7 @@ export default function Resume() {
                               </p>
                           <div className="text-slate-700 dark:text-slate-300">
                             • Developed cutting-edge Software Development Security strategy for entire company • Built on existing WarnerMedia CSO Application Security platform • Made tremendous progress towards three-year strategic plan • Led team reporting directly to AT&T Chief Security Office • Focused on innovative solutions driving security forward
-                          </div>
+                            </div>
                           </div>
                         </div>
 
@@ -234,7 +246,7 @@ export default function Resume() {
                           </p>
                           <div className="text-slate-700 dark:text-slate-300">
                             • Established a cutting-edge DevSecOps team from scratch in the Information Security Office (ISO) at Turner • Aimed at helping various brands within the company adopt a &quot;secure by default&quot; mindset • Championed a culture of security and integrated critical tools into the CI/CD pipelines • Minimized security risks earlier in the development process • Worked alongside different teams at Turner, bridging the gap between security and developers • Identified and achieved top-notch security standards within each brand
-                          </div>
+                            </div>
                           </div>
                         </div>
 
