@@ -89,7 +89,7 @@ export default function Resume() {
                             <h3 className="text-xl font-semibold text-slate-900 dark:text-white">
                               Sr. Director, Head of Software Security
                             </h3>
-                            <span className="text-sm font-medium text-slate-600 dark:text-slate-400 bg-slate-100 dark:bg-slate-700 px-3 py-1 rounded-full">
+                            <span className="text-sm font-bold text-white bg-gradient-to-r from-blue-500 to-blue-600 px-4 py-2 rounded-full shadow-lg border border-blue-400">
                               2025 – Present
                             </span>
                           </div>
@@ -112,7 +112,7 @@ export default function Resume() {
                     <h3 className="text-xl font-semibold text-slate-900 dark:text-white">
                               Director, Head of Software Security
                     </h3>
-                            <span className="text-sm font-medium text-slate-600 dark:text-slate-400 bg-slate-100 dark:bg-slate-700 px-3 py-1 rounded-full">
+                            <span className="text-sm font-bold text-white bg-gradient-to-r from-emerald-500 to-emerald-600 px-4 py-2 rounded-full shadow-lg border border-emerald-400">
                               2023 – 2025
                             </span>
                           </div>
@@ -135,7 +135,7 @@ export default function Resume() {
                     <h3 className="text-xl font-semibold text-slate-900 dark:text-white">
                       Director, Product and Application Security
                     </h3>
-                            <span className="text-sm font-medium text-slate-600 dark:text-slate-400 bg-slate-100 dark:bg-slate-700 px-3 py-1 rounded-full">
+                            <span className="text-sm font-bold text-white bg-gradient-to-r from-purple-500 to-purple-600 px-4 py-2 rounded-full shadow-lg border border-purple-400">
                               2022 – Present
                             </span>
                           </div>
@@ -161,7 +161,7 @@ export default function Resume() {
                     <h3 className="text-xl font-semibold text-slate-900 dark:text-white">
                       Director, Product and Application Security
                     </h3>
-                                <span className="text-sm font-medium text-slate-600 dark:text-slate-400 bg-slate-100 dark:bg-slate-700 px-3 py-1 rounded-full">
+                                <span className="text-sm font-bold text-white bg-gradient-to-r from-cyan-500 to-cyan-600 px-4 py-2 rounded-full shadow-lg border border-cyan-400">
                                   2021 – 2022
                                 </span>
                               </div>
@@ -184,7 +184,7 @@ export default function Resume() {
                     <h3 className="text-xl font-semibold text-slate-900 dark:text-white">
                       Director, Software Development Security
                     </h3>
-                                <span className="text-sm font-medium text-slate-600 dark:text-slate-400 bg-slate-100 dark:bg-slate-700 px-3 py-1 rounded-full">
+                                <span className="text-sm font-bold text-white bg-gradient-to-r from-orange-500 to-orange-600 px-4 py-2 rounded-full shadow-lg border border-orange-400">
                                   2021
                                 </span>
                               </div>
@@ -207,7 +207,7 @@ export default function Resume() {
                                 <h3 className="text-xl font-semibold text-slate-900 dark:text-white">
                                   Sr. Manager, Application Security
                                 </h3>
-                                <span className="text-sm font-medium text-slate-600 dark:text-slate-400 bg-slate-100 dark:bg-slate-700 px-3 py-1 rounded-full">
+                                <span className="text-sm font-bold text-white bg-gradient-to-r from-indigo-500 to-indigo-600 px-4 py-2 rounded-full shadow-lg border border-indigo-400">
                                   2019 – 2020
                                 </span>
                               </div>
@@ -230,7 +230,7 @@ export default function Resume() {
                                 <h3 className="text-xl font-semibold text-slate-900 dark:text-white">
                                   Sr. DevOps Manager, IT
                                 </h3>
-                                <span className="text-sm font-medium text-slate-600 dark:text-slate-400 bg-slate-100 dark:bg-slate-700 px-3 py-1 rounded-full">
+                                <span className="text-sm font-bold text-white bg-gradient-to-r from-teal-500 to-teal-600 px-4 py-2 rounded-full shadow-lg border border-teal-400">
                                   2015 – 2017
                                 </span>
                               </div>
@@ -253,7 +253,7 @@ export default function Resume() {
                                 <h3 className="text-xl font-semibold text-slate-900 dark:text-white">
                                   Advisory Software Engineer, Team Lead
                                 </h3>
-                                <span className="text-sm font-medium text-slate-600 dark:text-slate-400 bg-slate-100 dark:bg-slate-700 px-3 py-1 rounded-full">
+                                <span className="text-sm font-bold text-white bg-gradient-to-r from-pink-500 to-pink-600 px-4 py-2 rounded-full shadow-lg border border-pink-400">
                                   2005 – 2010
                                 </span>
                               </div>
@@ -276,7 +276,7 @@ export default function Resume() {
                                 <h3 className="text-xl font-semibold text-slate-900 dark:text-white">
                                   Senior Technical Support Engineer
                                 </h3>
-                                <span className="text-sm font-medium text-slate-600 dark:text-slate-400 bg-slate-100 dark:bg-slate-700 px-3 py-1 rounded-full">
+                                <span className="text-sm font-bold text-white bg-gradient-to-r from-rose-500 to-rose-600 px-4 py-2 rounded-full shadow-lg border border-rose-400">
                                   1998 – 2000
                                 </span>
                               </div>
