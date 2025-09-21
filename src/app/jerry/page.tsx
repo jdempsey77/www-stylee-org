@@ -18,7 +18,7 @@ export default function Jerry() {
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full blur-lg opacity-30 animate-pulse-slow"></div>
                 <Image 
-                  src="/main.png" 
+                  src="/jerry.jpg" 
                   alt="Jerry Dempsey" 
                   width={256}
                   height={256}
