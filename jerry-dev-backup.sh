@@ -1,8 +1,8 @@
 #!/bin/bash
 
-# Jerry Dempsey Website - Enhanced Development & Deployment Script
-# ==============================================================
-# Comprehensive tool for managing development, testing, deployment, and branching
+# Jerry Dempsey Website - Development & Deployment Script
+# =====================================================
+# Comprehensive tool for managing development, testing, and deployment
 
 set -e  # Exit on any error
 
@@ -66,141 +66,6 @@ check_npm() {
         exit 1
     fi
     log_success "npm $(npm --version) is available"
-}
-
-# Branch Management Functions
-create_feature_branch() {
-    log_header "Create Feature Branch"
-    log_step "Ensuring you're on main branch..."
-    
-    current_branch=$(git branch --show-current)
-    if [ "$current_branch" != "main" ]; then
-        log_warning "You're currently on branch: $current_branch"
-        read -p "Switch to main branch? (y/n): " switch_to_main
-        if [ "$switch_to_main" = "y" ] || [ "$switch_to_main" = "Y" ]; then
-            git checkout main
-            git pull origin main
-        else
-            log_error "Cannot create feature branch from non-main branch"
-            return 1
-        fi
-    else
-        git pull origin main
-    fi
-    
-    read -p "Enter feature name (e.g., 'contact-form'): " feature_name
-    if [ -z "$feature_name" ]; then
-        log_error "Feature name cannot be empty"
-        return 1
-    fi
-    
-    branch_name="feature/$feature_name"
-    log_step "Creating branch: $branch_name"
-    
-    if git checkout -b "$branch_name"; then
-        log_success "Created and switched to branch: $branch_name"
-        log_info "You can now start developing your feature"
-        log_info "Run './jerry-dev.sh dev' to start the development server"
-    else
-        log_error "Failed to create branch. It might already exist."
-    fi
-}
-
-create_fix_branch() {
-    log_header "Create Fix Branch"
-    log_step "Ensuring you're on main branch..."
-    
-    current_branch=$(git branch --show-current)
-    if [ "$current_branch" != "main" ]; then
-        log_warning "You're currently on branch: $current_branch"
-        read -p "Switch to main branch? (y/n): " switch_to_main
-        if [ "$switch_to_main" = "y" ] || [ "$switch_to_main" = "Y" ]; then
-            git checkout main
-            git pull origin main
-        else
-            log_error "Cannot create fix branch from non-main branch"
-            return 1
-        fi
-    else
-        git pull origin main
-    fi
-    
-    read -p "Enter fix description (e.g., 'mobile-navigation-bug'): " fix_desc
-    if [ -z "$fix_desc" ]; then
-        log_error "Fix description cannot be empty"
-        return 1
-    fi
-    
-    branch_name="fix/$fix_desc"
-    log_step "Creating branch: $branch_name"
-    
-    if git checkout -b "$branch_name"; then
-        log_success "Created and switched to branch: $branch_name"
-        log_info "You can now start fixing the issue"
-        log_info "Run './jerry-dev.sh dev' to start the development server"
-    else
-        log_error "Failed to create branch. It might already exist."
-    fi
-}
-
-create_style_branch() {
-    log_header "Create Style Branch"
-    log_step "Ensuring you're on main branch..."
-    
-    current_branch=$(git branch --show-current)
-    if [ "$current_branch" != "main" ]; then
-        log_warning "You're currently on branch: $current_branch"
-        read -p "Switch to main branch? (y/n): " switch_to_main
-        if [ "$switch_to_main" = "y" ] || [ "$switch_to_main" = "Y" ]; then
-            git checkout main
-            git pull origin main
-        else
-            log_error "Cannot create style branch from non-main branch"
-            return 1
-        fi
-    else
-        git pull origin main
-    fi
-    
-    read -p "Enter style change description (e.g., 'modern-buttons'): " style_desc
-    if [ -z "$style_desc" ]; then
-        log_error "Style description cannot be empty"
-        return 1
-    fi
-    
-    branch_name="style/$style_desc"
-    log_step "Creating branch: $branch_name"
-    
-    if git checkout -b "$branch_name"; then
-        log_success "Created and switched to branch: $branch_name"
-        log_info "You can now start styling changes"
-        log_info "Run './jerry-dev.sh dev' to start the development server"
-    else
-        log_error "Failed to create branch. It might already exist."
-    fi
-}
-
-show_branch_status() {
-    log_header "Branch Status"
-    
-    current_branch=$(git branch --show-current)
-    echo -e "${WHITE}Current Branch:${NC} $current_branch"
-    
-    echo -e "\n${WHITE}Local Branches:${NC}"
-    git branch -v | sed 's/^/  /'
-    
-    echo -e "\n${WHITE}Remote Branches:${NC}"
-    git branch -r | sed 's/^/  /'
-    
-    echo -e "\n${WHITE}Recent Commits:${NC}"
-    git log --oneline -5 | sed 's/^/  /'
-    
-    echo -e "\n${WHITE}Uncommitted Changes:${NC}"
-    if git diff --quiet; then
-        echo "  ✅ No uncommitted changes"
-    else
-        git status --short | sed 's/^/  /'
-    fi
 }
 
 # Resume Pipeline Functions
@@ -307,15 +172,6 @@ start_production_server() {
 # Deployment Functions
 push_to_production() {
     log_header "Push to Production"
-    
-    current_branch=$(git branch --show-current)
-    if [ "$current_branch" != "main" ]; then
-        log_error "You can only deploy from the main branch!"
-        log_info "Current branch: $current_branch"
-        log_info "Please switch to main branch first: git checkout main"
-        return 1
-    fi
-    
     log_step "Running production pipeline before push..."
     
     if npm run pipeline:production; then
@@ -346,15 +202,6 @@ push_to_production() {
 
 deploy_with_message() {
     log_header "Deploy with Custom Message"
-    
-    current_branch=$(git branch --show-current)
-    if [ "$current_branch" != "main" ]; then
-        log_error "You can only deploy from the main branch!"
-        log_info "Current branch: $current_branch"
-        log_info "Please switch to main branch first: git checkout main"
-        return 1
-    fi
-    
     log_step "Running production pipeline..."
     
     if npm run pipeline:production; then
@@ -386,10 +233,7 @@ deploy_with_message() {
 show_status() {
     log_header "Project Status"
     
-    current_branch=$(git branch --show-current)
-    echo -e "${WHITE}Current Branch:${NC} $current_branch"
-    
-    echo -e "\n${WHITE}📊 Git Status:${NC}"
+    echo -e "${WHITE}📊 Git Status:${NC}"
     git status --short
     
     echo -e "\n${WHITE}📦 Dependencies:${NC}"
@@ -449,92 +293,85 @@ setup_hooks() {
     log_success "Git hooks setup completed"
 }
 
-migrate_repository() {
-    log_header "Repository Migration"
-    log_step "Running repository migration script..."
-    ./scripts/migrate-repo.sh
-    log_success "Repository migration completed"
-}
+    migrate_repository() {
+        log_header "Repository Migration"
+        log_step "Running repository migration script..."
+        ./scripts/migrate-repo.sh
+        log_success "Repository migration completed"
+    }
 
-show_docs() {
-    log_header "Documentation"
-    log_step "Available documentation in docs/ directory:"
-    find docs/ -name "*.md" | sort | sed 's/^/  📄 /'
-    echo ""
-    log_info "Quick access:"
-    echo "  📚 Main docs index: docs/README.md"
-    echo "  🚀 Quick start: QUICK_START.md"
-    echo "  🔧 Setup guides: docs/setup/"
-    echo "  🧪 Testing: docs/testing/"
-    echo "  🚀 Deployment: docs/deployment/"
-    echo "  🌿 Branching: BRANCHING_WORKFLOW.md"
-}
+    show_docs() {
+        log_header "Documentation"
+        log_step "Available documentation in docs/ directory:"
+        find docs/ -name "*.md" | sort | sed 's/^/  📄 /'
+        echo ""
+        log_info "Quick access:"
+        echo "  📚 Main docs index: docs/README.md"
+        echo "  🚀 Quick start: QUICK_START.md"
+        echo "  🔧 Setup guides: docs/setup/"
+        echo "  🧪 Testing: docs/testing/"
+        echo "  🚀 Deployment: docs/deployment/"
+    }
 
-run_security_check() {
-    log_header "Security Check"
-    log_step "Running comprehensive security scan..."
-    npm run security
-    if [ $? -eq 0 ]; then
-        log_success "Security scan completed successfully"
-    else
-        log_error "Security scan found issues"
-        exit 1
-    fi
-}
+    run_security_check() {
+        log_header "Security Check"
+        log_step "Running comprehensive security scan..."
+        npm run security
+        if [ $? -eq 0 ]; then
+            log_success "Security scan completed successfully"
+        else
+            log_error "Security scan found issues"
+            exit 1
+        fi
+    }
 
-setup_complete() {
-    log_header "Complete Setup"
-    log_step "Running complete project setup..."
-    npm install
-    npm run setup:hooks
-    log_success "Complete setup finished"
-    log_info "You can now run: ./jerry-dev.sh dev"
-}
+    setup_complete() {
+        log_header "Complete Setup"
+        log_step "Running complete project setup..."
+        npm install
+        npm run setup:hooks
+        log_success "Complete setup finished"
+        log_info "You can now run: ./jerry-dev.sh dev"
+    }
 
 # Main Menu
 show_main_menu() {
     clear
-    echo -e "${PURPLE}🎯 Jerry Dempsey Website - Enhanced Development Tool${NC}"
+    echo -e "${PURPLE}🎯 Jerry Dempsey Website - Development Tool${NC}"
     echo -e "${PURPLE}$(printf '=%.0s' {1..50})${NC}"
     echo ""
-    echo -e "${WHITE}🌿 Branch Management:${NC}"
-    echo "1) Create Feature Branch"
-    echo "2) Create Fix Branch"
-    echo "3) Create Style Branch"
-    echo "4) Show Branch Status"
-    echo ""
     echo -e "${WHITE}📄 Resume Management:${NC}"
-    echo "5) Update Resume (Simple Pipeline)"
-    echo "6) Update Resume (Google Drive Pipeline)"
-    echo "7) Update Resume (Hybrid Pipeline)"
-    echo "8) Resume Options Menu"
+    echo "1) Update Resume (Simple Pipeline)"
+    echo "2) Update Resume (Google Drive Pipeline)"
+    echo "3) Update Resume (Hybrid Pipeline)"
+    echo "4) Resume Options Menu"
     echo ""
     echo -e "${WHITE}🧪 Testing & Quality:${NC}"
-    echo "9) Run Production Pipeline (Full Test)"
-    echo "10) Run Quick Tests"
-    echo "11) Run Security Scan"
-    echo "12) Run Linting"
+    echo "5) Run Production Pipeline (Full Test)"
+    echo "6) Run Quick Tests"
+    echo "7) Run Security Scan"
+    echo "8) Run Linting"
     echo ""
     echo -e "${WHITE}🌐 Servers:${NC}"
-    echo "13) Start Development Server"
-    echo "14) Start Staging Server"
-    echo "15) Start Production Server"
+    echo "9) Start Development Server"
+    echo "10) Start Staging Server"
+    echo "11) Start Production Server"
     echo ""
     echo -e "${WHITE}🚀 Deployment:${NC}"
-    echo "16) Push to Production (with pipeline)"
-    echo "17) Deploy with Custom Message"
+    echo "12) Push to Production (with pipeline)"
+    echo "13) Deploy with Custom Message"
     echo ""
     echo -e "${WHITE}🔧 Utilities:${NC}"
-    echo "18) Show Project Status"
-    echo "19) Clean Project"
-    echo "20) Install Dependencies"
-    echo "21) Setup Git Hooks"
-    echo "22) Migrate Repository (jerry-dempsey-website → www-stylee-org)"
-    echo "23) Show Documentation"
-    echo "24) Run Security Check"
-    echo "25) Complete Setup (install + hooks)"
-    echo ""
-    echo -e "${WHITE}❌ Exit:${NC}"
+    echo "14) Show Project Status"
+    echo "15) Clean Project"
+    echo "16) Install Dependencies"
+        echo "17) Setup Git Hooks"
+        echo "18) Migrate Repository (jerry-dempsey-website → www-stylee-org)"
+        echo "19) Show Documentation"
+        echo "20) Run Security Check"
+        echo "21) Complete Setup (install + hooks)"
+        echo ""
+        echo -e "${WHITE}❌ Exit:${NC}"
     echo "0) Exit"
     echo ""
 }
@@ -547,47 +384,43 @@ main() {
     
     while true; do
         show_main_menu
-        read -p "Choose an option [0-25]: " choice
+        read -p "Choose an option [0-17]: " choice
         
         case $choice in
-            1) create_feature_branch ;;
-            2) create_fix_branch ;;
-            3) create_style_branch ;;
-            4) show_branch_status ;;
-            5) update_resume_simple ;;
-            6) update_resume_google ;;
-            7) update_resume_hybrid ;;
-            8) update_resume ;;
-            9) run_production_pipeline ;;
-            10) run_quick_tests ;;
-            11) run_security_scan ;;
-            12) run_linting ;;
-            13) start_dev_server ;;
-            14) start_staging_server ;;
-            15) start_production_server ;;
-            16) push_to_production ;;
-            17) deploy_with_message ;;
-            18) show_status ;;
-            19) clean_project ;;
-            20) install_dependencies ;;
-            21) setup_hooks ;;
-            22) migrate_repository ;;
-            23) show_docs ;;
-            24) run_security_check ;;
-            25) setup_complete ;;
+            1) update_resume_simple ;;
+            2) update_resume_google ;;
+            3) update_resume_hybrid ;;
+            4) update_resume ;;
+            5) run_production_pipeline ;;
+            6) run_quick_tests ;;
+            7) run_security_scan ;;
+            8) run_linting ;;
+            9) start_dev_server ;;
+            10) start_staging_server ;;
+            11) start_production_server ;;
+            12) push_to_production ;;
+            13) deploy_with_message ;;
+            14) show_status ;;
+            15) clean_project ;;
+            16) install_dependencies ;;
+            17) setup_hooks ;;
+            18) migrate_repository ;;
+            19) show_docs ;;
+            20) run_security_check ;;
+            21) setup_complete ;;
             0) 
                 log_success "Goodbye! 👋"
                 exit 0
                 ;;
             *)
-                log_error "Invalid option. Please choose 0-25."
+                log_error "Invalid option. Please choose 0-21."
                 echo ""
                 read -p "Press Enter to continue..."
                 ;;
         esac
         
         # Pause after each operation (except for servers)
-        if [[ ! "$choice" =~ ^(13|14|15)$ ]]; then
+        if [[ ! "$choice" =~ ^(9|10|11)$ ]]; then
             echo ""
             read -p "Press Enter to continue..."
         fi
@@ -601,18 +434,6 @@ if [ $# -eq 0 ]; then
 else
     # Handle command line arguments
     case "$1" in
-        "new-feature")
-            create_feature_branch
-            ;;
-        "new-fix")
-            create_fix_branch
-            ;;
-        "new-style")
-            create_style_branch
-            ;;
-        "branches"|"branch-status")
-            show_branch_status
-            ;;
         "resume"|"update-resume")
             update_resume
             ;;
@@ -677,15 +498,11 @@ else
             setup_complete
             ;;
         "help"|"-h"|"--help")
-            echo "Jerry Dempsey Website - Enhanced Development Tool"
+            echo "Jerry Dempsey Website - Development Tool"
             echo ""
             echo "Usage: $0 [command]"
             echo ""
             echo "Commands:"
-            echo "  new-feature              - Create feature branch"
-            echo "  new-fix                  - Create fix branch"
-            echo "  new-style                - Create style branch"
-            echo "  branches, branch-status  - Show branch status"
             echo "  resume, update-resume    - Resume update menu"
             echo "  resume-simple           - Simple resume pipeline"
             echo "  resume-google           - Google Drive resume pipeline"
