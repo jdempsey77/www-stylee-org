@@ -47,3 +47,9 @@ token.json
 # Resume pipeline files
 public/Jerry_Dempsey_Resume.docx
 public/Jerry_Dempsey_Resume_Google.md
+
+# Backup files
+*.bak
+*.backup
+*.tmp
+*.temp
