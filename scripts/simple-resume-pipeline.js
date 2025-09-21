@@ -267,19 +267,24 @@ class SimpleResumePipeline {
   generateResumePage(resumeData) {
     console.log('⚛️  Generating resume page component...');
     
-    const componentContent = `import { 
+    const componentContent = `'use client';
+
+import { 
   BriefcaseIcon,
   DocumentTextIcon,
   EnvelopeIcon,
-  MapPinIcon
+  ChevronDownIcon,
+  ChevronUpIcon
 } from '@heroicons/react/24/outline';
+import { useState } from 'react';
 
 export default function Resume() {
+  const [showAllExperience, setShowAllExperience] = useState(false);
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-gray-50 dark:from-slate-900 dark:to-slate-800">
       {/* Header */}
       <section className="py-20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
             <h1 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-4">
               ${resumeData.name}
@@ -287,7 +292,7 @@ export default function Resume() {
             <p className="text-xl text-gray-600 dark:text-gray-400 mb-6 font-semibold">
               ${resumeData.title}
             </p>
-            <p className="text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto mb-8">
+            <p className="text-lg text-slate-600 dark:text-slate-300 max-w-5xl mx-auto mb-8">
               ${resumeData.summary}
             </p>
             
@@ -299,15 +304,6 @@ export default function Resume() {
               >
                 <EnvelopeIcon className="w-5 h-5" />
                 Email
-              </a>
-              <a 
-                href="https://www.google.com/maps/place/Roswell,+GA"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-lg bg-slate-700 px-4 py-2 text-white hover:bg-slate-800 transition-colors"
-              >
-                <MapPinIcon className="w-5 h-5" />
-                Roswell, GA
               </a>
               <a 
                 href="/jerry-dempsey-resume.pdf"
@@ -324,10 +320,10 @@ export default function Resume() {
 
       {/* Resume Content */}
       <section className="py-12 bg-white dark:bg-slate-800">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-3 gap-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="space-y-8">
             {/* Main Content */}
-            <div className="lg:col-span-2 space-y-8">
+            <div className="space-y-8">
               {/* Professional Summary */}
               <div>
                 <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-4 flex items-center">
@@ -347,37 +343,52 @@ export default function Resume() {
                 </h2>
                 
                 <div className="space-y-6">
-                  ${this.generateExperienceHTML(resumeData.experience)}
+                  ${this.generateExperienceHTML(resumeData.experience, 'showAllExperience')}
+                  
+                  {/* Read More/Less Button */}
+                  <div className="flex justify-center pt-4">
+                    <button
+                      onClick={() => setShowAllExperience(!showAllExperience)}
+                      className="inline-flex items-center gap-2 px-6 py-3 bg-slate-600 hover:bg-slate-700 text-white font-semibold rounded-lg transition-all duration-200 hover:shadow-lg"
+                    >
+                      {showAllExperience ? (
+                        <>
+                          <ChevronUpIcon className="w-5 h-5" />
+                          Show Less
+                        </>
+                      ) : (
+                        <>
+                          <ChevronDownIcon className="w-5 h-5" />
+                          Show Complete Timeline
+                        </>
+                      )}
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
 
-            {/* Sidebar */}
-            <div className="space-y-8">
-              
-              {/* Education */}
-              <div>
-                <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-4 flex items-center">
-                  <BriefcaseIcon className="w-6 h-6 mr-3 text-gray-600 dark:text-gray-400" />
-                  Education
-                </h3>
-                <div className="space-y-2">
-                  ${resumeData.education.map(edu => `<p className="text-slate-700 dark:text-slate-300">${edu}</p>`).join('')}
-                </div>
-              </div>
-
-              {/* Certifications */}
-              <div>
-                <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-4 flex items-center">
-                  <BriefcaseIcon className="w-6 h-6 mr-3 text-gray-600 dark:text-gray-400" />
-                  Certifications
-                </h3>
-                <ul className="space-y-2">
-                  ${resumeData.certifications.map(cert => `<li className="text-slate-700 dark:text-slate-300">• ${cert}</li>`).join('')}
-                </ul>
-              </div>
-            </div>
           </div>
+        </div>
+      </section>
+
+      {/* Download Resume Section */}
+      <section className="py-12 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 dark:from-slate-900 dark:via-blue-900 dark:to-purple-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-4">
+            Download My Resume
+          </h2>
+          <p className="text-xl text-slate-600 dark:text-slate-300 mb-8 max-w-2xl mx-auto">
+            Get a complete PDF version of my resume for your records or to share with your team.
+          </p>
+          <a 
+            href="/jerry-dempsey-resume.pdf"
+            download="Jerry-Dempsey-Resume.pdf"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-slate-800 hover:bg-slate-900 text-white font-semibold rounded-lg transition-all duration-200 hover:shadow-lg text-lg"
+          >
+            <DocumentTextIcon className="w-6 h-6" />
+            Download Resume PDF
+          </a>
         </div>
       </section>
     </div>
@@ -388,21 +399,69 @@ export default function Resume() {
   }
 
   // Generate HTML for experience section
-  generateExperienceHTML(experience) {
-    const colors = ['border-slate-600', 'border-gray-600', 'border-green-600', 'border-cyan-600', 'border-purple-600'];
+  generateExperienceHTML(experience, showAllVar) {
+    const colors = ['border-blue-500', 'border-emerald-500', 'border-purple-500', 'border-cyan-500', 'border-orange-500'];
+    const bubbleColors = ['bg-gradient-to-r from-blue-500 to-blue-600', 'bg-gradient-to-r from-emerald-500 to-emerald-600', 'bg-gradient-to-r from-purple-500 to-purple-600', 'bg-gradient-to-r from-cyan-500 to-cyan-600', 'bg-gradient-to-r from-orange-500 to-orange-600'];
     
-    return experience.map((job, index) => `
-                  <div className="border-l-4 ${colors[index % colors.length]} pl-6">
-                    <h3 className="text-xl font-semibold text-slate-900 dark:text-white">
-                      ${job.title}
-                    </h3>
-                    <p className="text-gray-600 dark:text-gray-400 font-medium">
-                      ${job.company}, ${job.location}, ${job.dates} | 
-                    </p>
-                    <ul className="mt-3 space-y-2 text-slate-700 dark:text-slate-300">
-                      ${job.bullets.map(bullet => `<li>• ${bullet}</li>`).join('')}
-                    </ul>
+    // Generate all jobs but wrap the later ones in conditional rendering
+    const recentJobs = experience.slice(0, 3);
+    const olderJobs = experience.slice(3);
+    
+    let html = recentJobs.map((job, index) => `
+                  <div className="relative pl-8 pb-8">
+                    <div className="absolute left-0 top-2 w-4 h-4 ${bubbleColors[index % bubbleColors.length]} rounded-full shadow-lg animate-pulse"></div>
+                    <div className="bg-white dark:bg-slate-800 rounded-lg shadow-lg p-6 border-l-4 ${colors[index % colors.length]}">
+                      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
+                        <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-2 sm:mb-0">
+                          ${job.title}
+                        </h3>
+                        <span className="text-sm font-bold text-white ${bubbleColors[index % bubbleColors.length]} px-4 py-2 rounded-full shadow-lg border border-opacity-50">
+                          ${job.dates}
+                        </span>
+                      </div>
+                      <p className="text-gray-600 dark:text-gray-400 font-medium mb-3">
+                        ${job.company}, ${job.location}
+                      </p>
+                      <div className="text-slate-700 dark:text-slate-300">
+                        ${job.bullets.join(' ')}
+                      </div>
+                    </div>
                   </div>`).join('\n');
+    
+    if (olderJobs.length > 0) {
+      html += `
+
+                  {/* Expandable Career History */}
+                  {${showAllVar} && (
+                    <div className="space-y-6">`;
+      
+      html += olderJobs.map((job, index) => `
+                      <div className="relative pl-8 pb-8">
+                        <div className="absolute left-0 top-2 w-4 h-4 ${bubbleColors[(index + 3) % bubbleColors.length]} rounded-full shadow-lg animate-pulse"></div>
+                        <div className="bg-white dark:bg-slate-800 rounded-lg shadow-lg p-6 border-l-4 ${colors[(index + 3) % colors.length]}">
+                          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
+                            <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-2 sm:mb-0">
+                              ${job.title}
+                            </h3>
+                            <span className="text-sm font-bold text-white ${bubbleColors[(index + 3) % bubbleColors.length]} px-4 py-2 rounded-full shadow-lg border border-opacity-50">
+                              ${job.dates}
+                            </span>
+                          </div>
+                          <p className="text-gray-600 dark:text-gray-400 font-medium mb-3">
+                            ${job.company}, ${job.location}
+                          </p>
+                          <div className="text-slate-700 dark:text-slate-300">
+                            ${job.bullets.join(' ')}
+                          </div>
+                        </div>
+                      </div>`).join('\n');
+      
+      html += `
+                    </div>
+                  )}`;
+    }
+    
+    return html;
   }
 
 
