@@ -31,7 +31,7 @@ export default function Resume() {
                 <div className="flex flex-wrap justify-center gap-4 animate-slide-in-right">
                   <a 
                     href="mailto:jerry@stylee.org"
-                    className="btn-primary inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold hover-lift"
+                    className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold bg-slate-600 hover:bg-slate-700 text-white hover-lift transition-all duration-200"
                   >
                     <EnvelopeIcon className="w-5 h-5" />
                     Email Me
@@ -39,7 +39,7 @@ export default function Resume() {
                   <a 
                     href="/jerry-dempsey-resume.pdf"
                     download="Jerry-Dempsey-Resume.pdf"
-                    className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold bg-gradient-to-r from-emerald-500 to-blue-500 text-white hover-lift"
+                    className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold bg-blue-600 hover:bg-blue-700 text-white hover-lift transition-all duration-200"
                   >
                     <DocumentTextIcon className="w-5 h-5" />
                     Download Resume
