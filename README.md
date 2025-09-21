@@ -1,36 +1,119 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Jerry Dempsey Website
 
-## Getting Started
+A modern, responsive personal website built with Next.js, featuring a professional resume with timeline design, automated pipeline integration, and comprehensive security features.
 
-First, run the development server:
+## 🚀 Quick Start
 
 ```bash
+# Install dependencies
+npm install
+
+# Start development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# Visit http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📁 Project Structure
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+├── src/
+│   ├── app/                 # Next.js App Router pages
+│   │   ├── jerry/          # Main profile page
+│   │   │   └── resume/     # Resume page with timeline design
+│   │   └── links/          # Links page
+│   ├── components/         # React components
+│   └── lib/               # Utility functions
+├── scripts/               # Automation scripts
+│   ├── smart-resume-pipeline.js    # Main resume pipeline
+│   ├── production-pipeline.js     # Production deployment
+│   └── setup-*.sh         # Setup scripts
+├── docs/                  # Documentation
+│   ├── scripts/           # Script documentation
+│   ├── setup/            # Setup guides
+│   ├── deployment/       # Deployment docs
+│   └── development/      # Development workflow
+└── public/               # Static assets
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🛠️ Key Features
 
-## Learn More
+### Resume System
+- **Timeline Design**: Modern bubble timeline with expandable job history
+- **Smart Pipeline**: Automatically detects changes and updates resume
+- **PDF Generation**: Direct export from Google Docs
+- **Mobile Responsive**: Optimized for all screen sizes
 
-To learn more about Next.js, take a look at the following resources:
+### Development
+- **TypeScript**: Full type safety
+- **Tailwind CSS**: Utility-first styling
+- **ESLint**: Code quality enforcement
+- **Pre-push Hooks**: Automated testing and security checks
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Security
+- **Security Headers**: Comprehensive HTTP security
+- **CSP**: Content Security Policy
+- **SSL/TLS**: Production-grade encryption
+- **Dependency Scanning**: Automated vulnerability checks
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📋 Available Scripts
 
-## Deploy on Vercel
+```bash
+# Development
+npm run dev              # Start development server
+npm run build           # Build for production
+npm run start           # Start production server
+npm run lint            # Run ESLint
+npm run lint:fix        # Fix ESLint issues
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+# Resume Pipeline
+npm run resume:smart    # Smart resume pipeline (recommended)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+# Setup
+npm run setup:hooks     # Configure Git hooks
+```
+
+## 🔧 Configuration
+
+### Environment Variables
+Create `.env.local`:
+```env
+NEXT_PUBLIC_GA_ID=your-google-analytics-id
+GOOGLE_DOC_ID=your-google-doc-id
+```
+
+### Google Drive API
+See [docs/setup/GOOGLE_DRIVE_API_SETUP.md](docs/setup/GOOGLE_DRIVE_API_SETUP.md) for setup instructions.
+
+## 📚 Documentation
+
+- **[Setup Guide](docs/setup/)** - Initial setup and configuration
+- **[Scripts](docs/scripts/)** - Automation and pipeline documentation  
+- **[Development](docs/development/)** - Development workflow and tools
+- **[Deployment](docs/deployment/)** - Production deployment guides
+- **[Security](docs/setup/SECURITY.md)** - Security checklist and best practices
+
+## 🚀 Deployment
+
+The project uses GitHub Pages with automated deployment:
+
+1. Push to `main` branch triggers deployment
+2. Pre-push hooks ensure code quality
+3. Production pipeline validates build
+4. Automated security scanning
+
+## 🤝 Contributing
+
+1. Follow the branching workflow in `docs/development/`
+2. Run `npm run lint` before committing
+3. Ensure all tests pass
+4. Update documentation as needed
+
+## 📄 License
+
+Private project - All rights reserved.
+
+---
+
+**Maintained by**: Jerry Dempsey  
+**Last Updated**: January 2025

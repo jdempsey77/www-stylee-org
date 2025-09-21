@@ -1,209 +1,152 @@
-# Resume Pipeline Documentation
+# 🧠 Smart Resume Pipeline
 
-## Overview
+The Smart Resume Pipeline is the primary automation tool for managing resume updates. It intelligently detects changes and only updates when necessary, ensuring efficiency and accuracy.
 
-The Resume Pipeline is an automated system that keeps your resume synchronized across multiple formats:
-- **Source**: `Jerry_Dempsey_Resume.docx` (Word document - single source of truth)
-- **Website**: `/jerry/resume` page (React component)
-- **PDF**: `jerry-dempsey-resume.pdf` (downloadable PDF)
+## ✨ Features
 
-## How It Works
+- **Intelligent Change Detection**: Checks if resume content has changed since last run
+- **Conditional Execution**: Only runs generation steps when content changes
+- **Direct PDF Generation**: Exports PDF directly from Google Docs
+- **Website Integration**: Updates the resume page with current design
+- **Error Handling**: Robust error handling and logging
 
-### 1. Source Document (`Jerry_Dempsey_Resume.docx`)
-This is your **single source of truth**. Update this document with any resume changes, and the pipeline will automatically propagate those changes to both the website and PDF.
+## 🚀 Usage
 
-### 2. Pipeline Script (`scripts/resume-pipeline.js`)
-The pipeline script:
-1. **Parses** the Word document content
-2. **Extracts** structured resume data
-3. **Generates** the React component for the website
-4. **Creates** a clean HTML version for PDF generation
-5. **Builds** the website with updated content
-
-### 3. Automated Updates
-When you run the pipeline, it automatically:
-- Updates the website resume page
-- Generates a new PDF with the latest content
-- Builds the site for deployment
-
-## Usage
-
-### Quick Commands
-
+### Basic Usage
 ```bash
-# Update resume from Word doc and rebuild website
-npm run resume:update
-
-# Update resume, build, and preview locally
-npm run resume:build
-
-# Complete pipeline: update, build, and serve locally
-npm run resume:preview
+npm run resume:smart
 ```
 
-### Step-by-Step Workflow
-
-1. **Edit the Word Document**
-   ```
-   Edit: Jerry_Dempsey_Resume.docx
-   ```
-
-2. **Run the Pipeline**
-   ```bash
-   npm run resume:update
-   ```
-
-3. **Preview Changes** (optional)
-   ```bash
-   npm run resume:preview
-   ```
-
-4. **Deploy** (when ready)
-   ```bash
-   git add .
-   git commit -m "Update resume with latest information"
-   git push origin main
-   ```
-
-## Document Format
-
-The Word document should follow this structure:
-
-```
-JERRY DEMPSEY
-Product and Application Security Leader
-
-Contact Information:
-Email: jerry@stylee.org
-Location: Roswell, GA
-
-PROFESSIONAL SUMMARY
-[Your professional summary here]
-
-PROFESSIONAL EXPERIENCE
-
-Job Title
-Company, Location | Date Range
-• Bullet point 1
-• Bullet point 2
-• Bullet point 3
-
-Next Job Title
-Company, Location | Date Range
-• Bullet point 1
-• Bullet point 2
-
-EDUCATION
-[Education information]
-
-CERTIFICATIONS
-• Certification 1
-• Certification 2
-
-TECHNICAL SKILLS
-[Skills information]
+### Manual Execution
+```bash
+node scripts/smart-resume-pipeline.js
 ```
 
-## Features
-
-### ✅ Automatic Synchronization
-- Changes in Word doc automatically update website and PDF
-- No manual copying or pasting required
-- Consistent formatting across all formats
-
-### ✅ Clean PDF Generation
-- PDFs are generated from clean HTML (no website UI elements)
-- Professional formatting optimized for printing
-- No analytics popups or navigation elements
-
-### ✅ Website Integration
-- Resume page matches your site's design and styling
-- Responsive layout for all devices
-- Download button for PDF version
-
-### ✅ Build Integration
-- Pipeline integrates with your existing build process
-- Works with staging and production deployments
-- Maintains all existing functionality
-
-## File Structure
-
-```
-jerry-dempsey-website/
-├── Jerry_Dempsey_Resume.docx          # Source document (edit this)
-├── scripts/
-│   └── resume-pipeline.js             # Pipeline script
-├── src/app/jerry/resume/
-│   └── page.tsx                       # Generated website page
-├── public/
-│   └── jerry-dempsey-resume.pdf       # Generated PDF
-└── out/
-    └── jerry-dempsey-resume.pdf       # PDF for deployment
+### With Environment Variable
+```bash
+GOOGLE_DOC_ID="your-doc-id" npm run resume:smart
 ```
 
-## Troubleshooting
+## 🔧 Configuration
+
+### Required Environment Variables
+Create or update `.env.local`:
+```env
+GOOGLE_DOC_ID="1vx69LJxQP6746MQatcIpvd2VbmTc54w446sbj6Yzymo"
+```
+
+### Google Drive API Setup
+See [GOOGLE_DRIVE_API_SETUP.md](../setup/GOOGLE_DRIVE_API_SETUP.md) for complete setup instructions.
+
+## 📋 Pipeline Steps
+
+### Step 1: Change Detection
+- Calculates hash of current Google Doc content
+- Compares with stored hash from last run
+- If unchanged, skips generation steps
+
+### Step 2: PDF Generation (if changed)
+- Exports Google Doc directly as PDF
+- Saves to `public/jerry-dempsey-resume.pdf`
+- Copies to `out/` directory if it exists (production builds)
+
+### Step 3: Website Page Generation (if changed)
+- Generates `src/app/jerry/resume/page.tsx`
+- Uses current timeline design with bubbles
+- Includes all job descriptions in paragraph format
+- Maintains responsive design and mobile optimization
+
+## 🎨 Design Features
+
+The generated resume page includes:
+- **Timeline Design**: Modern bubble timeline with expandable content
+- **Responsive Layout**: Optimized for desktop and mobile
+- **Interactive Elements**: Hover effects and smooth transitions
+- **Sticky Download Banner**: Always-visible download button
+- **Professional Styling**: Consistent with site design
+
+## 📁 Output Files
+
+### Generated Files
+- `src/app/jerry/resume/page.tsx` - Resume page component
+- `public/jerry-dempsey-resume.pdf` - Resume PDF
+- `out/jerry-dempsey-resume.pdf` - Production PDF (if out exists)
+
+### Cache Files
+- `.resume-cache` - Stores content hash for change detection
+
+## 🔍 Troubleshooting
 
 ### Common Issues
 
-**"Error parsing Word document"**
-- Ensure the document follows the expected format
-- Check that section headers are exactly as shown
-- Verify the file is saved as `.docx`
+#### "File not found: YOUR_GOOGLE_DOC_ID_HERE"
+- **Cause**: `GOOGLE_DOC_ID` not set in `.env.local`
+- **Solution**: Add the correct Google Doc ID to `.env.local`
 
-**"PDF generation failed"**
-- Make sure Puppeteer is installed: `npm install puppeteer`
-- Check that the local server isn't running on port 3001
-- Verify the HTML generation is working
+#### "The requested conversion is not supported"
+- **Cause**: Google Drive API export format issue
+- **Solution**: Pipeline automatically handles this by using direct PDF export
 
-**"Website build failed"**
-- Check for syntax errors in the generated React component
-- Ensure all imports are correct
-- Run `npm run lint` to check for issues
+#### "ENOENT: no such file or directory, copyfile"
+- **Cause**: Attempting to copy to non-existent `out` directory
+- **Solution**: Pipeline includes conditional check and handles this gracefully
 
-### Getting Help
-
-1. Check the console output for specific error messages
-2. Verify the Word document format matches the expected structure
-3. Ensure all dependencies are installed: `npm install`
-4. Try running individual steps to isolate issues
-
-## Advanced Usage
-
-### Custom Styling
-The pipeline generates clean, professional styling. If you need custom formatting:
-1. Edit the CSS in `generatePDFHTML()` method
-2. Modify the React component styling in `generateResumePage()`
-
-### Adding New Sections
-To add new resume sections:
-1. Update the Word document format
-2. Modify the `extractResumeData()` method to parse the new section
-3. Update the HTML generation methods to include the new section
-
-### Integration with CI/CD
-The pipeline can be integrated with GitHub Actions:
-```yaml
-- name: Update Resume
-  run: npm run resume:update
-- name: Build Site
-  run: npm run build:prod
-- name: Deploy
-  run: # your deployment commands
+### Debug Mode
+Add debug logging by modifying the pipeline script or running with verbose output:
+```bash
+DEBUG=true npm run resume:smart
 ```
 
-## Best Practices
+## 📊 Performance
 
-1. **Always edit the Word document** - never edit the generated files directly
-2. **Test locally** before deploying using `npm run resume:preview`
-3. **Keep the document format consistent** - follow the structure exactly
-4. **Run the pipeline after any resume changes** to keep everything in sync
-5. **Commit both the Word doc and generated files** to version control
+- **Change Detection**: ~2-3 seconds
+- **PDF Generation**: ~5-10 seconds (when changed)
+- **Page Generation**: ~1-2 seconds (when changed)
+- **Total Time**: ~3-5 seconds (no changes), ~8-15 seconds (with changes)
 
-## Future Enhancements
+## 🔄 Integration
 
-Potential improvements to the pipeline:
-- Support for images and logos in the resume
-- Multiple resume versions (different formats for different purposes)
-- Integration with LinkedIn or other professional networks
-- Automated scheduling for regular updates
-- Support for other document formats (Google Docs, etc.)
+### Pre-push Hooks
+The pipeline integrates with Git pre-push hooks to ensure resume is always up-to-date.
+
+### Production Pipeline
+Automatically runs as part of the production deployment process.
+
+### Manual Updates
+Can be run manually whenever resume content changes in Google Docs.
+
+## 📈 Benefits
+
+- **Efficiency**: Only updates when content changes
+- **Accuracy**: PDF is direct export from Google Docs
+- **Consistency**: Website always reflects latest design
+- **Automation**: Reduces manual effort
+- **Reliability**: Robust error handling and validation
+
+## 🔧 Advanced Usage
+
+### Custom Content
+The pipeline uses `getResumeData()` method to define resume content. This can be modified to:
+- Update job descriptions
+- Add new positions
+- Modify formatting
+- Include additional sections
+
+### Design Customization
+The `generateResumePage()` method controls the page design. Modifications can include:
+- Color schemes
+- Layout changes
+- Additional features
+- Responsive adjustments
+
+## 📚 Related Documentation
+
+- [GOOGLE_DRIVE_PIPELINE.md](GOOGLE_DRIVE_PIPELINE.md) - Google Drive integration
+- [RESUME_PIPELINE_SIMPLE.md](RESUME_PIPELINE_SIMPLE.md) - Simple pipeline alternative
+- [RESUME_PIPELINE_OPTIONS.md](RESUME_PIPELINE_OPTIONS.md) - Pipeline comparison
+- [GOOGLE_DRIVE_API_SETUP.md](../setup/GOOGLE_DRIVE_API_SETUP.md) - API setup
+
+---
+
+**Last Updated**: January 2025  
+**Version**: Smart Pipeline v1.0
