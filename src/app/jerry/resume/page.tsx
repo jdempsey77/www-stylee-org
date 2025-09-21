@@ -233,7 +233,7 @@ export default function Resume() {
                             Turner Broadcasting (became WarnerMedia), Atlanta, GA
                           </p>
                           <div className="text-slate-700 dark:text-slate-300">
-                            • Established a cutting-edge DevSecOps team from scratch in the Information Security Office (ISO) at Turner • Aimed at helping various brands within the company adopt a "secure by default" mindset • Championed a culture of security and integrated critical tools into the CI/CD pipelines • Minimized security risks earlier in the development process • Worked alongside different teams at Turner, bridging the gap between security and developers • Identified and achieved top-notch security standards within each brand
+                            • Established a cutting-edge DevSecOps team from scratch in the Information Security Office (ISO) at Turner • Aimed at helping various brands within the company adopt a &quot;secure by default&quot; mindset • Championed a culture of security and integrated critical tools into the CI/CD pipelines • Minimized security risks earlier in the development process • Worked alongside different teams at Turner, bridging the gap between security and developers • Identified and achieved top-notch security standards within each brand
                           </div>
                           </div>
                         </div>
@@ -253,7 +253,7 @@ export default function Resume() {
                                 Tripwire Inc., Alpharetta, GA
                               </p>
                           <div className="text-slate-700 dark:text-slate-300">
-                            • Oversaw the SaaSOps and IT DevOps groups at Tripwire • Managed the Purecloud application and led the development of a cloud-hosted service • Led the development of a cloud-hosted service for our flagship product • Managed the R&D Dev/Test infrastructure, which is Tripwire's largest private cloud • Facilitated self-service virtual machine deployment using tools like Cloudbolt and Chef/Vagrant • Streamlined development workflows
+                            • Oversaw the SaaSOps and IT DevOps groups at Tripwire • Managed the Purecloud application and led the development of a cloud-hosted service • Led the development of a cloud-hosted service for our flagship product • Managed the R&D Dev/Test infrastructure, which is Tripwire&apos;s largest private cloud • Facilitated self-service virtual machine deployment using tools like Cloudbolt and Chef/Vagrant • Streamlined development workflows
                           </div>
                         </div>
                       </div>
@@ -293,7 +293,7 @@ export default function Resume() {
                             nCircle Network Security, Alpharetta, GA
                           </p>
                           <div className="text-slate-700 dark:text-slate-300">
-                            • As a Development Manager for nCircle's Compliance and Configuration Management software (CCM) • Led the development, QA, and content teams using Agile Methodology • Served as the Scrum Master and was hands-on in managing QA, design, code review, and backlog planning • Collaborated with Product Management to plan releases and determine long-term project goals • Maintained team retention and managed new hires • Oversaw quarterly budgeting for hardware and software purchases
+                            • As a Development Manager for nCircle&apos;s Compliance and Configuration Management software (CCM) • Led the development, QA, and content teams using Agile Methodology • Served as the Scrum Master and was hands-on in managing QA, design, code review, and backlog planning • Collaborated with Product Management to plan releases and determine long-term project goals • Maintained team retention and managed new hires • Oversaw quarterly budgeting for hardware and software purchases
                             </div>
                           </div>
                         </div>
@@ -353,7 +353,7 @@ export default function Resume() {
                             Internet Security Systems, Inc. (ISS), Atlanta, GA
                           </p>
                           <div className="text-slate-700 dark:text-slate-300">
-                            • Responsible for testing new security content updates for RealSecure Network Sensor • Tested ISS's market-leading IDS software • Played a key role in determining how security content was tested with other ISS products • Collaborated closely with the X-Force Research and Development team • Identified and addressed new vulnerabilities • Ensured that our customers were protected quickly and effectively
+                            • Responsible for testing new security content updates for RealSecure Network Sensor • Tested ISS&apos;s market-leading IDS software • Played a key role in determining how security content was tested with other ISS products • Collaborated closely with the X-Force Research and Development team • Identified and addressed new vulnerabilities • Ensured that our customers were protected quickly and effectively
                           </div>
                         </div>
                       </div>
