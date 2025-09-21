@@ -1,6 +1,6 @@
 'use client';
 
-import {
+import { 
   BriefcaseIcon,
   DocumentTextIcon,
   ChevronDownIcon,
@@ -395,18 +395,18 @@ export default function Resume() {
 
 
       {/* Sticky Download Banner */}
-      <div className="fixed bottom-0 left-0 right-0 bg-gradient-to-r from-blue-600 to-blue-700 text-white py-1 md:py-2 px-3 md:px-4 shadow-lg z-50 border-t border-blue-500">
-        <div className="max-w-4xl mx-auto flex items-center justify-center">
-          <a
-            href="/jerry-dempsey-resume.pdf"
-            download="Jerry-Dempsey-Resume.pdf"
-            className="inline-flex items-center gap-2 px-3 py-1.5 sm:px-4 sm:py-2 bg-white text-blue-700 font-semibold rounded-lg hover:bg-blue-50 transition-all duration-200 shadow-sm text-sm sm:text-base"
-          >
+      <div className="fixed bottom-0 left-0 right-0 bg-white dark:bg-slate-800 text-slate-900 dark:text-white py-1 md:py-2 px-3 md:px-4 shadow-lg z-50 border-t border-slate-200 dark:border-slate-700">
+        <div className="max-w-4xl mx-auto flex items-center justify-center sm:justify-end">
+            <a
+              href="/jerry-dempsey-resume.pdf"
+              download="Jerry-Dempsey-Resume.pdf"
+            className="inline-flex items-center gap-2 px-3 py-1.5 sm:px-4 sm:py-2 bg-gradient-to-r from-blue-600 to-blue-700 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-blue-800 transition-all duration-200 shadow-sm text-sm sm:text-base"
+            >
             <DocumentTextIcon className="w-3 h-3 sm:w-4 sm:h-4" />
             Download Resume
-          </a>
+            </a>
+          </div>
         </div>
-      </div>
     </div>
   );
 }
