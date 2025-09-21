@@ -156,36 +156,18 @@ export default function Resume() {
                           </div>
                   </div>
 
-                  {/* Show More/Less Button */}
-                  <div className="flex justify-center pt-4">
-                    <button
-                      onClick={() => {
-                        setShowAllExperience(!showAllExperience);
-                        // Scroll to bottom after content expands
-                        setTimeout(() => {
-                          if (expandedContentRef.current) {
-                            expandedContentRef.current.scrollIntoView({ 
-                              behavior: 'smooth', 
-                              block: 'end' 
-                            });
-                          }
-                        }, 100);
-                      }}
-                      className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-purple-600 to-purple-700 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl hover:from-purple-700 hover:to-purple-800 transform hover:-translate-y-1 transition-all duration-200 border border-purple-500"
-                    >
-                      {showAllExperience ? (
-                        <>
-                          <ChevronUpIcon className="w-5 h-5" />
-                          Show Less
-                        </>
-                      ) : (
-                        <>
-                          <ChevronDownIcon className="w-5 h-5" />
-                          Show Complete Timeline
-                        </>
-                      )}
-                    </button>
-                  </div>
+                  {/* Show More Button */}
+                  {!showAllExperience && (
+                    <div className="flex justify-center pt-4">
+                      <button
+                        onClick={() => setShowAllExperience(true)}
+                        className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-700 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl hover:from-blue-700 hover:to-blue-800 transform hover:-translate-y-1 transition-all duration-200 border border-blue-500"
+                      >
+                        <ChevronDownIcon className="w-5 h-5" />
+                        Show Complete Timeline
+                      </button>
+                    </div>
+                  )}
 
                   {/* Additional Experience (Hidden by default) */}
                   {showAllExperience && (
@@ -408,8 +390,19 @@ export default function Resume() {
                             • Delivered customer support for RealSecure Network Sensor via phone and email • Resolved configuration issues and identified software bugs • Assisted with product deployment • Provided workarounds to overcome software limitations
                           </div>
                         </div>
-                      </div>
                   </div>
+
+                      {/* Show Less Button - at the bottom of expanded content */}
+                      <div className="flex justify-center pt-8">
+                    <button
+                          onClick={() => setShowAllExperience(false)}
+                          className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-700 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl hover:from-blue-700 hover:to-blue-800 transform hover:-translate-y-1 transition-all duration-200 border border-blue-500"
+                    >
+                          <ChevronUpIcon className="w-5 h-5" />
+                          Show Less
+                    </button>
+                  </div>
+                    </div>
                   )}
                 </div>
               </div>
@@ -431,7 +424,7 @@ export default function Resume() {
             <a
               href="/jerry-dempsey-resume.pdf"
               download="Jerry-Dempsey-Resume.pdf"
-            className="inline-flex items-center gap-3 px-10 py-5 bg-gradient-to-r from-indigo-600 to-indigo-700 text-white font-bold rounded-xl shadow-xl hover:shadow-2xl hover:from-indigo-700 hover:to-indigo-800 transform hover:-translate-y-1 transition-all duration-200 border border-indigo-500 text-lg"
+            className="inline-flex items-center gap-3 px-10 py-5 bg-gradient-to-r from-blue-600 to-blue-700 text-white font-bold rounded-xl shadow-xl hover:shadow-2xl hover:from-blue-700 hover:to-blue-800 transform hover:-translate-y-1 transition-all duration-200 border border-blue-500 text-lg"
             >
               <DocumentTextIcon className="w-6 h-6" />
               Download Resume PDF
