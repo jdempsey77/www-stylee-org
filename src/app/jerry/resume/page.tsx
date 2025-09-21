@@ -15,16 +15,16 @@ export default function Resume() {
   return (
         <div className="min-h-screen bg-gradient-to-br from-slate-50 to-gray-50 dark:from-slate-900 dark:to-slate-800 pb-20">
       {/* Header */}
-      <section className="py-12 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 dark:from-slate-900 dark:via-blue-900 dark:to-purple-900">
+      <section className="py-8 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 dark:from-slate-900 dark:via-blue-900 dark:to-purple-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-4">
+          <div className="text-center mb-2">
             <h1 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-4">
               Jerry Dempsey
             </h1>
             <p className="text-xl text-gray-600 dark:text-gray-400 mb-6 font-semibold">
               Product and Application Security Leader
             </p>
-            <p className="text-lg text-slate-600 dark:text-slate-300 max-w-5xl mx-auto mb-8">
+            <p className="text-lg text-slate-600 dark:text-slate-300 max-w-5xl mx-auto mb-4">
               More than 20 years of experience in cybersecurity with outstanding communication skills and expertise in recruiting and mentoring top-performing teams. As a Product and Application Security leader, I excel at building comprehensive security programs that seamlessly integrate with development workflows. I am a proven problem-solver with a knack for finding creative solutions to complex challenges and an advocate for forward-thinking security concepts. I am committed to driving collaboration and partnership with development organizations to help them adopt cutting-edge security strategies.
             </p>
             
@@ -33,7 +33,7 @@ export default function Resume() {
       </section>
 
       {/* Resume Content */}
-      <section className="py-8 bg-white dark:bg-slate-800">
+      <section className="py-4 bg-white dark:bg-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="space-y-8">
             {/* Main Content */}
