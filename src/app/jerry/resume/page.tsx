@@ -15,9 +15,9 @@ export default function Resume() {
   return (
         <div className="min-h-screen bg-gradient-to-br from-slate-50 to-gray-50 dark:from-slate-900 dark:to-slate-800 pb-20">
       {/* Header */}
-      <section className="py-20 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 dark:from-slate-900 dark:via-blue-900 dark:to-purple-900">
+      <section className="py-12 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 dark:from-slate-900 dark:via-blue-900 dark:to-purple-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8">
+          <div className="text-center mb-4">
             <h1 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-4">
               Jerry Dempsey
             </h1>
@@ -33,7 +33,7 @@ export default function Resume() {
       </section>
 
       {/* Resume Content */}
-      <section className="py-12 bg-white dark:bg-slate-800">
+      <section className="py-8 bg-white dark:bg-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="space-y-8">
             {/* Main Content */}
