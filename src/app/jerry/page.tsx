@@ -50,9 +50,9 @@ export default function Jerry() {
       </section>
 
       {/* Personal About Me & Hobbies */}
-      <section className="py-20 bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm">
+      <section className="py-12 bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-start">
+          <div className="grid lg:grid-cols-2 gap-8 items-start">
             <div className="animate-slide-in-left">
               <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-6">
                 About me
