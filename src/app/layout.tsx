@@ -18,7 +18,7 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: "Jerry Dempsey - Security in Proof 🥃",
-  description: "20+ years of security leadership. I help companies build secure products and teams that don't hate each other. Also partial to bourbon and good conversation. 🥃",
+  description: "Started in security when most people thought it was just antivirus and firewall. Now I help companies build security that doesn't suck. Also, bourbon. 🥃",
   keywords: ["Jerry Dempsey", "Product Security", "Application Security", "Cybersecurity", "Security Leader", "FanDuel", "Warner Bros Discovery", "stylee.org", "Bourbon", "Security Blog"],
   authors: [{ name: "Jerry Dempsey" }],
   robots: "index, follow",
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Jerry Dempsey - Security in Proof 🥃",
-    description: "20+ years of security leadership. I help companies build secure products and teams that don't hate each other. Also partial to bourbon and good conversation. 🥃",
+    description: "Started in security when most people thought it was just antivirus and firewall. Now I help companies build security that doesn't suck. Also, bourbon. 🥃",
     type: "website",
     url: "https://stylee.org",
     siteName: "Security in Proof - stylee.org",
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Jerry Dempsey - Security in Proof 🥃",
-    description: "20+ years of security leadership. I help companies build secure products and teams that don't hate each other. Also partial to bourbon and good conversation. 🥃",
+    description: "Started in security when most people thought it was just antivirus and firewall. Now I help companies build security that doesn't suck. Also, bourbon. 🥃",
     images: ["/mainlogo.png"],
     creator: "@jerryldempsey",
   },
