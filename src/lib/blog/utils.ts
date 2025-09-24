@@ -27,6 +27,66 @@ Cheers!
     coverImage: '/welcome.jpg'
   },
   {
+    slug: 'bourbon-security-parallels',
+    title: 'Bourbon and Security: Unexpected Parallels in Craft and Quality',
+    excerpt: 'Exploring the surprising connections between bourbon craftsmanship and cybersecurity practices - both require patience, attention to detail, and a commitment to quality.',
+    content: `
+# Bourbon and Security: Unexpected Parallels in Craft and Quality
+
+There's something about bourbon that speaks to the security professional in me. Maybe it's the patience required, the attention to detail, or the way both demand respect for process and tradition. After years in cybersecurity and countless evenings with a good pour, I've noticed some fascinating parallels between these two worlds.
+
+## The Art of Patience
+
+Bourbon isn't made overnight. It requires years of aging, careful monitoring, and the wisdom to know when it's ready. Security isn't much different. You can't rush a security program, and you certainly can't skip the fundamentals. Both require the patience to build something that will stand the test of time.
+
+The best bourbons are aged for years, developing complexity and character. The best security programs are built over time, with layers of protection that mature and strengthen. You can't force either process.
+
+## Quality Over Quantity
+
+In bourbon, it's not about how much you can produce—it's about the quality of what you create. A small batch, carefully crafted bourbon will always outshine a mass-produced product. The same principle applies to security.
+
+It's better to have a few, well-implemented security controls than dozens of half-measures. Focus on doing fewer things exceptionally well rather than many things poorly.
+
+## The Importance of Process
+
+Every great bourbon distillery has a process—a recipe, if you will. The mash bill, fermentation, distillation, and aging all follow specific steps that have been refined over generations. Security is no different.
+
+We have our processes too: threat modeling, secure coding practices, vulnerability management, incident response. These aren't arbitrary rules—they're time-tested methods that work when applied consistently.
+
+## Learning from Mistakes
+
+In bourbon making, a bad batch teaches you more than a perfect one. You learn what went wrong, adjust your process, and improve. Security is built on the same principle of continuous improvement.
+
+Every security incident, every vulnerability, every near-miss is an opportunity to learn and strengthen your defenses. The key is to embrace these lessons rather than fear them.
+
+## The Craft of Mastery
+
+Both bourbon making and security require mastery of craft. You can't fake expertise in either field. It takes years of practice, study, and hands-on experience to truly understand the nuances.
+
+The best bourbon makers can taste a sample and tell you exactly what's in it, how it was made, and what might improve it. The best security professionals can look at a system and immediately identify potential risks and mitigation strategies.
+
+## Building Something Worth Sharing
+
+Great bourbon is meant to be shared—with friends, family, and fellow enthusiasts. The same is true of security knowledge. We learn from each other, share best practices, and build a community that makes everyone stronger.
+
+Whether it's a rare bottle or a security insight, the best things in life are better when shared with others who appreciate them.
+
+## The Bottom Line
+
+At the end of the day, both bourbon and security are about creating something of value. Something that protects, something that brings joy, something that stands the test of time.
+
+So here's to the craftsmen and craftswomen in both fields. May your processes be sound, your quality be high, and your patience be rewarded.
+
+Cheers! 🥃
+    `,
+    author: 'Jerry Dempsey',
+    publishedAt: '2025-01-24',
+    tags: ['Bourbon', 'Security', 'Personal', 'Craft'],
+    featured: true,
+    readingTime: 4,
+    coverImage: '/welcome.jpg'
+  },
+  {
     slug: 'return-to-code-ai-driven-development',
     title: 'A Return to Code: Exploring AI-Driven Development as a Security Leader',
     excerpt: 'After a decade away from daily coding, AI-driven development tools brought me back to the keyboard. Here\'s what I learned building a DAST tool with AI assistance.',
