@@ -10,11 +10,11 @@ interface PostCardProps {
 
 export default function PostCard({ post, featured = false }: PostCardProps) {
   return (
-        <article className={`group cursor-pointer ${featured ? 'md:col-span-2' : ''}`}>
+        <article className="group cursor-pointer">
           <Link href={`/blog/${post.slug}`}>
             <div className="bg-slate-700 dark:bg-slate-700 border border-slate-600 dark:border-slate-600 rounded-2xl overflow-hidden hover:shadow-lg transition-all duration-300">
           {post.coverImage && (
-            <div className={`relative ${featured ? 'h-64' : 'h-48'} overflow-hidden`}>
+            <div className={`relative ${featured ? 'h-48' : 'h-48'} overflow-hidden`}>
               <Image
                 src={post.coverImage}
                 alt={post.title}
@@ -30,7 +30,7 @@ export default function PostCard({ post, featured = false }: PostCardProps) {
             </div>
           )}
           
-              <div className="p-6">
+              <div className={`${featured ? 'p-4' : 'p-6'}`}>
                 <div className="flex items-center gap-4 text-sm text-slate-300 mb-3">
                   <time dateTime={post.publishedAt}>
                     {formatDate(post.publishedAt)}
@@ -42,7 +42,7 @@ export default function PostCard({ post, featured = false }: PostCardProps) {
                 </div>
 
                 <h2 className={`font-bold group-hover:text-blue-400 transition-colors duration-200 mb-3 text-white ${
-                  featured ? 'text-2xl' : 'text-xl'
+                  featured ? 'text-xl' : 'text-xl'
                 }`}>
                   {post.title}
                 </h2>

@@ -1,15 +1,13 @@
 'use client';
 
 import { useState } from 'react';
-import { getAllPosts, getFeaturedPosts, getPostsByTag, getAllTags } from '@/lib/blog/utils';
+import { getAllPosts, getPostsByTag, getAllTags } from '@/lib/blog/utils';
 import PostCard from '@/components/blog/PostCard';
 
 export default function BlogPage() {
   const [selectedTag, setSelectedTag] = useState<string | null>(null);
   
   const allPosts = getAllPosts();
-  const featuredPosts = getFeaturedPosts();
-  
   const displayedPosts = selectedTag ? getPostsByTag(selectedTag) : allPosts;
 
   return (
@@ -62,22 +60,6 @@ export default function BlogPage() {
       <section className="py-12 bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       {/* Featured Posts */}
-      {featuredPosts.length > 0 && (
-        <section className="mb-8">
-          <div className="text-center mb-6">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-2 animate-slide-in-left">
-              Featured Posts
-            </h2>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {featuredPosts.slice(0, 2).map((post, index) => (
-              <div key={post.slug} className={`animate-fade-in-up`} style={{animationDelay: `${index * 0.2}s`}}>
-                <PostCard post={post} featured={true} />
-              </div>
-            ))}
-          </div>
-        </section>
-      )}
 
       {/* All Posts */}
       <section className="mb-8">
