@@ -68,9 +68,6 @@ export default function BlogPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-2 animate-slide-in-left">
               Featured Posts
             </h2>
-            <p className="text-slate-600 dark:text-slate-300 animate-slide-in-right">
-              Security insights, leadership lessons, and life beyond the code
-            </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {featuredPosts.slice(0, 2).map((post, index) => (
@@ -88,9 +85,6 @@ export default function BlogPage() {
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-2 animate-slide-in-left">
             {selectedTag ? `Posts tagged with "${selectedTag}"` : 'All Posts'}
           </h2>
-          <p className="text-slate-600 dark:text-slate-300 animate-slide-in-right">
-            {selectedTag ? `Explore posts about ${selectedTag.toLowerCase()}` : 'Security insights, leadership lessons, and life beyond the code'}
-          </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {displayedPosts.map((post, index) => (

@@ -23,6 +23,12 @@ export default function Links() {
       category: "Sports"
     },
     {
+      name: "Atlanta United FC",
+      url: "https://www.atlutd.com/",
+      description: "Official website of Atlanta United FC MLS team",
+      category: "Sports"
+    },
+    {
       name: "Dark Reading",
       url: "https://www.darkreading.com",
       description: "Information security news, analysis, and insights",
