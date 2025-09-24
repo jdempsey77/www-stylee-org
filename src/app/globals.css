@@ -343,3 +343,144 @@ code {
   background: transparent;
   padding: 0;
 }
+
+/* Giscus Comments Styling to Match Site Theme */
+.giscus-comments {
+  --giscus-theme: dark;
+  --giscus-color-scheme: dark;
+}
+
+/* Override Giscus styles to match site theme */
+.giscus-comments .giscus {
+  background: transparent !important;
+}
+
+.giscus-comments .giscus-frame {
+  background: transparent !important;
+}
+
+/* Main comment container */
+.giscus-comments .giscus-comments {
+  background: transparent !important;
+}
+
+/* Individual comments */
+.giscus-comments .giscus-comment {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 16px !important;
+  margin-bottom: 16px !important;
+  padding: 16px !important;
+  backdrop-filter: blur(10px) !important;
+}
+
+.giscus-comments .giscus-comment-header {
+  color: #f1f5f9 !important;
+}
+
+.giscus-comments .giscus-comment-body {
+  color: #e2e8f0 !important;
+}
+
+.giscus-comments .giscus-comment-footer {
+  color: #94a3b8 !important;
+}
+
+/* Comment input box */
+.giscus-comments .giscus-comment-box {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 16px !important;
+  backdrop-filter: blur(10px) !important;
+  padding: 16px !important;
+}
+
+.giscus-comments .giscus-comment-box textarea {
+  background: rgba(255, 255, 255, 0.05) !important;
+  color: #f1f5f9 !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 12px !important;
+  padding: 12px !important;
+}
+
+.giscus-comments .giscus-comment-box textarea::placeholder {
+  color: #94a3b8 !important;
+}
+
+/* Tabs */
+.giscus-comments .giscus-comment-box .giscus-comment-box-tabs {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border-radius: 12px !important;
+  padding: 4px !important;
+  margin-bottom: 12px !important;
+}
+
+.giscus-comments .giscus-comment-box .giscus-comment-box-tab {
+  color: #94a3b8 !important;
+  background: transparent !important;
+  border-radius: 8px !important;
+  padding: 8px 16px !important;
+}
+
+.giscus-comments .giscus-comment-box .giscus-comment-box-tab.active {
+  color: #f1f5f9 !important;
+  background: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Sign in button */
+.giscus-comments .giscus-comment-box .giscus-comment-box-main .giscus-comment-box-main-button {
+  background: linear-gradient(135deg, #3b82f6 0%, #7c3aed 100%) !important;
+  color: white !important;
+  border: none !important;
+  border-radius: 12px !important;
+  padding: 12px 24px !important;
+  font-weight: 600 !important;
+  transition: all 0.2s ease !important;
+}
+
+.giscus-comments .giscus-comment-box .giscus-comment-box-main .giscus-comment-box-main-button:hover {
+  background: linear-gradient(135deg, #2563eb 0%, #6d28d9 100%) !important;
+  transform: translateY(-1px) !important;
+}
+
+/* Reaction buttons */
+.giscus-comments .giscus-reactions {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 12px !important;
+  padding: 8px 12px !important;
+  margin-bottom: 16px !important;
+}
+
+.giscus-comments .giscus-reactions button {
+  color: #94a3b8 !important;
+  background: transparent !important;
+  border: none !important;
+  border-radius: 8px !important;
+  padding: 8px !important;
+  transition: all 0.2s ease !important;
+}
+
+.giscus-comments .giscus-reactions button:hover {
+  color: #f1f5f9 !important;
+  background: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Comments count */
+.giscus-comments .giscus-comments-count {
+  color: #f1f5f9 !important;
+  font-weight: 600 !important;
+}
+
+.giscus-comments .giscus-powered-by {
+  color: #94a3b8 !important;
+}
+
+.giscus-comments .giscus-powered-by a {
+  color: #3b82f6 !important;
+  text-decoration: none !important;
+}
+
+.giscus-comments .giscus-powered-by a:hover {
+  color: #60a5fa !important;
+}

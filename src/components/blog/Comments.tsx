@@ -21,7 +21,7 @@ export default function Comments({ slug, title }: CommentsProps) {
     script.setAttribute('data-reactions-enabled', '1');
     script.setAttribute('data-emit-metadata', '0');
     script.setAttribute('data-input-position', 'bottom');
-    script.setAttribute('data-theme', 'light');
+    script.setAttribute('data-theme', 'dark');
     script.setAttribute('data-lang', 'en');
     script.setAttribute('data-loading', 'lazy');
     script.crossOrigin = 'anonymous';
@@ -41,11 +41,18 @@ export default function Comments({ slug, title }: CommentsProps) {
   }, [slug, title]);
 
   return (
-    <div className="mt-8 pt-6 border-t border-slate-200">
-      <h3 className="text-xl font-semibold mb-4" style={{color: '#000000'}}>
+    <div className="mt-8 pt-6 border-t border-slate-200 dark:border-slate-600">
+      <h3 className="text-2xl md:text-3xl font-bold mb-6 text-slate-900 dark:text-white">
         Comments
       </h3>
-      <div id="giscus-comments"></div>
+      <div 
+        id="giscus-comments"
+        className="giscus-comments"
+        style={{
+          '--giscus-theme': 'dark',
+          '--giscus-color-scheme': 'dark'
+        } as React.CSSProperties}
+      ></div>
     </div>
   );
 }

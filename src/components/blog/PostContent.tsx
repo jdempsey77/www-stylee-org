@@ -24,19 +24,19 @@ export default function PostContent({ post }: PostContentProps) {
       // Headers
       if (line.startsWith('# ')) {
         elements.push(
-          <h1 key={key++} className="text-3xl font-bold mt-6 mb-3" style={{color: '#000000'}}>
+          <h1 key={key++} className="text-3xl font-bold mt-6 mb-3 text-slate-900 dark:text-white">
             {line.substring(2)}
           </h1>
         );
       } else if (line.startsWith('## ')) {
         elements.push(
-          <h2 key={key++} className="text-2xl font-bold mt-4 mb-2" style={{color: '#000000'}}>
+          <h2 key={key++} className="text-2xl font-bold mt-4 mb-2 text-slate-900 dark:text-white">
             {line.substring(3)}
           </h2>
         );
       } else if (line.startsWith('### ')) {
         elements.push(
-          <h3 key={key++} className="text-xl font-semibold mt-3 mb-1" style={{color: '#000000'}}>
+          <h3 key={key++} className="text-xl font-semibold mt-3 mb-1 text-slate-900 dark:text-white">
             {line.substring(4)}
           </h3>
         );
@@ -47,14 +47,14 @@ export default function PostContent({ post }: PostContentProps) {
         let j = i;
         while (j < lines.length && lines[j].startsWith('- ')) {
           listItems.push(
-            <li key={j} className="mb-1" style={{color: '#000000'}}>
+            <li key={j} className="mb-1 text-slate-600 dark:text-slate-300">
               {lines[j].substring(2)}
             </li>
           );
           j++;
         }
         elements.push(
-          <ul key={key++} className="list-disc list-inside mb-3 ml-4 space-y-1" style={{color: '#000000'}}>
+          <ul key={key++} className="list-disc list-inside mb-3 ml-4 space-y-1 text-slate-600 dark:text-slate-300">
             {listItems}
           </ul>
         );
@@ -66,14 +66,14 @@ export default function PostContent({ post }: PostContentProps) {
         let j = i;
         while (j < lines.length && /^\d+\. /.test(lines[j])) {
           listItems.push(
-            <li key={j} className="mb-1" style={{color: '#000000'}}>
+            <li key={j} className="mb-1 text-slate-600 dark:text-slate-300">
               {lines[j].replace(/^\d+\. /, '')}
             </li>
           );
           j++;
         }
         elements.push(
-          <ol key={key++} className="list-decimal list-inside mb-3 ml-4 space-y-1" style={{color: '#000000'}}>
+          <ol key={key++} className="list-decimal list-inside mb-3 ml-4 space-y-1 text-slate-600 dark:text-slate-300">
             {listItems}
           </ol>
         );
@@ -87,7 +87,7 @@ export default function PostContent({ post }: PostContentProps) {
         elements.push(
           <p 
             key={key++} 
-            className="text-slate-700 mb-2 leading-relaxed"
+            className="text-slate-600 dark:text-slate-300 mb-2 leading-relaxed"
           >
             {processedLine}
           </p>
@@ -102,7 +102,7 @@ export default function PostContent({ post }: PostContentProps) {
     <article className="max-w-4xl mx-auto">
       {/* Header */}
       <header className="mb-4">
-        <div className="flex items-center gap-4 text-sm text-slate-500 mb-2">
+        <div className="flex items-center gap-4 text-sm text-slate-500 dark:text-slate-300 mb-2">
           <time dateTime={post.publishedAt}>
             {formatDate(post.publishedAt)}
           </time>
@@ -112,11 +112,11 @@ export default function PostContent({ post }: PostContentProps) {
           <span>By {post.author}</span>
         </div>
         
-        <h1 className="text-4xl md:text-5xl font-bold mb-2" style={{color: '#000000'}}>
+        <h1 className="text-4xl md:text-5xl font-bold mb-2 text-slate-900 dark:text-white">
           {post.title}
         </h1>
         
-        <p className="text-xl text-slate-600 mb-2">
+        <p className="text-xl text-slate-600 dark:text-slate-300 mb-2">
           {post.excerpt}
         </p>
         
@@ -124,7 +124,7 @@ export default function PostContent({ post }: PostContentProps) {
           {post.tags.map((tag) => (
             <span
               key={tag}
-              className="inline-block bg-gradient-to-r from-blue-100 to-purple-100 dark:from-blue-900 dark:to-purple-900 text-blue-800 dark:text-blue-200 text-sm px-3 py-1 rounded-full hover:from-blue-200 hover:to-purple-200 dark:hover:from-blue-800 dark:hover:to-purple-800 transition-all duration-200"
+              className="inline-block bg-gradient-to-r from-blue-600 to-purple-600 text-white text-sm px-3 py-1 rounded-full hover:from-blue-700 hover:to-purple-700 transition-all duration-200"
             >
               {tag}
             </span>
@@ -153,15 +153,15 @@ export default function PostContent({ post }: PostContentProps) {
       </div>
 
       {/* Footer */}
-      <footer className="mt-6 pt-4 border-t border-slate-200">
+      <footer className="mt-6 pt-4 border-t border-slate-200 dark:border-slate-600">
         <div className="flex items-center justify-between">
-          <div className="text-sm text-slate-500">
+          <div className="text-sm text-slate-500 dark:text-slate-400">
             Published on {formatDate(post.publishedAt)}
             {post.updatedAt && post.updatedAt !== post.publishedAt && (
               <span> • Updated on {formatDate(post.updatedAt)}</span>
             )}
           </div>
-          <div className="text-sm text-slate-500">
+          <div className="text-sm text-slate-500 dark:text-slate-400">
             By {post.author}
           </div>
         </div>

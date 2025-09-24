@@ -12,7 +12,7 @@ export default function Jerry() {
         </div>
         
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
-          <div className="text-center">
+          <div className="text-center pb-2">
             {/* Profile Photo with enhanced styling */}
             <div className="mb-8 flex justify-center animate-fade-in-up">
               <div className="relative">
@@ -27,9 +27,12 @@ export default function Jerry() {
               </div>
             </div>
             
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 animate-fade-in-up gradient-text">
-              Hey, I&apos;m Jerry! 👋
+            <h1 className="text-4xl md:text-6xl font-bold mb-4 animate-fade-in-up gradient-text leading-tight">
+              Hey, I&apos;m Jerry!
             </h1>
+            <div className="text-4xl md:text-5xl mb-6 animate-fade-in-up">
+              👋
+            </div>
             <p className="text-xl md:text-2xl text-slate-700 dark:text-slate-300 mb-4 font-semibold animate-slide-in-left">
               Security geek, dad, gamer, and bourbon enthusiast 🥃
             </p>
