@@ -28,7 +28,7 @@
     "serve:local": "./scripts/serve-local.sh",
     "watch:files": "./scripts/watch-files.sh",
     "resume:smart": "node scripts/smart-resume-pipeline.js",
-        "pipeline:production": "node scripts/production-pipeline.js",
+    "pipeline:production": "node scripts/production-pipeline.js",
     "setup:hooks": "./scripts/setup-pre-push-hook.sh",
     "test:production": "npm run pipeline:production",
     "docs": "echo '📚 Documentation available in docs/ directory:' && ls docs/",
@@ -39,6 +39,8 @@
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",
+    "@types/dompurify": "^3.0.5",
+    "dompurify": "^3.2.7",
     "googleapis": "^160.0.0",
     "gtag": "^1.0.1",
     "next": "15.5.3",
