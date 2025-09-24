@@ -1,7 +1,4 @@
-User-agent: *
-Allow: /
-
-# Allow social media scrapers
+# Allow all social media scrapers
 User-agent: facebookexternalhit
 Allow: /
 
@@ -9,6 +6,9 @@ User-agent: LinkedInBot
 Allow: /
 
 User-agent: Twitterbot
+Allow: /
+
+User-agent: *
 Allow: /
 
 # Allow blog pages for social media sharing
