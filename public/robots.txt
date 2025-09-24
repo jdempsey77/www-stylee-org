@@ -1,9 +1,9 @@
 User-agent: *
 Allow: /
 
-# Block blog pages from search engines
-Disallow: /blog/
-Disallow: /blog
+# Allow blog pages for social media sharing
+Allow: /blog/
+Allow: /blog
 
 # Allow main pages
 Allow: /jerry/
