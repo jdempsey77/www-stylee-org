@@ -27,7 +27,7 @@ export default function Resume() {
               Product and Application Security Leader
             </p>
             <p className="text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
-              Building security that doesn't suck. 20+ years of experience. 🥃
+              Building security that doesn&apos;t suck. 20+ years of experience. 🥃
             </p>
           </div>
         </div>

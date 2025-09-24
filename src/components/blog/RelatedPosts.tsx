@@ -1,6 +1,5 @@
 import { BlogPost } from '@/lib/blog/types';
 import { getAllPosts } from '@/lib/blog/utils';
-import PostCard from './PostCard';
 import Link from 'next/link';
 import Image from 'next/image';
 import { formatDate } from '@/lib/blog/utils';
