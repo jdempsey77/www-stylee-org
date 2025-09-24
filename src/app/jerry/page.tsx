@@ -41,7 +41,7 @@ export default function Jerry() {
               What I love most is solving complex technical problems and working with teams to build 
               security solutions that actually work in the real world.
             </p>
-            <p className="text-slate-600 dark:text-slate-400 max-w-3xl mx-auto mb-8 animate-fade-in-up">
+            <p className="text-slate-600 dark:text-slate-400 max-w-3xl mx-auto mb-4 animate-fade-in-up">
               When I&apos;m not thinking about security, you&apos;ll find me hanging with my family, 
               gaming, or enjoying a nice bourbon. Coffee? Nah, not my thing.
             </p>
@@ -50,11 +50,11 @@ export default function Jerry() {
       </section>
 
       {/* Personal About Me & Hobbies */}
-      <section className="py-12 bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm">
+      <section className="py-8 bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-8 items-start">
+          <div className="grid lg:grid-cols-2 gap-6 items-start">
             <div className="animate-slide-in-left">
-              <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4">
                 About me
               </h2>
               <div className="glass rounded-2xl p-8 hover-lift">
@@ -70,7 +70,7 @@ export default function Jerry() {
             </div>
             <div className="animate-slide-in-right">
               <div className="glass rounded-2xl p-8 hover-lift">
-                <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-6">What I do when I&apos;m not working</h3>
+                <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">What I do when I&apos;m not working</h3>
                 <div className="space-y-4">
                   <div className="flex items-start space-x-4 p-4 rounded-xl bg-white/50 dark:bg-slate-700/50 hover:bg-white/70 dark:hover:bg-slate-700/70 transition-all duration-300">
                     <span className="text-2xl">👨‍👩‍👧‍👦</span>
