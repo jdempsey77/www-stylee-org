@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     siteName: "Security in Proof - stylee.org",
     images: [
       {
-        url: "/mainlogo.png",
+        url: "https://stylee.org/mainlogo.png",
         width: 1200,
         height: 630,
         alt: "Jerry Dempsey - Security in Proof",
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Jerry Dempsey - Security in Proof 🥃",
     description: "Started in security when most people thought it was just antivirus and firewall. Now I help companies build security that doesn't suck. Also, bourbon. 🥃",
-    images: ["/mainlogo.png"],
+    images: ["https://stylee.org/mainlogo.png"],
     creator: "@jerryldempsey",
   },
 };
