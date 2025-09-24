@@ -27,50 +27,6 @@ Cheers!
     coverImage: '/welcome.jpg'
   },
   {
-    slug: 'my-journey-into-the-whiskey-world',
-    title: 'My Journey Into the Whiskey World',
-    excerpt: 'From craft beer to bourbon hunting - how Eagle Rare changed everything and led me down the rabbit hole of whiskey appreciation.',
-    content: `
-# My Journey Into the Whiskey World
-
-## From Beer to Bourbon
-
-For years I was deep into the craft beer scene. I loved the flavors and the creativity, but beer eventually started to feel heavy. It filled me up in a way that wasn't always enjoyable. Meanwhile, my father-in-law kept nudging me to try whiskey. I gave it a shot here and there, but I could only handle it with Coke or other mixer. Straight bourbon? Forget about it.
-
-That changed one night years ago at a friend's house when I was handed a bottle of Eagle Rare. At first glance, I laughed. The big eagle on the front screamed 'Merica, and I assumed it was some cheap bottle. Then I learned it was from Buffalo Trace, the legendary distillery behind Pappy Van Winkle. I tried a sip—and I was hooked. Smooth, flavorful, and nothing like what I expected. For under $30 at the time, it became my first real bourbon love.
-
-## Bourbon Trail & Expanding My Palate
-
-A few years ago I did the Bourbon Trail. Visiting distilleries like Buffalo Trace, Maker's Mark, and Bardstown opened my eyes to the culture and craft behind bourbon. Buffalo Trace stood out most—our tour guide, the famous Freddy, made it unforgettable tasting experience. Maker's Mark had the most beautiful campus, while Bardstown's state-of-the-art facility showed me where the future of bourbon is headed.
-
-As I got deeper into bourbon, I developed a taste for drinking it neat. Over time, I learned to appreciate the differences in proof, spice, and oak. My sweet spot tends to be bourbons around 45–50% ABV—enough to bring flavor and warmth without overwhelming heat.
-
-## The Hunt
-
-When I first started bourbon hunting, I could still walk into a store and find Eagle Rare on the shelf. I had a few go-to spots, and every so often I'd stumble across a hidden gem in a random liquor store. Those days feel long gone. The bourbon world exploded and suddenly bottles I considered "easy finds" became rare treasures.
-
-Still, that hunt is part of the fun. I enjoy collecting bottles, but I never forget they're meant to be opened and shared. Some are reserved for special occasions, but the best moments are drinking bourbon with friends.
-
-## Go-To Pours & Recommendations
-
-Even today, Eagle Rare remains my go-to pour—when I can find it. Along the way I've discovered other favorites like Elmer T. Lee, New Riff and James E. Pepper 1776. For everyday drinking, James E. Pepper and even standard Buffalo Trace never disappoint.
-
-If you're a beer drinker looking to dip into bourbon, I'd recommend Buffalo Trace, Four Roses, James E. Pepper or Angel's Envy as great starting points.
-
-## Closing Thoughts
-
-Bourbon has gone from an intimidating spirit I could only drink with Coke to something I deeply enjoy and appreciate. It's more than just what's in the glass—it's the stories, the places, and the people you share it with.
-
-And for me, it all started with a bottle of Eagle Rare that I once thought looked cheap. Funny how things change.
-    `,
-    author: 'Jerry Dempsey',
-    publishedAt: '2025-01-24',
-    tags: ['Bourbon', 'Personal', 'Whiskey', 'Buffalo Trace', 'Eagle Rare'],
-    featured: false,
-    readingTime: 5,
-    coverImage: '/IMG_20250923_183428553_HDR.jpg'
-  },
-  {
     slug: 'return-to-code-ai-driven-development',
     title: 'A Return to Code: Exploring AI-Driven Development as a Security Leader',
     excerpt: 'After a decade away from daily coding, AI-driven development tools brought me back to the keyboard. Here\'s what I learned building a DAST tool with AI assistance.',
