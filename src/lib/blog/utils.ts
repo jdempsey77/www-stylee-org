@@ -68,7 +68,7 @@ And for me, it all started with a bottle of Eagle Rare that I once thought looke
     tags: ['Bourbon', 'Personal', 'Whiskey', 'Buffalo Trace', 'Eagle Rare'],
     featured: false,
     readingTime: 5,
-    coverImage: '/welcome.jpg'
+    coverImage: '/IMG_20250923_183428553_HDR.jpg'
   },
   {
     slug: 'return-to-code-ai-driven-development',
