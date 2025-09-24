@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
   }
 
   const shareUrl = `https://stylee.org/blog/${post.slug}`;
-  const ogImageUrl = `https://stylee.org/api/og?title=${encodeURIComponent(post.title)}&excerpt=${encodeURIComponent(post.excerpt)}&author=${encodeURIComponent(post.author)}&date=${encodeURIComponent(post.publishedAt)}`;
+  const ogImageUrl = post.coverImage ? `https://stylee.org${post.coverImage}` : 'https://stylee.org/mainlogo.png';
 
   return {
     title: `${post.title} | Security in Proof`,
