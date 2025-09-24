@@ -27,63 +27,47 @@ Cheers!
     coverImage: '/welcome.jpg'
   },
   {
-    slug: 'bourbon-security-parallels',
-    title: 'Bourbon and Security: Unexpected Parallels in Craft and Quality',
-    excerpt: 'Exploring the surprising connections between bourbon craftsmanship and cybersecurity practices - both require patience, attention to detail, and a commitment to quality.',
+    slug: 'my-journey-into-the-whiskey-world',
+    title: 'My Journey Into the Whiskey World',
+    excerpt: 'From craft beer to bourbon hunting - how Eagle Rare changed everything and led me down the rabbit hole of whiskey appreciation.',
     content: `
-# Bourbon and Security: Unexpected Parallels in Craft and Quality
+# My Journey Into the Whiskey World
 
-There's something about bourbon that speaks to the security professional in me. Maybe it's the patience required, the attention to detail, or the way both demand respect for process and tradition. After years in cybersecurity and countless evenings with a good pour, I've noticed some fascinating parallels between these two worlds.
+## From Beer to Bourbon
 
-## The Art of Patience
+For years I was deep into the craft beer scene. I loved the flavors and the creativity, but beer eventually started to feel heavy. It filled me up in a way that wasn't always enjoyable. Meanwhile, my father-in-law kept nudging me to try whiskey. I gave it a shot here and there, but I could only handle it with Coke or other mixer. Straight bourbon? Forget about it.
 
-Bourbon isn't made overnight. It requires years of aging, careful monitoring, and the wisdom to know when it's ready. Security isn't much different. You can't rush a security program, and you certainly can't skip the fundamentals. Both require the patience to build something that will stand the test of time.
+That changed one night years ago at a friend's house when I was handed a bottle of Eagle Rare. At first glance, I laughed. The big eagle on the front screamed 'Merica, and I assumed it was some cheap bottle. Then I learned it was from Buffalo Trace, the legendary distillery behind Pappy Van Winkle. I tried a sip—and I was hooked. Smooth, flavorful, and nothing like what I expected. For under $30 at the time, it became my first real bourbon love.
 
-The best bourbons are aged for years, developing complexity and character. The best security programs are built over time, with layers of protection that mature and strengthen. You can't force either process.
+## Bourbon Trail & Expanding My Palate
 
-## Quality Over Quantity
+A few years ago I did the Bourbon Trail. Visiting distilleries like Buffalo Trace, Maker's Mark, and Bardstown opened my eyes to the culture and craft behind bourbon. Buffalo Trace stood out most—our tour guide, the famous Freddy, made it unforgettable tasting experience. Maker's Mark had the most beautiful campus, while Bardstown's state-of-the-art facility showed me where the future of bourbon is headed.
 
-In bourbon, it's not about how much you can produce—it's about the quality of what you create. A small batch, carefully crafted bourbon will always outshine a mass-produced product. The same principle applies to security.
+As I got deeper into bourbon, I developed a taste for drinking it neat. Over time, I learned to appreciate the differences in proof, spice, and oak. My sweet spot tends to be bourbons around 45–50% ABV—enough to bring flavor and warmth without overwhelming heat.
 
-It's better to have a few, well-implemented security controls than dozens of half-measures. Focus on doing fewer things exceptionally well rather than many things poorly.
+## The Hunt
 
-## The Importance of Process
+When I first started bourbon hunting, I could still walk into a store and find Eagle Rare on the shelf. I had a few go-to spots, and every so often I'd stumble across a hidden gem in a random liquor store. Those days feel long gone. The bourbon world exploded and suddenly bottles I considered "easy finds" became rare treasures.
 
-Every great bourbon distillery has a process—a recipe, if you will. The mash bill, fermentation, distillation, and aging all follow specific steps that have been refined over generations. Security is no different.
+Still, that hunt is part of the fun. I enjoy collecting bottles, but I never forget they're meant to be opened and shared. Some are reserved for special occasions, but the best moments are drinking bourbon with friends.
 
-We have our processes too: threat modeling, secure coding practices, vulnerability management, incident response. These aren't arbitrary rules—they're time-tested methods that work when applied consistently.
+## Go-To Pours & Recommendations
 
-## Learning from Mistakes
+Even today, Eagle Rare remains my go-to pour—when I can find it. Along the way I've discovered other favorites like Elmer T. Lee, New Riff and James E. Pepper 1776. For everyday drinking, James E. Pepper and even standard Buffalo Trace never disappoint.
 
-In bourbon making, a bad batch teaches you more than a perfect one. You learn what went wrong, adjust your process, and improve. Security is built on the same principle of continuous improvement.
+If you're a beer drinker looking to dip into bourbon, I'd recommend Buffalo Trace, Four Roses, James E. Pepper or Angel's Envy as great starting points.
 
-Every security incident, every vulnerability, every near-miss is an opportunity to learn and strengthen your defenses. The key is to embrace these lessons rather than fear them.
+## Closing Thoughts
 
-## The Craft of Mastery
+Bourbon has gone from an intimidating spirit I could only drink with Coke to something I deeply enjoy and appreciate. It's more than just what's in the glass—it's the stories, the places, and the people you share it with.
 
-Both bourbon making and security require mastery of craft. You can't fake expertise in either field. It takes years of practice, study, and hands-on experience to truly understand the nuances.
-
-The best bourbon makers can taste a sample and tell you exactly what's in it, how it was made, and what might improve it. The best security professionals can look at a system and immediately identify potential risks and mitigation strategies.
-
-## Building Something Worth Sharing
-
-Great bourbon is meant to be shared—with friends, family, and fellow enthusiasts. The same is true of security knowledge. We learn from each other, share best practices, and build a community that makes everyone stronger.
-
-Whether it's a rare bottle or a security insight, the best things in life are better when shared with others who appreciate them.
-
-## The Bottom Line
-
-At the end of the day, both bourbon and security are about creating something of value. Something that protects, something that brings joy, something that stands the test of time.
-
-So here's to the craftsmen and craftswomen in both fields. May your processes be sound, your quality be high, and your patience be rewarded.
-
-Cheers! 🥃
+And for me, it all started with a bottle of Eagle Rare that I once thought looked cheap. Funny how things change.
     `,
     author: 'Jerry Dempsey',
     publishedAt: '2025-01-24',
-    tags: ['Bourbon', 'Security', 'Personal', 'Craft'],
+    tags: ['Bourbon', 'Personal', 'Whiskey', 'Buffalo Trace', 'Eagle Rare'],
     featured: true,
-    readingTime: 4,
+    readingTime: 5,
     coverImage: '/welcome.jpg'
   },
   {
