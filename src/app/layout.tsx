@@ -17,9 +17,9 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Jerry Dempsey - Product and Application Security Leader",
-  description: "Jerry Dempsey is a Product and Application Security Leader with 20+ years of experience in cybersecurity. Expert in team building, mentoring, and implementing cutting-edge security strategies.",
-  keywords: ["Jerry Dempsey", "Product Security", "Application Security", "Cybersecurity", "Security Leader", "FanDuel", "Warner Bros Discovery", "stylee.org"],
+  title: "Jerry Dempsey - Security in Proof 🥃",
+  description: "20+ years of security leadership. I help companies build secure products and teams that don't hate each other. Also partial to bourbon and good conversation. 🥃",
+  keywords: ["Jerry Dempsey", "Product Security", "Application Security", "Cybersecurity", "Security Leader", "FanDuel", "Warner Bros Discovery", "stylee.org", "Bourbon", "Security Blog"],
   authors: [{ name: "Jerry Dempsey" }],
   robots: "index, follow",
   icons: {
@@ -28,24 +28,24 @@ export const metadata: Metadata = {
     apple: '/favicon.svg',
   },
   openGraph: {
-    title: "Jerry Dempsey - Product and Application Security Leader",
-    description: "Product and Application Security Leader with 20+ years of cybersecurity experience. Expert in team building, mentoring, and implementing cutting-edge security strategies.",
+    title: "Jerry Dempsey - Security in Proof 🥃",
+    description: "20+ years of security leadership. I help companies build secure products and teams that don't hate each other. Also partial to bourbon and good conversation. 🥃",
     type: "website",
     url: "https://stylee.org",
-    siteName: "Jerry Dempsey - stylee.org",
+    siteName: "Security in Proof - stylee.org",
     images: [
       {
         url: "/mainlogo.png",
         width: 1200,
         height: 630,
-        alt: "Jerry Dempsey - Product and Application Security Leader",
+        alt: "Jerry Dempsey - Security in Proof",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Jerry Dempsey - Product and Application Security Leader",
-    description: "20+ years of cybersecurity experience. Expert in team building, mentoring, and implementing cutting-edge security strategies.",
+    title: "Jerry Dempsey - Security in Proof 🥃",
+    description: "20+ years of security leadership. I help companies build secure products and teams that don't hate each other. Also partial to bourbon and good conversation. 🥃",
     images: ["/mainlogo.png"],
     creator: "@jerryldempsey",
   },
