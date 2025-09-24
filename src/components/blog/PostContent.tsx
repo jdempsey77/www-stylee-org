@@ -1,6 +1,5 @@
 import React from 'react';
 import Image from 'next/image';
-import DOMPurify from 'dompurify';
 import { BlogPost } from '@/lib/blog/types';
 import { formatDate } from '@/lib/blog/utils';
 
@@ -82,18 +81,16 @@ export default function PostContent({ post }: PostContentProps) {
       }
       // Paragraphs
       else {
-        // Handle italic text (*text*)
-        const processedLine = line.replace(/\*([^*]+)\*/g, '<em>$1</em>');
-        
-        // Sanitize HTML to prevent XSS
-        const sanitizedHTML = DOMPurify.sanitize(processedLine);
+        // Handle italic text (*text*) - simple text replacement for now
+        const processedLine = line.replace(/\*([^*]+)\*/g, '$1');
         
         elements.push(
           <p 
             key={key++} 
             className="text-slate-700 mb-2 leading-relaxed"
-            dangerouslySetInnerHTML={{ __html: sanitizedHTML }}
-          />
+          >
+            {processedLine}
+          </p>
         );
       }
     }

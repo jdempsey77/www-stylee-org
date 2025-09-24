@@ -135,3 +135,7 @@ export function generateExcerpt(content: string, maxLength: number = 160): strin
   }
   return plainText.substring(0, maxLength).trim() + '...';
 }
+
+export function getAllPostSlugs(): string[] {
+  return samplePosts.map(post => post.slug);
+}
