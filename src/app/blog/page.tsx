@@ -122,6 +122,7 @@ export default function BlogPage() {
           </div>
         )}
       </section>
+      </div>
     </>
   );
 }
