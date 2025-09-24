@@ -77,7 +77,7 @@ The tools are new, the process is evolving, and challenges remain. But curiosity
     author: 'Jerry Dempsey',
     publishedAt: '2025-09-24',
     tags: ['AI Development', 'Security Leadership', 'DAST', 'Golang', 'Personal Projects'],
-    featured: false,
+    featured: true,
     readingTime: 6,
     coverImage: '/code-screen.png'
   }
@@ -85,7 +85,6 @@ The tools are new, the process is evolving, and challenges remain. But curiosity
 
 export function getAllPosts(): BlogPost[] {
   return samplePosts
-    .filter(post => post.featured) // Only show featured posts
     .sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime());
 }
 
@@ -99,14 +98,12 @@ export function getFeaturedPosts(): BlogPost[] {
 
 export function getPostsByTag(tag: string): BlogPost[] {
   return samplePosts
-    .filter(post => post.featured) // Only search in featured posts
     .filter(post => post.tags.includes(tag));
 }
 
 export function getAllTags(): string[] {
   const tags = new Set<string>();
   samplePosts
-    .filter(post => post.featured) // Only include tags from featured posts
     .forEach(post => {
       post.tags.forEach(tag => tags.add(tag));
     });
