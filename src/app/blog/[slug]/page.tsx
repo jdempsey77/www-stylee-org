@@ -1,4 +1,5 @@
 import { notFound } from 'next/navigation';
+import { Metadata } from 'next';
 import { getPostBySlug, getAllPostSlugs } from '@/lib/blog/utils';
 import BlogPostClient from './BlogPostClient';
 
@@ -14,6 +15,55 @@ export async function generateStaticParams() {
   return slugs.map((slug) => ({
     slug: slug,
   }));
+}
+
+// Generate metadata for each blog post
+export async function generateMetadata({ params }: BlogPostPageProps): Promise<Metadata> {
+  const { slug } = await params;
+  const post = getPostBySlug(slug);
+
+  if (!post) {
+    return {
+      title: 'Post Not Found',
+      description: 'The requested blog post could not be found.',
+    };
+  }
+
+  const shareUrl = `https://stylee.org/blog/${post.slug}`;
+  const ogImageUrl = `https://stylee.org/api/og?title=${encodeURIComponent(post.title)}&excerpt=${encodeURIComponent(post.excerpt)}&author=${encodeURIComponent(post.author)}&date=${encodeURIComponent(post.publishedAt)}`;
+
+  return {
+    title: `${post.title} | Security in Proof`,
+    description: post.excerpt,
+    keywords: post.tags,
+    authors: [{ name: post.author }],
+    openGraph: {
+      title: post.title,
+      description: post.excerpt,
+      url: shareUrl,
+      siteName: 'Security in Proof',
+      images: [
+        {
+          url: ogImageUrl,
+          width: 1200,
+          height: 630,
+          alt: post.title,
+        },
+      ],
+      locale: 'en_US',
+      type: 'article',
+      publishedTime: post.publishedAt,
+      authors: [post.author],
+      tags: post.tags,
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: post.title,
+      description: post.excerpt,
+      images: [ogImageUrl],
+      creator: '@stylee_org',
+    },
+  };
 }
 
 export default async function BlogPostPage({ params }: BlogPostPageProps) {

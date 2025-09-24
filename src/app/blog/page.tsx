@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { getAllPosts, getFeaturedPosts, getPostsByTag, getAllTags } from '@/lib/blog/utils';
 import PostCard from '@/components/blog/PostCard';
+import Head from 'next/head';
 
 export default function BlogPage() {
   const [selectedTag, setSelectedTag] = useState<string | null>(null);
@@ -13,7 +14,21 @@ export default function BlogPage() {
   const displayedPosts = selectedTag ? getPostsByTag(selectedTag) : allPosts;
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-gray-50 dark:from-slate-900 dark:to-slate-800 pb-20">
+    <>
+      <Head>
+        <title>Security in Proof - Blog | Jerry Dempsey</title>
+        <meta name="description" content="Security insights, leadership lessons, and life beyond the code. Join Jerry Dempsey as he shares 20+ years of cybersecurity experience." />
+        <meta property="og:title" content="Security in Proof - Blog" />
+        <meta property="og:description" content="Security insights, leadership lessons, and life beyond the code. Join Jerry Dempsey as he shares 20+ years of cybersecurity experience." />
+        <meta property="og:url" content="https://stylee.org/blog" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://stylee.org/api/og/?title=Security%20in%20Proof&excerpt=Security%20insights%2C%20leadership%20lessons%2C%20and%20life%20beyond%20the%20code&author=Jerry%20Dempsey&date=2025-09-24" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Security in Proof - Blog" />
+        <meta name="twitter:description" content="Security insights, leadership lessons, and life beyond the code. Join Jerry Dempsey as he shares 20+ years of cybersecurity experience." />
+        <meta name="twitter:image" content="https://stylee.org/api/og/?title=Security%20in%20Proof&excerpt=Security%20insights%2C%20leadership%20lessons%2C%20and%20life%20beyond%20the%20code&author=Jerry%20Dempsey&date=2025-09-24" />
+      </Head>
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-gray-50 dark:from-slate-900 dark:to-slate-800 pb-20">
       {/* Header */}
       <section className="py-8 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 dark:from-slate-900 dark:via-blue-900 dark:to-purple-900">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -107,9 +122,7 @@ export default function BlogPage() {
           </div>
         )}
       </section>
-
-        </div>
-      </section>
     </div>
+    </>
   );
 }
