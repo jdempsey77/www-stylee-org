@@ -21,9 +21,9 @@ Cheers!
     `,
     author: 'Jerry Dempsey',
     publishedAt: '2024-09-22',
-    tags: ['Welcome', 'Personal'],
-    featured: true,
-    readingTime: 2,
+        tags: ['Welcome', 'Personal'],
+        featured: false,
+        readingTime: 2,
     coverImage: '/welcome.jpg'
   },
   {

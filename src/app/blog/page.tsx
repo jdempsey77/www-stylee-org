@@ -1,13 +1,16 @@
 'use client';
 
 import { useState } from 'react';
-import { getAllPosts, getPostsByTag, getAllTags } from '@/lib/blog/utils';
+import { getAllPosts, getPostsByTag, getAllTags, getFeaturedPosts } from '@/lib/blog/utils';
 import PostCard from '@/components/blog/PostCard';
+import Link from 'next/link';
+import Image from 'next/image';
 
 export default function BlogPage() {
   const [selectedTag, setSelectedTag] = useState<string | null>(null);
   
   const allPosts = getAllPosts();
+  const featuredPosts = getFeaturedPosts();
   const displayedPosts = selectedTag ? getPostsByTag(selectedTag) : allPosts;
 
   return (
@@ -60,6 +63,76 @@ export default function BlogPage() {
       <section className="py-12 bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       {/* Featured Posts */}
+      {featuredPosts && featuredPosts.length > 0 && (
+        <section className="mb-12">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4">
+              Featured Posts
+            </h2>
+          </div>
+          
+          <div className="max-w-4xl mx-auto">
+            {featuredPosts.slice(0, 2).map((post) => (
+              <Link
+                key={post.slug}
+                href={`/blog/${post.slug}`}
+                className="group block"
+              >
+                <div className="glass rounded-2xl p-8 hover-lift transition-all duration-300 group-hover:shadow-xl">
+                  <div className="flex items-start space-x-6">
+                    {post.coverImage && (
+                      <div className="flex-shrink-0">
+                        <Image
+                          src={post.coverImage}
+                          alt={post.title}
+                          width={120}
+                          height={120}
+                          className="w-30 h-30 rounded-xl object-cover"
+                        />
+                      </div>
+                    )}
+                    <div className="flex-1 min-w-0">
+                      <div className="flex items-center space-x-3 mb-3">
+                        <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200">
+                          Featured
+                        </span>
+                        <span className="text-sm text-slate-500 dark:text-slate-400">
+                          {post.readingTime} min read
+                        </span>
+                      </div>
+                      <h3 className="text-2xl font-bold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-200 mb-3">
+                        {post.title}
+                      </h3>
+                      <p className="text-slate-600 dark:text-slate-300 text-base leading-relaxed mb-4">
+                        {post.excerpt}
+                      </p>
+                      <div className="flex items-center justify-between">
+                        <div className="flex flex-wrap gap-2">
+                          {post.tags.slice(0, 4).map((tag) => (
+                            <span
+                              key={tag}
+                              className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-slate-100 text-slate-700 dark:bg-slate-700 dark:text-slate-300"
+                            >
+                              {tag}
+                            </span>
+                          ))}
+                        </div>
+                        <span className="text-sm text-slate-500 dark:text-slate-400">
+                          {new Date(post.publishedAt).toLocaleDateString('en-US', {
+                            month: 'short',
+                            day: 'numeric',
+                            year: 'numeric'
+                          })}
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </section>
+      )}
 
       {/* All Posts */}
       <section className="mb-8">
