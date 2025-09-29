@@ -69,6 +69,12 @@ export default function Links() {
       url: "https://www.bourbonbanter.com/",
       description: "Bourbon reviews, industry news, and community discussions",
       category: "Bourbon"
+    },
+    {
+      name: "Dempsey5.com",
+      url: "https://dempsey5.com",
+      description: "Dempsey family personal home",
+      category: "Personal"
     }
   ];
 
