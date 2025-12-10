@@ -1,0 +1,24 @@
+# Allow all social media scrapers
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: *
+Allow: /
+
+# Allow blog pages for social media sharing
+Allow: /blog/
+Allow: /blog
+
+# Allow main pages
+Allow: /jerry/
+Allow: /links/
+Allow: /jerry-dempsey-resume.pdf
+
+# Sitemap location (if you add one later)
+# Sitemap: https://stylee.org/sitemap.xml
