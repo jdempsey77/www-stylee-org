@@ -1,20 +1,23 @@
 import type { NextConfig } from "next";
 
-const isProd = process.env.NODE_ENV === 'production';
+const nodeEnv = process.env.NODE_ENV as string | undefined;
+const isProd = nodeEnv === 'production';
+const isStaging = nodeEnv === 'staging';
+const shouldExport = isProd || isStaging;
 const isCustomDomain = process.env.CUSTOM_DOMAIN === 'true';
 const basePath = isProd && !isCustomDomain ? '/www-stylee-org' : '';
 
 const nextConfig: NextConfig = {
-  // Only use export mode in production
-  ...(isProd && { output: 'export' }),
+  // Export static builds in production and staging so CI has an "out" directory
+  ...(shouldExport && { output: 'export' }),
   trailingSlash: true,
   basePath,
   assetPrefix: basePath,
   images: {
     unoptimized: true
   },
-  // Only use custom distDir in production
-  ...(isProd && { distDir: 'out' }),
+  // Use "out" dist dir when exporting in production or staging
+  ...(shouldExport && { distDir: 'out' }),
   // Only use headers in production
   ...(isProd && {
     async headers() {
