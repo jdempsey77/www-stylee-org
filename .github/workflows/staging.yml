@@ -39,6 +39,9 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event_name == 'pull_request' || github.ref == 'refs/heads/develop'
     name: "Deploy to Staging"
+    permissions:
+      contents: write
+      pages: write
     
     steps:
     - name: Checkout code
@@ -71,6 +74,9 @@ jobs:
     if: github.ref == 'refs/heads/main'
     name: "Deploy to Production"
     environment: production
+    permissions:
+      contents: write
+      pages: write
     
     steps:
     - name: Checkout code
