@@ -196,7 +196,7 @@ That's the best kind of feedback.
     tags: ['Personal Projects', 'AI Development', 'Home Automation'],
     featured: false,
     readingTime: 7,
-    coverImage: '/code-screen.png'
+    coverImage: '/3dprinting.webp'
   }
 ];
 
