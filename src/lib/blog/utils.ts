@@ -124,6 +124,79 @@ The tools are new, the process is evolving, and challenges remain. But curiosity
     featured: true,
     readingTime: 6,
     coverImage: '/code-screen.png'
+  },
+  {
+    slug: 'building-filamentiq',
+    title: 'When Home Automation Meets 3D Printing: Building FilamentIQ',
+    excerpt: 'I got a 3D printer for Christmas and ended up building an automated filament tracking system that bridges Bambu Lab printers, Home Assistant, and Spoolman.',
+    content: `
+# When Home Automation Meets 3D Printing: Building FilamentIQ
+
+I got a 3D printer for Christmas and I'm completely hooked. Naturally, the first thing I wanted to do was integrate it into Home Assistant. One rabbit hole led to another, and eventually I found myself deep into filament tracking — trying to know exactly how much was left on every spool without ever having to manually weigh or check anything.
+
+There are good solutions out there. Spoolman is excellent. The ha-bambulab integration is solid. But there were gaps — the pieces didn't quite talk to each other the way I wanted. Consumption wasn't being recorded automatically. Spool identity was fragile. I kept iterating until I realized I was building something worth finishing.
+
+That became FilamentIQ.
+
+## What I Decided to Build
+
+FilamentIQ is an AppDaemon-based system that bridges Bambu Lab printers, Home Assistant, and Spoolman. The goal: zero manual intervention. A print finishes, filament consumption gets recorded, spool weights stay accurate — without me touching anything.
+
+Simple to say. Less simple to build.
+
+## The Journey
+
+The first challenge was spool identity. How does the system know which physical spool is in slot 3? Bambu RFID spools have a chip, but not all spools do — and even RFID chips can be unreliable. Some Bambu spools have dual NFC chips that report different IDs depending on how the spool is oriented.
+
+I ended up with a two-track identity system:
+
+- RFID spools are matched by tray_uuid — a stable identifier from the ha-bambulab integration
+- Non-RFID spools are matched by a color + material fingerprint, auto-enrolled when the combination is unambiguous
+
+All identity is stored in Spoolman's lot_nr field, making it portable and source-of-truth friendly.
+
+The second challenge was consumption accuracy. Just knowing that filament was used isn't enough — you need to know how much per spool. This is where things got interesting.
+
+I built a three-tier allocation pipeline:
+
+1. **3MF file parsing** — After a print finishes, the system FTPs into the printer, downloads the 3MF file from the cache directory, and extracts the slicer's own used_g values per filament. This is the most accurate method — the slicer calculated it.
+2. **RFID fuel gauge delta** — If 3MF parsing isn't available, fall back to start_g - end_g from the tray weight sensors on RFID spools. Roughly 40g resolution, but reliable.
+3. **Time-weighted estimation** — Final fallback. Split total consumption proportionally by how long each tray was active during the print. Naturally captures purge tower waste too.
+
+The system tries each tier in order and uses the best data available. In practice, tier one fires most of the time.
+
+## Building With AI
+
+I used Claude.ai as my architect and advisor throughout — thinking through system design, debating tradeoffs, and working through edge cases before writing a line of code. Claude Code and Cursor did the heavy lifting on the actual implementation.
+
+One example: the job deduplication problem. Prints can trigger multiple completion events. Without deduplication, you'd record consumption twice. The solution was a disk-persisted job key set, capped at 50 entries, that survives AppDaemon restarts. A subtle problem with a clean solution.
+
+## What Shipping Looks Like Now
+
+FilamentIQ is live on GitHub and available as a HACS custom repository:
+
+https://github.com/jdempsey77/filament-iq
+
+The repo has full documentation, a regression test suite (99 tests against my live P1S), and CI via GitHub Actions. The system is running on my home setup right now, tracking every print automatically.
+
+It's early days. There are rough edges. The setup requires familiarity with AppDaemon and Home Assistant configuration. But the core system is solid, and I'm genuinely using it — which is the only metric that matters for a personal project.
+
+## What's Next
+
+The immediate roadmap includes a cleaner installation experience and potentially a submission to the official HACS default store. Longer term, I want to explore richer dashboard visualizations — cost tracking per print, filament brand comparisons, lifecycle projections.
+
+But mostly, I want to see if it's useful to other people. If you run a Bambu printer with Spoolman and Home Assistant, give it a try and tell me what breaks.
+
+That's the best kind of feedback.
+
+*FilamentIQ is open source under the MIT license. Issues, PRs, and questions welcome at github.com/jdempsey77/filament-iq.*
+    `,
+    author: 'Jerry Dempsey',
+    publishedAt: '2026-03-06',
+    tags: ['Personal Projects', 'AI Development', 'Home Automation'],
+    featured: false,
+    readingTime: 7,
+    coverImage: '/code-screen.png'
   }
 ];
 
