@@ -10,18 +10,35 @@ export default function ProjectContent({ project }: ProjectContentProps) {
     <article className="max-w-4xl mx-auto">
       {/* Hero */}
       <header className="mb-8">
-        <div className="flex items-center gap-3 mb-2 flex-wrap">
-          <h1 className="text-4xl md:text-5xl font-bold text-white">
-            {project.name}
-          </h1>
-          <span className="inline-block text-sm px-3 py-1 rounded-full font-medium bg-slate-600 text-slate-200">
-            {project.version}
-          </span>
+        <div className="mb-6 overflow-hidden rounded-xl" style={{ background: '#0d1117' }}>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 140" width="100%">
+            {/* Subtle grid */}
+            <defs>
+              <pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse">
+                <path d="M28 0L0 0 0 28" fill="none" stroke="rgba(255,255,255,0.03)" strokeWidth="1"/>
+              </pattern>
+            </defs>
+            <rect width="700" height="140" fill="url(#grid)"/>
+            {/* Spool mark */}
+            <circle cx="70" cy="70" r="46" fill="none" stroke="#5B8AF0" strokeWidth="4"/>
+            <path d="M70 26 A44 44 0 1 1 69.99 26Z" fill="none" stroke="#F97316" strokeWidth="15" opacity="0.9"/>
+            <circle cx="70" cy="70" r="16" fill="#0d1117" stroke="#5B8AF0" strokeWidth="3"/>
+            <line x1="70" y1="24" x2="70" y2="54" stroke="#5B8AF0" strokeWidth="3" strokeLinecap="round"/>
+            <line x1="109.8" y1="92" x2="90.2" y2="81" stroke="#5B8AF0" strokeWidth="3" strokeLinecap="round"/>
+            <line x1="30.2" y1="92" x2="49.8" y2="81" stroke="#5B8AF0" strokeWidth="3" strokeLinecap="round"/>
+            <circle cx="70" cy="70" r="6.5" fill="#5B8AF0"/>
+            {/* Filament tail */}
+            <path d="M113 44 Q122 32 120 22" fill="none" stroke="#F97316" strokeWidth="3" strokeLinecap="round" opacity="0.7"/>
+            <circle cx="120" cy="22" r="4" fill="#F97316" opacity="0.7"/>
+            {/* Wordmark */}
+            <text x="148" y="60" fontFamily="system-ui,-apple-system,sans-serif" fontSize="36" fontWeight="800" fill="#ffffff" dominantBaseline="middle" letterSpacing="-1">Filament</text>
+            <text x="148" y="98" fontFamily="system-ui,-apple-system,sans-serif" fontSize="36" fontWeight="200" fill="#5B8AF0" dominantBaseline="middle" letterSpacing="14">IQ</text>
+            {/* Tagline */}
+            <text x="440" y="54" fontFamily="system-ui,-apple-system,sans-serif" fontSize="13" fontWeight="400" fill="rgba(255,255,255,0.45)" dominantBaseline="middle">Filament identity &amp; lifecycle</text>
+            <text x="440" y="74" fontFamily="system-ui,-apple-system,sans-serif" fontSize="13" fontWeight="400" fill="rgba(255,255,255,0.45)" dominantBaseline="middle">management for Bambu Lab printers</text>
+            <text x="440" y="100" fontFamily="system-ui,-apple-system,sans-serif" fontSize="11" fontWeight="500" fill="#F97316" dominantBaseline="middle" opacity="0.75">v1.5.0</text>
+          </svg>
         </div>
-
-        <p className="text-xl text-slate-300 mb-6 italic">
-          {project.tagline}
-        </p>
 
         <div className="flex flex-wrap gap-3">
           <a
