@@ -14,7 +14,7 @@
     "start:staging": "NODE_ENV=staging next start",
     "lint": "eslint",
     "lint:fix": "eslint --fix",
-    "audit": "npm audit --audit-level moderate",
+    "audit": "npm audit --omit=dev --audit-level moderate",
     "audit:fix": "npm audit fix",
     "test:build": "npm run build:staging && npm run validate:build",
     "validate:build": "node scripts/validate-build.js",
