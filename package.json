@@ -43,7 +43,7 @@
     "dompurify": "^3.4.9",
     "googleapis": "^160.0.0",
     "gtag": "^1.0.1",
-    "next": "^15.5.19",
+    "next": "^15.5.28",
     "react": "^19.2.3",
     "react-dom": "^19.2.3"
   },
@@ -59,7 +59,7 @@
     "@types/react": "^19.2.7",
     "@types/react-dom": "^19.2.3",
     "eslint": "^9.39.1",
-    "eslint-config-next": "^15.5.9",
+    "eslint-config-next": "^15.5.28",
     "puppeteer": "^24.33.0",
     "tailwindcss": "^4.1.18",
     "typescript": "^5.9.3"
