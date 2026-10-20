@@ -1,0 +1,17 @@
+# release.yaml: the release contract (v1). Schema: _reorg/repo_contract_audit.md.
+contract: 1
+tier: 3
+branch: main
+test: null   # GAP: no tests (CI runs lint, npm audit and next build only)
+ci: true   # Production Pipeline + Hybrid Staging Environment run on PRs
+secrets: none
+deploy:
+  target: github-pages
+  how: hand   # nothing to run: Actions deploys on push
+  order: 70
+  ledger: none
+  note: "GitHub Pages via Actions: push to main runs .github/workflows/deploy.yml (next build, deploy-pages) for stylee.org"
+smoke:
+  command: "curl -fsS -m 10 -o /dev/null https://stylee.org"   # public, from anywhere
+  tries: 3
+rollback: hand   # revert the commit on main; Actions redeploys
