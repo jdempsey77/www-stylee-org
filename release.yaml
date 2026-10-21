@@ -7,11 +7,13 @@ ci: true   # Production Pipeline + Hybrid Staging Environment run on PRs
 secrets: none
 deploy:
   target: github-pages
-  how: hand   # nothing to run: Actions deploys on push
+  how: on-merge   # the merge is the deploy: Actions (deploy.yml) builds and publishes; /deploy waits, smokes, records
+  environment: github-pages   # confirmed 2026-10-21 (not the stale 2025 "Production" env)
+  path: https://stylee.org   # informational (the site URL)
   order: 70
-  ledger: none
+  ledger: deploy
   note: "GitHub Pages via Actions: push to main runs .github/workflows/deploy.yml (next build, deploy-pages) for stylee.org"
 smoke:
   command: "curl -fsS -m 10 -o /dev/null https://stylee.org"   # public, from anywhere
   tries: 3
-rollback: hand   # revert the commit on main; Actions redeploys
+rollback: hand   # a revert PR through /merge; Actions redeploys, then /deploy records it
