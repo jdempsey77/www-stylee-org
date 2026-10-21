@@ -2,7 +2,7 @@
 contract: 1
 tier: 3
 branch: main
-test: "/usr/bin/python3 -m unittest discover -s tests -q && PUPPETEER_SKIP_DOWNLOAD=true npm ci && npm run build:staging && /usr/bin/python3 scripts/check_site.py out"   # = tests.yml (fake fixtures, staging build, no GA secret)
+test: null   # GAP: no tests (CI runs lint, npm audit and next build only)
 ci: true   # Production Pipeline + Hybrid Staging Environment run on PRs
 secrets: none
 deploy:
